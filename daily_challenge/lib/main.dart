@@ -9,7 +9,7 @@ void main() => runApp(
             title: Text('Hello'),
           ),
           body: Center(
-            child: Image(image: AssetImage('images/diamond.jpg')),
+            child: Image(image: AssetImage('images/photo.jpg')),
           ),
         ),
       ),
