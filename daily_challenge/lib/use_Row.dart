@@ -14,18 +14,19 @@ class UseRow extends StatelessWidget {
             children: [
               Container(
                 width: 100,
-
                 color: Colors.white,
               ),
               SizedBox(
-                width: 30,
+                width: 100,
               ),
-              Column(
-                children: [
-                  Container(width: 100.0, height: 100.0, color: Colors.yellow),
-                  Container(width: 100.0, height: 100.0, color: Colors.green)
-                ],
-              ),SizedBox(width: 30.0,),
+              Center(
+                child: Column(mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(width: 100.0, height: 100.0, color: Colors.yellow),
+                    Container(width: 100.0, height: 100.0, color: Colors.green)
+                  ],
+                ),
+              ),SizedBox(width: 100.0,),
               Container(
                 width: 100,
 
