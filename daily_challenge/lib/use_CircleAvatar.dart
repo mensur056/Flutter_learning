@@ -34,45 +34,31 @@ class UseAvatar extends StatelessWidget {
                 Card(
                   color: Colors.white,
                   margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                  child: Padding(padding: EdgeInsets.all(25.0),
-                    child: Row(
-                      children: [
-                        Icon(
-                          Icons.phone,
-                          color: Colors.green,
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          '+994 50 645 29 39',
-                          style: TextStyle(fontFamily: 'Source', fontSize: 20.0),
-                        )
-                      ],
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.phone,
+                      color: Colors.green,
+                    ),
+                    title: Text(
+                      '+994 50 645 29 39',
+                      style: TextStyle(fontSize: 20.0, fontFamily: 'Source'),
                     ),
                   ),
                 ),
                 Card(
                   color: Colors.white,
                   margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-
-                  child: Padding(padding: EdgeInsets.all(25),
-                    child: Row(
-                      children: [
-                        Icon(
-                          Icons.email,color: Colors.teal,
-                        ),
-                        SizedBox(
-                          width: 10.0,
-                        ),
-                        Text(
-                          'ElonMusk@gmail.com',
-                          style: TextStyle(fontSize: 20.0, fontFamily: 'Source'),
-                        )
-                      ],
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.email,
+                      color: Colors.teal,
+                    ),
+                    title: Text(
+                      'ElonMusk@gmail.com',
+                      style: TextStyle(fontSize: 20.0, fontFamily: 'Source'),
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),
