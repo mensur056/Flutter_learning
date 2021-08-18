@@ -31,6 +31,13 @@ class UseAvatar extends StatelessWidget {
                       fontFamily: 'Source',
                       color: Colors.tealAccent),
                 ),
+                SizedBox(
+                  height: 20,
+                  width: 100,
+                  child: Divider(
+                    color: Colors.tealAccent,
+                  ),
+                ),
                 Card(
                   color: Colors.white,
                   margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
