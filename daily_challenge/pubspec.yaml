@@ -18,3 +18,10 @@ flutter:
     - images/elon.jpg
 
 
+  fonts:
+    - family: Pacifico
+      fonts:
+        - asset: fonts/Pacifico-Regular.ttf
+    - family: Source
+      fonts:
+        - asset: fonts/Source-Regular.ttf
