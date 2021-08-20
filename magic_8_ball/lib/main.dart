@@ -28,7 +28,7 @@ class _BallPageState extends State<BallPage> {
     return Center(
       child: Expanded(
         child: FlatButton(
-            onPressed: () {setState(() {
+            onPressed: () {setState(() {ballNumber=Random().nextInt(5)+1;
 
             });}, child: Image.asset('images/ball$ballNumber.png')),
       ),
