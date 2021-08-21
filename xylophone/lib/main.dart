@@ -12,70 +12,63 @@ class Xylophone extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
+      home: Scaffold(backgroundColor: Colors.black,
         body: SafeArea(
           child: Center(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  color: Colors.red,
-                  child: FlatButton(
+                Expanded(
+                  child: FlatButton(color: Colors.red,
                     onPressed: () {
                       PlaySound(1);
                     },
                     child: Text('Click me'),
                   ),
                 ),
-                Container(
-                  color: Colors.blue,
-                  child: FlatButton(
+                Expanded(
+                  child: FlatButton(color: Colors.pink,
                     onPressed: () {
                       PlaySound(2);
                     },
                     child: Text('Click me'),
                   ),
                 ),
-                Container(
-                  color: Colors.teal,
-                  child: FlatButton(
+                Expanded(
+                  child: FlatButton(color: Colors.teal,
                     onPressed: () {
                       PlaySound(3);
                     },
                     child: Text('Click me'),
                   ),
                 ),
-                Container(
-                  color: Colors.yellow,
-                  child: FlatButton(
+                Expanded(
+                  child: FlatButton(color: Colors.blue,
                     onPressed: () {
                       PlaySound(4);
                     },
                     child: Text('Click me'),
                   ),
                 ),
-                Container(
-                  color: Colors.green,
-                  child: FlatButton(
+                Expanded(
+                  child: FlatButton(color: Colors.green,
                     onPressed: () {
                       PlaySound(5);
                     },
                     child: Text('Click me'),
                   ),
                 ),
-                Container(
-                  color: Colors.orange,
-                  child: FlatButton(
+                Expanded(
+                  child: FlatButton(color: Colors.yellow,
                     onPressed: () {
                       PlaySound(6);
                     },
                     child: Text('Click me'),
                   ),
                 ),
-                Container(
-                  color: Colors.pink,
-                  child: FlatButton(
+                Expanded(
+                  child: FlatButton(color: Colors.orange,
                     onPressed: () {
                       PlaySound(7);
                     },
