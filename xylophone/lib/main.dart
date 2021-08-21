@@ -29,7 +29,7 @@ class Xylophone extends StatelessWidget {
           child: Center(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
-              mainAxisAlignment: MainAxisAlignment.center,
+
               children: [
 
                 buildKey(color: Colors.red,soundNumber: 1,text: 'Music1'),
@@ -39,6 +39,8 @@ class Xylophone extends StatelessWidget {
                 buildKey(color: Colors.white,soundNumber: 5,text: 'Music5'),
                 buildKey(color: Colors.orange,soundNumber: 6,text: 'Music6'),
                 buildKey(color: Colors.pink,soundNumber: 7,text: 'Music7'),
+                buildKey(color: Colors.pink,soundNumber: 1,text: 'Music8'),
+
 
 
               ],
