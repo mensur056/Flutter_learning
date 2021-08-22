@@ -28,18 +28,32 @@ class Xylophone extends StatelessWidget {
         body: SafeArea(
           child: Center(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
 
               children: [
-
-                buildKey(color: Colors.red,soundNumber: 1,text: 'Music1'),
-                buildKey(color: Colors.green,soundNumber: 2,text: 'Music2'),
-                buildKey(color: Colors.blue,soundNumber: 3,text: 'Music3'),
-                buildKey(color: Colors.yellow,soundNumber: 4,text: 'Music4'),
-                buildKey(color: Colors.white,soundNumber: 5,text: 'Music5'),
-                buildKey(color: Colors.orange,soundNumber: 6,text: 'Music6'),
-                buildKey(color: Colors.pink,soundNumber: 7,text: 'Music7'),
-                buildKey(color: Colors.grey,soundNumber: 1,text: 'Music8'),
+                Row(
+                  children: [
+                    buildKey(color: Colors.red,soundNumber: 1,text: 'Music1'),
+                    buildKey(color: Colors.green,soundNumber: 2,text: 'Music2'),
+                  ],
+                ),
+                Row(
+                  children: [
+                    buildKey(color: Colors.blue,soundNumber: 3,text: 'Music3'),
+                    buildKey(color: Colors.yellow,soundNumber: 4,text: 'Music4'),
+                  ],
+                ),
+                Row(
+                  children: [
+                    buildKey(color: Colors.white,soundNumber: 5,text: 'Music5'),
+                    buildKey(color: Colors.orange,soundNumber: 6,text: 'Music6'),
+                  ],
+                ),
+                Row(
+                  children: [
+                    buildKey(color: Colors.pink,soundNumber: 7,text: 'Music7'),
+                    buildKey(color: Colors.grey,soundNumber: 1,text: 'Music8'),
+                  ],
+                ),
 
 
 
