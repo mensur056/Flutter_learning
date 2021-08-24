@@ -84,11 +84,7 @@ class _QuizzPageState extends State<QuizzPage> {
                       onPressed: () {
                         bool correctAnswer = answers[questionIndex];
                         setState(() {
-                          if (correctAnswer == false) {
-                            elections.add(kTrueIcon);
-                          } else {
-                            elections.add(kFalseIcon);
-                          }
+                         correctAnswer==false?elections.add(kTrueIcon):elections.add(kFalseIcon);
                           questionIndex++;
                           // elections.add(kFalseIcon);
                         });
@@ -107,11 +103,7 @@ class _QuizzPageState extends State<QuizzPage> {
                       onPressed: () {
                         bool correctAnswer = answers[questionIndex];
                         setState(() {
-                          if (correctAnswer == true) {
-                            elections.add(kTrueIcon);
-                          } else {
-                            elections.add(kFalseIcon);
-                          }
+                        correctAnswer==true?elections.add(kTrueIcon):elections.add(kFalseIcon);
                           questionIndex++;
                           //elections.add(kTrueIcon);
                         });
