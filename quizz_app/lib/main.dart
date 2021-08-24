@@ -27,14 +27,14 @@ class QuizzPage extends StatefulWidget {
 
 class _QuizzPageState extends State<QuizzPage> {
   List<Widget> elections = [];
-  List<String> questions = [
-    'You can lead a cow down stairs but not up stairs.',
-    'Approximately one quarter of human bones are in the feet.',
-    'Butterflies live one day',
-    'People can live for 1 month without water',
-    'A slug\'s blood is green.',
+
+  List<Question>questionBank=[
+    Question(questionAnswer:false, questionText: 'You can lead a cow down stairs but not up stairs.'),
+    Question(questionAnswer:true, questionText: 'Approximately one quarter of human bones are in the feet.'),
+    Question(questionAnswer:false, questionText: 'Butterflies live one day'),
+    Question(questionAnswer:false, questionText: 'People can live for 1 month without water'),
+    Question(questionAnswer:true, questionText: 'A slug\'s blood is green.')
   ];
-  List<bool> answers = [false, true, false, false, true];
   int questionIndex = 0;
 
   @override
@@ -49,7 +49,7 @@ class _QuizzPageState extends State<QuizzPage> {
             padding: EdgeInsets.all(10.0),
             child: Center(
               child: Text(
-                questions[questionIndex],
+                questionBank[questionIndex].questionText,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20.0,
@@ -82,7 +82,7 @@ class _QuizzPageState extends State<QuizzPage> {
                         size: 30.0,
                       ),
                       onPressed: () {
-                        bool correctAnswer = answers[questionIndex];
+                        bool correctAnswer = questionBank[questionIndex].questionAnswer;
                         setState(() {
                          correctAnswer==false?elections.add(kTrueIcon):elections.add(kFalseIcon);
                           questionIndex++;
@@ -101,7 +101,7 @@ class _QuizzPageState extends State<QuizzPage> {
                       color: Colors.green[400],
                       child: Icon(Icons.check, size: 30.0),
                       onPressed: () {
-                        bool correctAnswer = answers[questionIndex];
+                        bool correctAnswer = questionBank[questionIndex].questionAnswer;
                         setState(() {
                         correctAnswer==true?elections.add(kTrueIcon):elections.add(kFalseIcon);
                           questionIndex++;
@@ -119,13 +119,9 @@ class _QuizzPageState extends State<QuizzPage> {
     );
   }
 }
+class Question{
+  String questionText;
+  bool questionAnswer;
+  Question({required this.questionAnswer,required this.questionText});
+}
 
-/*
- 'You can lead a cow down stairs but not up stairs.', false,
- 'Approximately one quarter of human bones are in the feet.', true,
- 'Butterflies live one day',false,
- 'People can live for 1 month without water',false
- 'A slug\'s blood is green.', true,
-
-
-*/
