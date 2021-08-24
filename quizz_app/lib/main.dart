@@ -34,7 +34,8 @@ class _QuizzPageState extends State<QuizzPage> {
     'People can live for 1 month without water',
     'A slug\'s blood is green.',
   ];
-  int questionIndex=0;
+  List<bool> answers = [false, true, false, false, true];
+  int questionIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -81,8 +82,15 @@ class _QuizzPageState extends State<QuizzPage> {
                         size: 30.0,
                       ),
                       onPressed: () {
-                        setState(() {questionIndex++;
-                          elections.add(kFalseIcon);
+                        bool correctAnswer = answers[questionIndex];
+                        setState(() {
+                          if (correctAnswer == false) {
+                            elections.add(kTrueIcon);
+                          } else {
+                            elections.add(kFalseIcon);
+                          }
+                          questionIndex++;
+                          // elections.add(kFalseIcon);
                         });
                       },
                     ),
@@ -97,8 +105,15 @@ class _QuizzPageState extends State<QuizzPage> {
                       color: Colors.green[400],
                       child: Icon(Icons.check, size: 30.0),
                       onPressed: () {
-                        setState(() {questionIndex++;
-                          elections.add(kTrueIcon);
+                        bool correctAnswer = answers[questionIndex];
+                        setState(() {
+                          if (correctAnswer == true) {
+                            elections.add(kTrueIcon);
+                          } else {
+                            elections.add(kFalseIcon);
+                          }
+                          questionIndex++;
+                          //elections.add(kTrueIcon);
                         });
                       },
                     ),
