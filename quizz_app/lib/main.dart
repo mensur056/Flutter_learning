@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './const.dart';
+
 void main() => runApp(Quizzler());
 
 class Quizzler extends StatelessWidget {
@@ -26,6 +27,14 @@ class QuizzPage extends StatefulWidget {
 
 class _QuizzPageState extends State<QuizzPage> {
   List<Widget> elections = [];
+  List<String> questions = [
+    'You can lead a cow down stairs but not up stairs.',
+    'Approximately one quarter of human bones are in the feet.',
+    'Butterflies live one day',
+    'People can live for 1 month without water',
+    'A slug\'s blood is green.',
+  ];
+  int questionIndex=0;
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +48,7 @@ class _QuizzPageState extends State<QuizzPage> {
             padding: EdgeInsets.all(10.0),
             child: Center(
               child: Text(
-                'Questions',
+                questions[questionIndex],
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20.0,
@@ -49,7 +58,9 @@ class _QuizzPageState extends State<QuizzPage> {
             ),
           ),
         ),
-        Row(
+        Wrap(
+          runSpacing: 10,
+          spacing: 10,
           children: elections,
         ),
         Expanded(
@@ -69,9 +80,11 @@ class _QuizzPageState extends State<QuizzPage> {
                         Icons.close,
                         size: 30.0,
                       ),
-                      onPressed: () {setState(() {
-                        elections.add(kFalseIcon);
-                      });},
+                      onPressed: () {
+                        setState(() {questionIndex++;
+                          elections.add(kFalseIcon);
+                        });
+                      },
                     ),
                   ),
                 ),
@@ -83,9 +96,11 @@ class _QuizzPageState extends State<QuizzPage> {
                       textColor: Colors.white,
                       color: Colors.green[400],
                       child: Icon(Icons.check, size: 30.0),
-                      onPressed: () {setState(() {
-                        elections.add(kTrueIcon);
-                      });},
+                      onPressed: () {
+                        setState(() {questionIndex++;
+                          elections.add(kTrueIcon);
+                        });
+                      },
                     ),
                   ),
                 ),
@@ -99,8 +114,11 @@ class _QuizzPageState extends State<QuizzPage> {
 }
 
 /*
-question1: 'You can lead a cow down stairs but not up stairs.', false,
-question2: 'Approximately one quarter of human bones are in the feet.', true,
-question3: 'A slug\'s blood is green.', true,
-*/
+ 'You can lead a cow down stairs but not up stairs.', false,
+ 'Approximately one quarter of human bones are in the feet.', true,
+ 'Butterflies live one day',false,
+ 'People can live for 1 month without water',false
+ 'A slug\'s blood is green.', true,
 
+
+*/
