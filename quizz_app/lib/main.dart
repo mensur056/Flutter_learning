@@ -48,7 +48,7 @@ class _QuizzPageState extends State<QuizzPage> {
             padding: EdgeInsets.all(10.0),
             child: Center(
               child: Text(
-                quizBrain.questionBank[questionIndex].questionText,
+                quizBrain.getQuestionText(questionIndex),
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20.0,
@@ -81,7 +81,7 @@ class _QuizzPageState extends State<QuizzPage> {
                         size: 30.0,
                       ),
                       onPressed: () {
-                        bool correctAnswer = quizBrain.questionBank[questionIndex].questionAnswer;
+                        bool correctAnswer = quizBrain.getQuestionAnswer(questionIndex);
                         setState(() {
                          correctAnswer==false?elections.add(kTrueIcon):elections.add(kFalseIcon);
                           questionIndex++;
@@ -100,7 +100,7 @@ class _QuizzPageState extends State<QuizzPage> {
                       color: Colors.green[400],
                       child: Icon(Icons.check, size: 30.0),
                       onPressed: () {
-                        bool correctAnswer = quizBrain.questionBank[questionIndex].questionAnswer;
+                        bool correctAnswer = quizBrain.getQuestionAnswer(questionIndex);
                         setState(() {
                         correctAnswer==true?elections.add(kTrueIcon):elections.add(kFalseIcon);
                           questionIndex++;
