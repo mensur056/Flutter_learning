@@ -4,8 +4,8 @@ import 'const.dart';
 import './question.dart';
 import 'quizBrain.dart';
 
+QuizBrain quizBrain = QuizBrain();
 
-QuizBrain quizBrain=QuizBrain();
 void main() => runApp(Quizzler());
 
 class Quizzler extends StatelessWidget {
@@ -13,7 +13,7 @@ class Quizzler extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.indigo[700],
+        backgroundColor: Colors.indigo,
         body: SafeArea(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 10.0),
@@ -32,9 +32,6 @@ class QuizzPage extends StatefulWidget {
 
 class _QuizzPageState extends State<QuizzPage> {
   List<Widget> elections = [];
-
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -83,7 +80,9 @@ class _QuizzPageState extends State<QuizzPage> {
                       onPressed: () {
                         bool correctAnswer = quizBrain.getQuestionAnswer();
                         setState(() {
-                         correctAnswer==false?elections.add(kTrueIcon):elections.add(kFalseIcon);
+                          correctAnswer == false
+                              ? elections.add(kTrueIcon)
+                              : elections.add(kFalseIcon);
                           quizBrain.nextQuestion();
                           // elections.add(kFalseIcon);
                         });
@@ -102,7 +101,9 @@ class _QuizzPageState extends State<QuizzPage> {
                       onPressed: () {
                         bool correctAnswer = quizBrain.getQuestionAnswer();
                         setState(() {
-                        correctAnswer==true?elections.add(kTrueIcon):elections.add(kFalseIcon);
+                          correctAnswer == true
+                              ? elections.add(kTrueIcon)
+                              : elections.add(kFalseIcon);
                           quizBrain.nextQuestion();
                           //elections.add(kTrueIcon);
                         });
