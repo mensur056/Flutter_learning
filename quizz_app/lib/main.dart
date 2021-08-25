@@ -34,7 +34,7 @@ class _QuizzPageState extends State<QuizzPage> {
   List<Widget> elections = [];
 
 
-  int questionIndex = 0;
+
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +48,7 @@ class _QuizzPageState extends State<QuizzPage> {
             padding: EdgeInsets.all(10.0),
             child: Center(
               child: Text(
-                quizBrain.getQuestionText(questionIndex),
+                quizBrain.getQuestionText(),
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20.0,
@@ -81,10 +81,10 @@ class _QuizzPageState extends State<QuizzPage> {
                         size: 30.0,
                       ),
                       onPressed: () {
-                        bool correctAnswer = quizBrain.getQuestionAnswer(questionIndex);
+                        bool correctAnswer = quizBrain.getQuestionAnswer();
                         setState(() {
                          correctAnswer==false?elections.add(kTrueIcon):elections.add(kFalseIcon);
-                          questionIndex++;
+                          quizBrain.nextQuestion();
                           // elections.add(kFalseIcon);
                         });
                       },
@@ -100,10 +100,10 @@ class _QuizzPageState extends State<QuizzPage> {
                       color: Colors.green[400],
                       child: Icon(Icons.check, size: 30.0),
                       onPressed: () {
-                        bool correctAnswer = quizBrain.getQuestionAnswer(questionIndex);
+                        bool correctAnswer = quizBrain.getQuestionAnswer();
                         setState(() {
                         correctAnswer==true?elections.add(kTrueIcon):elections.add(kFalseIcon);
-                          questionIndex++;
+                          quizBrain.nextQuestion();
                           //elections.add(kTrueIcon);
                         });
                       },
