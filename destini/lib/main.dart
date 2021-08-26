@@ -66,7 +66,7 @@ class _StoryPageState extends State<StoryPage> {
 
                     storyBrain.getChoice1(),
                     style: TextStyle(
-                      fontSize: 20.0,
+                      fontSize: 15.0,
                     ),
                   ),
                 ),
@@ -87,7 +87,7 @@ class _StoryPageState extends State<StoryPage> {
 
                       storyBrain.getChoice2(),
                       style: TextStyle(
-                        fontSize: 20.0,
+                        fontSize: 15.0,
                       ),
                     ),
                   ),
