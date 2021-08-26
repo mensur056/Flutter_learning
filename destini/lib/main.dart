@@ -14,7 +14,6 @@ class Destini extends StatelessWidget {
   }
 }
 
-//TODO: Step 9 - Create a new storyBrain object from the StoryBrain class.
 StoryBrain storyBrain = StoryBrain();
 
 class StoryPage extends StatefulWidget {
@@ -22,6 +21,13 @@ class StoryPage extends StatefulWidget {
 }
 
 class _StoryPageState extends State<StoryPage> {
+
+  void buttonFunction(int selectButton){setState(() {
+    storyBrain.nextStory(1);
+  });
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,9 +59,7 @@ class _StoryPageState extends State<StoryPage> {
                 flex: 2,
                 child: FlatButton(
                   onPressed: () {
-                    setState(() {
-                      storyBrain.nextStory(1);
-                    });
+                    buttonFunction(1);
                   },
                   color: Colors.red,
                   child: Text(
@@ -76,9 +80,7 @@ class _StoryPageState extends State<StoryPage> {
                   visible: storyBrain.buttonShouldBeVisible(),
                   child: FlatButton(
                     onPressed: () {
-                      setState(() {
-                        storyBrain.nextStory(2);
-                      });
+                     buttonFunction(2);
                     },
                     color: Colors.blue,
                     child: Text(
