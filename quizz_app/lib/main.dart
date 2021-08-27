@@ -52,8 +52,11 @@ class _QuizzPageState extends State<QuizzPage> {
               ],
             );
           });
-      quizBrain.questionRestart();
+      setState(() { quizBrain.questionRestart();
       elections = [];
+
+      });
+
     } else {
       setState(() {
         quizBrain.getQuestionAnswer() == false
