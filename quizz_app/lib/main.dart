@@ -34,6 +34,16 @@ class QuizzPage extends StatefulWidget {
 class _QuizzPageState extends State<QuizzPage> {
   List<Widget> elections = [];
 
+
+  void buttonFunction(bool selectButton){
+
+    setState(() {
+      quizBrain.getQuestionAnswer() == false
+          ? elections.add(kTrueIcon)
+          : elections.add(kFalseIcon);
+      quizBrain.nextQuestion();
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -78,15 +88,9 @@ class _QuizzPageState extends State<QuizzPage> {
                         Icons.close,
                         size: 30.0,
                       ),
-                      onPressed: () {
+                      onPressed: () {buttonFunction(false);
                         bool correctAnswer = quizBrain.getQuestionAnswer();
-                        setState(() {
-                          correctAnswer == false
-                              ? elections.add(kTrueIcon)
-                              : elections.add(kFalseIcon);
-                          quizBrain.nextQuestion();
-                          // elections.add(kFalseIcon);
-                        });
+
                       },
                     ),
                   ),
@@ -101,13 +105,7 @@ class _QuizzPageState extends State<QuizzPage> {
                       child: Icon(Icons.check, size: 30.0),
                       onPressed: () {
                         bool correctAnswer = quizBrain.getQuestionAnswer();
-                        setState(() {
-                          correctAnswer == true
-                              ? elections.add(kTrueIcon)
-                              : elections.add(kFalseIcon);
-                          quizBrain.nextQuestion();
-                          //elections.add(kTrueIcon);
-                        });
+                       buttonFunction(true);
                       },
                     ),
                   ),
