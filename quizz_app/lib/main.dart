@@ -45,17 +45,17 @@ class _QuizzPageState extends State<QuizzPage> {
               actions: [
                 new FlatButton(
                   child: Text('Restart'),
-                  onPressed: () {
+                  onPressed: () {setState(() { quizBrain.questionRestart();
+                  elections = [];
+
+                  });
                     Navigator.of(context).pop();
                   },
                 )
               ],
             );
           });
-      setState(() { quizBrain.questionRestart();
-      elections = [];
 
-      });
 
     } else {
       setState(() {
