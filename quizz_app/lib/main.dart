@@ -40,11 +40,11 @@ class _QuizzPageState extends State<QuizzPage> {
           context: context,
           builder: (BuildContext context) {
             return AlertDialog(
-              title: Text('Alert Dialog title'),
-              content: Text('Alert Dialog body'),
+              title: Text('Well done . You finished the test'),
+              //content: Text('Alert Dialog body'),
               actions: [
                 new FlatButton(
-                  child: Text('Close'),
+                  child: Text('Restart'),
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
