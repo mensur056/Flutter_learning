@@ -1,3 +1,5 @@
+import 'package:quizz_app/main.dart';
+
 import 'question.dart';
 
 class QuizBrain {
@@ -34,4 +36,12 @@ class QuizBrain {
       _questionIndex++;
     }
   }
+
+  bool questionEnd(){
+    if(_questionIndex+1>=_questionBank.length){return true;
+    }else{return false;}
+  }
+  void questionRestart(){
+    _questionIndex=0;
+}
 }

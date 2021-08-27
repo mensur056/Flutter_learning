@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quizz_app/quizBrain.dart';
 import 'const.dart';
-import './question.dart';
 import 'quizBrain.dart';
 
 QuizBrain quizBrain = QuizBrain();
@@ -33,17 +32,38 @@ class QuizzPage extends StatefulWidget {
 
 class _QuizzPageState extends State<QuizzPage> {
   List<Widget> elections = [];
+  QuizBrain quizBrain =QuizBrain();
 
-
-  void buttonFunction(bool selectButton){
-
-    setState(() {
-      quizBrain.getQuestionAnswer() == false
-          ? elections.add(kTrueIcon)
-          : elections.add(kFalseIcon);
-      quizBrain.nextQuestion();
-    });
+  void buttonFunction(bool selectButton) {
+    if (quizBrain.questionEnd() == true) {
+      showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: Text('Alert Dialog title'),
+              content: Text('Alert Dialog body'),
+              actions: [
+                new FlatButton(
+                  child: Text('Close'),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                )
+              ],
+            );
+          });
+      quizBrain.questionRestart();
+      elections = [];
+    } else {
+      setState(() {
+        quizBrain.getQuestionAnswer() == false
+            ? elections.add(kTrueIcon)
+            : elections.add(kFalseIcon);
+        quizBrain.nextQuestion();
+      });
+    }
   }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -88,8 +108,8 @@ class _QuizzPageState extends State<QuizzPage> {
                         Icons.close,
                         size: 30.0,
                       ),
-                      onPressed: () {buttonFunction(false);
-                        bool correctAnswer = quizBrain.getQuestionAnswer();
+                      onPressed: () {
+                        buttonFunction(false);
 
                       },
                     ),
@@ -104,8 +124,8 @@ class _QuizzPageState extends State<QuizzPage> {
                       color: Colors.green[400],
                       child: Icon(Icons.check, size: 30.0),
                       onPressed: () {
-                        bool correctAnswer = quizBrain.getQuestionAnswer();
-                       buttonFunction(true);
+
+                        buttonFunction(true);
                       },
                     ),
                   ),
