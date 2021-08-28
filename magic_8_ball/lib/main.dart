@@ -6,7 +6,7 @@ void main() {
     MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.tealAccent,
-        appBar: AppBar(
+        appBar: AppBar(backgroundColor: Colors.teal,
           title: Text('Ask me Anything'),
         ),
         body: BallPage(),
