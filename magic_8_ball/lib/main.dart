@@ -5,7 +5,7 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Colors.tealAccent,
         appBar: AppBar(
           title: Text('Ask me Anything'),
         ),
