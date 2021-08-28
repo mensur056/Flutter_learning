@@ -22,7 +22,7 @@ class MiCard extends StatelessWidget {
                   'Mensur Serxanov',
                   style: TextStyle(
                     fontFamily: 'Pacifico',
-                    fontSize: 35.0,
+                    fontSize: 45.0,
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                   ),
