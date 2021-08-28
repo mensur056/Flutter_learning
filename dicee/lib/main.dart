@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 
 void main() {
   return runApp(
-    MaterialApp(
+    MaterialApp(theme: ThemeData.dark(),
       home: Scaffold(
-        backgroundColor: Colors.red,
+
         appBar: AppBar(
           title: Center(child: Text('Dicee')),
           backgroundColor: Colors.red,
