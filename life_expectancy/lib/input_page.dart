@@ -1,4 +1,8 @@
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
+import 'package:flutter/rendering.dart';
 
 class InputPage extends StatefulWidget {
   @override
@@ -19,25 +23,25 @@ class _InputPageState extends State<InputPage> {
               child: Row(
                 children: [
                   Expanded(
-                    child: MyContainer(),
+                    child: MyContainer(colour: Color(0xFF1D1E33)),
                   ),
                   Expanded(
-                    child: MyContainer(),
+                    child: MyContainer(colour: Color(0xFF1D1E33)),
                   )
                 ],
               ),
             ),
             Expanded(
-              child: MyContainer(),
+              child: MyContainer(colour: Color(0xFF1D1E33)),
             ),
             Expanded(
               child: Row(
                 children: [
                   Expanded(
-                    child: MyContainer(),
+                    child: MyContainer(colour: Color(0xFF1D1E33)),
                   ),
                   Expanded(
-                    child:MyContainer()
+                    child:MyContainer(colour: Color(0xFF1D1E33))
                   ),
                 ],
               ),
@@ -50,17 +54,15 @@ class _InputPageState extends State<InputPage> {
 }
 
 class MyContainer extends StatelessWidget {
-  const MyContainer({
-    Key? key,
-  }) : super(key: key);
-
+ MyContainer({ required this.colour});
+final Color colour;
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(15),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: Color(0xFF1DE33),
+        color:colour ,
       ),
     );
   }
