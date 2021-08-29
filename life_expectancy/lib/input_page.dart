@@ -22,43 +22,73 @@ class _InputPageState extends State<InputPage> {
                   Expanded(
                     child: MyContainer(
                       colour: Color(0xFF1D1E33),
-                      cardChild: Column(
-                        children: [
-                          Icon(
-                            FontAwesomeIcons.mars,
-                            size: 80.0,
-                          ),SizedBox(height: 10,),
-                          Text(
-                            'MALE',
-                            style: TextStyle(
-                                fontSize: 18, color: Color(0xFF8D8E98),fontFamily: 'Pacifico'),
-                          )
-                        ],
+                      cardChild: IconContent(
+                        icon: FontAwesomeIcons.mars,
+                        label: "MALE",
                       ),
                     ),
                   ),
                   Expanded(
-                    child: MyContainer(colour: Color(0xFF1D1E33),cardChild: Text(''),),
+                    child: MyContainer(
+                      colour: Color(0xFF1D1E33),
+                      cardChild: IconContent(
+                        icon: FontAwesomeIcons.venus,
+                        label: "FEMALE",
+                      ),
+                    ),
                   )
                 ],
               ),
             ),
             Expanded(
-              child: MyContainer(colour: Color(0xFF1D1E33),cardChild: Text('')),
+              child:
+                  MyContainer(colour: Color(0xFF1D1E33), cardChild: Text('')),
             ),
             Expanded(
               child: Row(
                 children: [
                   Expanded(
-                    child: MyContainer(colour: Color(0xFF1D1E33),cardChild: Text('')),
+                    child: MyContainer(
+                        colour: Color(0xFF1D1E33), cardChild: Text('')),
                   ),
-                  Expanded(child: MyContainer(colour: Color(0xFF1D1E33),cardChild: Text('')),),
+                  Expanded(
+                    child: MyContainer(
+                        colour: Color(0xFF1D1E33), cardChild: Text('')),
+                  ),
                 ],
               ),
             ),
           ],
         ),
       ),
+    );
+  }
+}
+
+class IconContent extends StatelessWidget {
+  IconContent({required this.icon, required this.label});
+
+  final IconData icon;
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(
+          icon,
+          size: 80.0,
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Text(
+          label,
+          style: TextStyle(
+              fontSize: 18, color: Color(0xFF8D8E98), fontFamily: 'Pacifico'),
+        )
+      ],
     );
   }
 }
