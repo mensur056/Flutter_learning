@@ -2,13 +2,9 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
 import 'icon_content.dart';
 import 'MyContainer.dart';
+import 'constants.dart';
 
-const bottomContainerHeight = 80.0;
-const activeCardColour = Color(0xFF1D1E33);
-const inactiveCardColour = Color(0xFF111328);
-const bottomContainerColour = Color(0xFFEB1555);
-
-enum Gender{
+enum Gender {
   male,
   female,
 }
@@ -19,8 +15,7 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-   Gender? selectedGender;
-
+  Gender? selectedGender;
 
   @override
   Widget build(BuildContext context) {
@@ -30,15 +25,21 @@ class _InputPageState extends State<InputPage> {
       ),
       body: Center(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Expanded(
               child: Row(
                 children: [
                   Expanded(
-                    child: MyContainer(onPress: (){setState(() {
-                      selectedGender=Gender.male;
-                    });},
-                      colour: selectedGender==Gender.male?activeCardColour:inactiveCardColour,
+                    child: MyContainer(
+                      onPress: () {
+                        setState(() {
+                          selectedGender = Gender.male;
+                        });
+                      },
+                      colour: selectedGender == Gender.male
+                          ? kActiveCardColour
+                          : kInactiveCardColour,
                       cardChild: IconContent(
                         icon: FontAwesomeIcons.mars,
                         label: "MALE",
@@ -46,10 +47,15 @@ class _InputPageState extends State<InputPage> {
                     ),
                   ),
                   Expanded(
-                    child: MyContainer(onPress: (){setState(() {
-                      selectedGender=Gender.female;
-                    });},
-                      colour: selectedGender==Gender.female?activeCardColour:inactiveCardColour,
+                    child: MyContainer(
+                      onPress: () {
+                        setState(() {
+                          selectedGender = Gender.female;
+                        });
+                      },
+                      colour: selectedGender == Gender.female
+                          ? kActiveCardColour
+                          : kInactiveCardColour,
                       cardChild: IconContent(
                         icon: FontAwesomeIcons.venus,
                         label: "FEMALE",
@@ -60,23 +66,52 @@ class _InputPageState extends State<InputPage> {
               ),
             ),
             Expanded(
-              child:
-              MyContainer(colour: Color(0xFF1D1E33), cardChild: Text(''),onPress: (){},),
+              child: MyContainer(
+                colour: kActiveCardColour,
+                cardChild: Column(
+                  children: [
+                    Text(
+                      'HEIGHT',
+                      style: kLabelTextStyle,
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          '180',
+                          style: kNumberTextStyle
+                        )
+                      ],
+                    )
+                  ],
+                ),
+                onPress: () {},
+              ),
             ),
             Expanded(
               child: Row(
                 children: [
                   Expanded(
                     child: MyContainer(
-                        colour: Color(0xFF1D1E33), cardChild: Text(''),onPress: (){},),
+                      colour: kActiveCardColour,
+                      cardChild: Text(''),
+                      onPress: () {},
+                    ),
                   ),
                   Expanded(
                     child: MyContainer(
-                        colour: Color(0xFF1D1E33), cardChild: Text(''),onPress: (){}),
+                        colour: kActiveCardColour,
+                        cardChild: Text(''),
+                        onPress: () {}),
                   ),
                 ],
               ),
             ),
+            Container(
+              color: kBottomContainerColour,
+              margin: EdgeInsets.only(top: 10),
+              width: double.infinity,
+              height: kBottomContainerHeight,
+            )
           ],
         ),
       ),
