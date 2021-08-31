@@ -101,9 +101,9 @@ class _InputPageState extends State<InputPage> {
                           thumbColor: Color(0xFFEB1555),
                           overlayColor: Color(0x29EB1555),
                           thumbShape:
-                          RoundSliderThumbShape(enabledThumbRadius: 15),
+                              RoundSliderThumbShape(enabledThumbRadius: 15),
                           overlayShape:
-                          RoundSliderOverlayShape(overlayRadius: 20.0)),
+                              RoundSliderOverlayShape(overlayRadius: 20.0)),
                       child: Slider(
                         value: height.toDouble(),
                         min: 120.0,
@@ -137,17 +137,20 @@ class _InputPageState extends State<InputPage> {
                             weight.toString(),
                             style: kNumberTextStyle,
                           ),
-                          Row(mainAxisAlignment: MainAxisAlignment.center,
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              FloatingActionButton(backgroundColor: Color(0xFF4C4F5E),
-                                onPressed: () {},
-                                child: Icon(
-                                  Icons.add,
-                                ),
+                              RoundIconButton(icon: Icons.add),
+                              SizedBox(
+                                width: 10,
                               ),
-                              SizedBox(width: 10,),
-                              FloatingActionButton(backgroundColor:Color(0xFF4C4F5E),
-                                  onPressed: () {}, child: Icon(Icons.add))
+                              FloatingActionButton(
+                                  backgroundColor: Color(0xFF4C4F5E),
+                                  onPressed: () {},
+                                  child: Icon(
+                                    Icons.add,
+                                    color: Colors.white,
+                                  ))
                             ],
                           )
                         ],
@@ -174,5 +177,22 @@ class _InputPageState extends State<InputPage> {
         ),
       ),
     );
+  }
+}
+
+class RoundIconButton extends StatelessWidget {
+  RoundIconButton({required this.icon});
+
+  final IconData icon;
+
+  @override
+  Widget build(BuildContext context) {
+    return RawMaterialButton(
+        child: Icon(icon),
+        onPressed: () {},
+        elevation: 6,
+        constraints: BoxConstraints.tightFor(width: 45, height: 45),
+        shape: CircleBorder(),
+        fillColor: Color(0xFF4C4F5E));
   }
 }
