@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 class MyContainer extends StatelessWidget {
-  MyContainer({required this.colour, required this.cardChild,required this.onPress});
+  MyContainer({required this.colour,  required this.cardChild, required this.onPress});
 
   final Color colour;
   final Widget cardChild;
@@ -10,7 +10,8 @@ class MyContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(onTap: onPress,
+    return GestureDetector(
+      onTap: onPress,
       child: Container(
         child: cardChild,
         margin: EdgeInsets.all(15),
