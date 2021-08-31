@@ -17,6 +17,7 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   Gender? selectedGender;
   int height = 180;
+  int weight = 50;
 
   @override
   Widget build(BuildContext context) {
@@ -95,24 +96,21 @@ class _InputPageState extends State<InputPage> {
                     ),
                     SliderTheme(
                       data: SliderTheme.of(context).copyWith(
-                        inactiveTickMarkColor: Color(0xFF8D8E98),
+                          inactiveTickMarkColor: Color(0xFF8D8E98),
                           activeTrackColor: Colors.white,
                           thumbColor: Color(0xFFEB1555),
                           overlayColor: Color(0x29EB1555),
                           thumbShape:
-                              RoundSliderThumbShape(enabledThumbRadius: 15),
+                          RoundSliderThumbShape(enabledThumbRadius: 15),
                           overlayShape:
-                              RoundSliderOverlayShape(overlayRadius: 20.0)),
+                          RoundSliderOverlayShape(overlayRadius: 20.0)),
                       child: Slider(
                         value: height.toDouble(),
                         min: 120.0,
                         max: 220.0,
-
                         onChanged: (double newValue) {
                           setState(() {
-                            setState(() {
-                              height = newValue.round();
-                            });
+                            height = newValue.round();
                           });
                         },
                       ),
@@ -126,16 +124,42 @@ class _InputPageState extends State<InputPage> {
                 children: [
                   Expanded(
                     child: MyContainer(
-                      colour: kActiveCardColour,
-                      cardChild: Text(''),
                       onPress: () {},
+                      colour: kActiveCardColour,
+                      cardChild: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'WEIGHT',
+                            style: kLabelTextStyle,
+                          ),
+                          Text(
+                            weight.toString(),
+                            style: kNumberTextStyle,
+                          ),
+                          Row(mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              FloatingActionButton(backgroundColor: Color(0xFF4C4F5E),
+                                onPressed: () {},
+                                child: Icon(
+                                  Icons.add,
+                                ),
+                              ),
+                              SizedBox(width: 10,),
+                              FloatingActionButton(backgroundColor:Color(0xFF4C4F5E),
+                                  onPressed: () {}, child: Icon(Icons.add))
+                            ],
+                          )
+                        ],
+                      ),
                     ),
                   ),
                   Expanded(
                     child: MyContainer(
-                        colour: kActiveCardColour,
-                        cardChild: Text(''),
-                        onPress: () {}),
+                      onPress: () {},
+                      colour: kActiveCardColour,
+                      cardChild: Text(''),
+                    ),
                   ),
                 ],
               ),
@@ -144,7 +168,7 @@ class _InputPageState extends State<InputPage> {
               color: kBottomContainerColour,
               margin: EdgeInsets.only(top: 10),
               width: double.infinity,
-              height: kBottomContainerHeight,
+              height: 40,
             )
           ],
         ),
