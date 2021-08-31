@@ -67,7 +67,8 @@ class _InputPageState extends State<InputPage> {
               ),
             ),
             Expanded(
-              child: MyContainer(onPress: (){},
+              child: MyContainer(
+                onPress: () {},
                 colour: kActiveCardColour,
                 cardChild: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -83,7 +84,8 @@ class _InputPageState extends State<InputPage> {
                       children: <Widget>[
                         Text(
                           height.toString(),
-                          style: TextStyle(fontSize: 40,fontWeight: FontWeight.w900),
+                          style: TextStyle(
+                              fontSize: 40, fontWeight: FontWeight.w900),
                         ),
                         Text(
                           'cm',
@@ -91,23 +93,32 @@ class _InputPageState extends State<InputPage> {
                         )
                       ],
                     ),
-                    Slider(
-                      value: height.toDouble(),
-                      min: 120.0,
-                      max: 220.0,
-                      activeColor: Color(0xFFEB1555),
-                      inactiveColor: Color(0xFF8D8E98),
-                      onChanged: (double newValue){setState(() {setState(() {
-                        height=newValue.round();
-                      });
-
-                      });
-
-                      },
+                    SliderTheme(
+                      data: SliderTheme.of(context).copyWith(
+                          activeTrackColor: Colors.white,
+                          thumbColor: Color(0xFFEB1555),
+                          overlayColor: Color(0x29EB1555),
+                          thumbShape:
+                              RoundSliderThumbShape(enabledThumbRadius: 15),
+                          overlayShape:
+                              RoundSliderOverlayShape(overlayRadius: 30.0)),
+                      child: Slider(
+                        value: height.toDouble(),
+                        min: 120.0,
+                        max: 220.0,
+                        activeColor: Colors.white,
+                        inactiveColor: Color(0xFF8D8E98),
+                        onChanged: (double newValue) {
+                          setState(() {
+                            setState(() {
+                              height = newValue.round();
+                            });
+                          });
+                        },
+                      ),
                     )
                   ],
                 ),
-
               ),
             ),
             Expanded(
