@@ -83,7 +83,7 @@ class _InputPageState extends State<InputPage> {
                       children: <Widget>[
                         Text(
                           height.toString(),
-                          style: TextStyle(fontSize: 30,fontWeight: FontWeight.w900),
+                          style: TextStyle(fontSize: 40,fontWeight: FontWeight.w900),
                         ),
                         Text(
                           'cm',
