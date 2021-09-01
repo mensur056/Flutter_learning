@@ -9,12 +9,10 @@ class Screen1 extends StatelessWidget {
       body: Center(
         child: RaisedButton(
           color: Colors.red,
-          onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return Screen2();
-            }));
+          onPressed: () {Navigator.pop(context);
+
           },
-          child: Text('Go To Screen2'),
+          child: Text('Go To Back Screen0'),
         ),
       ),
     );

@@ -9,7 +9,7 @@ class Screen2 extends StatelessWidget {
         backgroundColor: Colors.blue,
       ),
       body: Center(
-        child: RaisedButton(child: Text('Go To Back Screen1'),
+        child: RaisedButton(child: Text('Go To Back Screen0'),
           onPressed: () {Navigator.pop(context);},
           color: Colors.red,
         ),
