@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'icon_content.dart';
 import 'MyContainer.dart';
 import 'constants.dart';
+import 'results_page.dart';
 
 enum Gender {
   male,
@@ -181,7 +182,8 @@ class _InputPageState extends State<InputPage> {
                             age.toString(),
                             style: kNumberTextStyle,
                           ),
-                          Row(mainAxisAlignment: MainAxisAlignment.center,
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               RoundIconButton(
                                 icon: FontAwesomeIcons.minus,
@@ -212,11 +214,19 @@ class _InputPageState extends State<InputPage> {
                 ],
               ),
             ),
-            Container(
-              color: kBottomContainerColour,
-              margin: EdgeInsets.only(top: 10),
-              width: double.infinity,
-              height: 40,
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return ResultsPage();
+                }));
+              },
+              child: Container(
+                child: Center(child: Text('CALCULATOR')),
+                color: kBottomContainerColour,
+                margin: EdgeInsets.only(top: 10),
+                width: double.infinity,
+                height: 40,
+              ),
             )
           ],
         ),
