@@ -11,22 +11,23 @@ class Screen0 extends StatelessWidget {
         backgroundColor: Colors.blue,
       ),
       body: Center(
-        child: Column(mainAxisAlignment: MainAxisAlignment.center,crossAxisAlignment: CrossAxisAlignment.center,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             RaisedButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return Screen1();
-                }));
+                Navigator.pushNamed(context, '/first');
               },
               color: Colors.red,
               child: Text('Go to Screen1'),
-            ),SizedBox(height: 10,),
+            ),
+            SizedBox(
+              height: 10,
+            ),
             RaisedButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return Screen2();
-                }));
+                Navigator.pushNamed(context, '/second');
               },
               color: Colors.red,
               child: Text('Go to Screen2'),
