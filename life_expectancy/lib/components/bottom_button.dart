@@ -1,5 +1,5 @@
-import 'constants.dart';
-import 'input_page.dart';
+import '../constants.dart';
+import '../screens/input_page.dart';
 import 'package:flutter/material.dart';
 
 class BottomButton extends StatelessWidget {

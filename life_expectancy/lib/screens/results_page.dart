@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:life_expectancy/constants.dart';
-import 'MyContainer.dart';
+import '../components/MyContainer.dart';
 
 class ResultsPage extends StatelessWidget {
   @override
