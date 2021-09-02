@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:life_expectancy/constants.dart';
 
 class ResultsPage extends StatelessWidget {
   @override
@@ -6,17 +7,21 @@ class ResultsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Your Results',
-          style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+          'BMI Calculator',
+
         ),
       ),
       body: Container(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Center(child: Text('Hello',style: TextStyle(fontSize: 40),)),
-            SizedBox(
-              height: 25,
-            )
+            Expanded(
+                child: Container(
+              child: Text(
+                'Your Results',
+                style: kTitleTextStyle,
+              ),
+            ))
           ],
         ),
       ),
