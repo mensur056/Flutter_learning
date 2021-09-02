@@ -4,6 +4,8 @@ import 'icon_content.dart';
 import 'MyContainer.dart';
 import 'constants.dart';
 import 'results_page.dart';
+import 'bottom_button.dart';
+import 'round_icon_button.dart';
 
 enum Gender {
   male,
@@ -214,11 +216,19 @@ class _InputPageState extends State<InputPage> {
                 ],
               ),
             ),
-            BottomButton( onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return ResultsPage();
-              }));
-            },buttonTitle: 'CALCULATOR',)
+            BottomButton(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return ResultsPage();
+                    },
+                  ),
+                );
+              },
+              buttonTitle: 'CALCULATOR',
+            )
           ],
         ),
       ),
@@ -226,41 +236,6 @@ class _InputPageState extends State<InputPage> {
   }
 }
 
-class BottomButton extends StatelessWidget {
-  BottomButton({required this.buttonTitle,required this.onTap});
-  final VoidCallback onTap;
-  final String buttonTitle;
 
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        child: Center(child: Text(buttonTitle,style: kLargeButtonTextStyle,)),
-        color: kBottomContainerColour,
-        margin: EdgeInsets.only(top: 10),
 
-        width: double.infinity,
-        height: 40,
-      ),
-    );
-  }
-}
 
-class RoundIconButton extends StatelessWidget {
-  RoundIconButton({required this.icon, required this.onPressed});
-
-  final IconData icon;
-  final VoidCallback onPressed;
-
-  @override
-  Widget build(BuildContext context) {
-    return RawMaterialButton(
-        child: Icon(icon),
-        onPressed: onPressed,
-        elevation: 6,
-        constraints: BoxConstraints.tightFor(width: 44, height: 44),
-        shape: CircleBorder(),
-        fillColor: Color(0xFF4C4F5E));
-  }
-}
