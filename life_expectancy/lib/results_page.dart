@@ -14,6 +14,7 @@ class ResultsPage extends StatelessWidget {
       body: Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Expanded(
               child: Container(
@@ -28,8 +29,22 @@ class ResultsPage extends StatelessWidget {
               child: MyContainer(
                 colour: kActiveCardColour,
                 cardChild: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [Center(child: Text('Normal',style: resultTextStyle,))],
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Normal',
+                      style: resultTextStyle,
+                    ),
+                    Text(
+                      '20.0',
+                      style: kBMITextStyle,
+                    ),
+                    Text(
+                      'Your BMI result is quite low , you should eat more!',textAlign: TextAlign.center,
+                      style: kBodyTextStyle,
+                    )
+                  ],
                 ),
                 onPress: () {},
               ),
