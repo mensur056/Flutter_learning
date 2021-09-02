@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import '../constants.dart';
-
-
+import 'package:life_expectancy/constants.dart';
 
 class IconContent extends StatelessWidget {
   IconContent({required this.icon, required this.label});
@@ -13,17 +11,17 @@ class IconContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [
+      children: <Widget>[
         Icon(
           icon,
           size: 80.0,
         ),
         SizedBox(
-          height: 10,
+          height: 15.0,
         ),
         Text(
           label,
-          style: kLabelTextStyle
+          style: kLabelTextStyle,
         )
       ],
     );
