@@ -5,9 +5,21 @@ class ResultsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BMI CALCULATOR'),
+        title: Text(
+          'Your Results',
+          style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+        ),
       ),
-      body: Text('HELLO'),
+      body: Container(
+        child: Column(
+          children: [
+            Center(child: Text('Hello',style: TextStyle(fontSize: 40),)),
+            SizedBox(
+              height: 25,
+            )
+          ],
+        ),
+      ),
     );
   }
 }
