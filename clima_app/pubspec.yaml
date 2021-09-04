@@ -29,4 +29,4 @@ flutter:
   fonts:
     - family: SpartanMB
       fonts:
-        - asset: font/SpartanMB-Black.otf
+        - asset: fonts/SpartanMB-Black.otf
