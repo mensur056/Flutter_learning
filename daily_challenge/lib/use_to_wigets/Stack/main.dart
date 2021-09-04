@@ -11,7 +11,7 @@ class StackLesson extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor:Colors.black,body: Center(child: Stack(children: [blueBox,pinkBox,star],),),);
+    return  Center(child: Stack(children: [blueBox,pinkBox,star],),);
   }
 }
 Widget blueBox=Container(color: Colors.blue,height: 200,width: 200,);
