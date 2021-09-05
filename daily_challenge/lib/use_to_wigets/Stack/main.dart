@@ -24,7 +24,7 @@ class StackLesson extends StatelessWidget {
                 redBox,
                 Positioned(left: 60, top: 40, child: moonBox),
                 Positioned(left:80,top:47,child: block),
-                Positioned(left:175,top:72,child: star)
+                Positioned(left:176,top:73,child: star)
               ],
             ),
           ),
