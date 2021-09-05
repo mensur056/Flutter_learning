@@ -18,18 +18,13 @@ class StackLesson extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.black,
         body: Center(
-          child: Container(
-            //width: 350,
-            // height: 350,
-            child: Stack(
-              alignment: Alignment.center,
-              overflow: Overflow.visible,
-              children: [
-                blueBox,
-                Positioned(bottom:-20,right:-20,child: pinkBox),
-                Positioned(bottom: 0, right: 0, child: star)
-              ],
-            ),
+          child: Stack(
+            children: [
+              redBox,
+              Positioned(left: 60, top: 40, child: moonBox),
+              Positioned(left:80,top:47,child: block),
+              Positioned(left:175,top:70,child: star)
+            ],
           ),
         ),
       ),
@@ -37,18 +32,22 @@ class StackLesson extends StatelessWidget {
   }
 }
 
-Widget blueBox = Container(
-  color: Colors.blue,
+Widget redBox = Container(
+  color: Colors.red,
+  width: 400,
   height: 200,
-  width: 200,
 );
-Widget pinkBox = Container(
-  color: Colors.pink,
-  height: 100,
-  width: 100,
+Widget moonBox = Container(
+  width: 125,
+  height: 125,
+  decoration: BoxDecoration(
+      color: Colors.white, borderRadius: BorderRadius.circular(70)),
 );
-Widget star = Icon(
-  Icons.star,
-  size: 50,
-  color: Colors.yellow,
+Widget block = Container(
+  width: 110,
+  height: 110,
+  decoration:
+      BoxDecoration(color: Colors.red, borderRadius: BorderRadius.circular(55)),
 );
+Widget star= Icon(Icons.star,size: 50,color: Colors.white,);
+
