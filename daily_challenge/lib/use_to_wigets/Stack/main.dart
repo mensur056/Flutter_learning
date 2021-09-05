@@ -15,13 +15,20 @@ class StackLesson extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Scaffold(backgroundColor: Colors.black,
+      child: Scaffold(
+        backgroundColor: Colors.black,
         body: Center(
           child: Container(
-            width: 350,
-            height: 350,
+            //width: 350,
+            // height: 350,
             child: Stack(
-              children: [blueBox, pinkBox, Positioned(bottom: 0,right:0, child: star)],
+              alignment: Alignment.center,
+              overflow: Overflow.visible,
+              children: [
+                blueBox,
+                Positioned(bottom:-20,right:-20,child: pinkBox),
+                Positioned(bottom: 0, right: 0, child: star)
+              ],
             ),
           ),
         ),
