@@ -1,9 +1,14 @@
+
+import 'dart:js';
+
+import 'package:path/path.dart';
+
 import 'package:daily_challenge/use_to_wigets/StateManagement/state_data.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 void main() => runApp(Provider<StateData>(
-    create: (BuildContext context) => StateData(), child: MyApp()));
+    create: (BuildContext context) { return StateData();}, child: MyApp()));
 
 class MyApp extends StatelessWidget {
   @override
@@ -37,6 +42,7 @@ class MyHomePage extends StatelessWidget {
 }
 
 class SolWidgetA extends StatelessWidget {
+ String city=Provider.of<StateData>(context).city;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -48,7 +54,7 @@ class SolWidgetA extends StatelessWidget {
               style: TextStyle(fontSize: 20),
             ),
             Text(
-              'Sehir: ..... ',
+              'Sehir: $city ',
               style: TextStyle(fontSize: 20),
             )
           ],
