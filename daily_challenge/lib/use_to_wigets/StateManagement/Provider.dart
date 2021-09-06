@@ -1,6 +1,9 @@
+import 'package:daily_challenge/use_to_wigets/StateManagement/state_data.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(Provider<StateData>(
+    create: (BuildContext context) => StateData(), child: MyApp()));
 
 class MyApp extends StatelessWidget {
   @override
@@ -13,8 +16,6 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  String city='Paris';
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,8 +27,8 @@ class MyHomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Expanded(child: SolWidgetA(city: city,)),
-            Expanded(child: SagWidgetA(city: city,))
+            Expanded(child: SolWidgetA()),
+            Expanded(child: SagWidgetA())
           ],
         ),
       ),
@@ -36,9 +37,6 @@ class MyHomePage extends StatelessWidget {
 }
 
 class SolWidgetA extends StatelessWidget {
-  final String city;
-
-  const SolWidgetA({ required this.city});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -50,7 +48,7 @@ class SolWidgetA extends StatelessWidget {
               style: TextStyle(fontSize: 20),
             ),
             Text(
-              'Sehir: $city ',
+              'Sehir: ..... ',
               style: TextStyle(fontSize: 20),
             )
           ],
@@ -59,9 +57,6 @@ class SolWidgetA extends StatelessWidget {
 }
 
 class SagWidgetA extends StatelessWidget {
-  final String city;
-
-const SagWidgetA({ required this.city});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -71,14 +66,13 @@ const SagWidgetA({ required this.city});
           'SagWidget A',
           style: TextStyle(fontSize: 20),
         ),
-        SagWidgetB(city:city)
+        SagWidgetB()
       ]),
     );
   }
 }
 
 class SagWidgetB extends StatelessWidget {
-  var city;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -90,16 +84,13 @@ class SagWidgetB extends StatelessWidget {
           'SagWidget B',
           style: TextStyle(fontSize: 20),
         ),
-        SagWidgetC(city: city,)
+        SagWidgetC()
       ]),
     );
   }
 }
 
 class SagWidgetC extends StatelessWidget {
-  final String city;
-
-  const SagWidgetC({ required this.city});
   @override
   Widget build(BuildContext context) {
     return Container(
