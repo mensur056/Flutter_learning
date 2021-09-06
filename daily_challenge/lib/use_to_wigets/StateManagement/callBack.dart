@@ -27,7 +27,7 @@ class MyHomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Expanded(child: SolWidgetA(city: city,)),
-            Expanded(child: SagWidgetA())
+            Expanded(child: SagWidgetA(city: city,))
           ],
         ),
       ),
@@ -59,6 +59,9 @@ class SolWidgetA extends StatelessWidget {
 }
 
 class SagWidgetA extends StatelessWidget {
+  final String city;
+
+const SagWidgetA({ required this.city});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -68,13 +71,14 @@ class SagWidgetA extends StatelessWidget {
           'SagWidget A',
           style: TextStyle(fontSize: 20),
         ),
-        SagWidgetB()
+        SagWidgetB(city:city)
       ]),
     );
   }
 }
 
 class SagWidgetB extends StatelessWidget {
+  var city;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -86,13 +90,16 @@ class SagWidgetB extends StatelessWidget {
           'SagWidget B',
           style: TextStyle(fontSize: 20),
         ),
-        SagWidgetC()
+        SagWidgetC(city: city,)
       ]),
     );
   }
 }
 
 class SagWidgetC extends StatelessWidget {
+  final String city;
+
+  const SagWidgetC({ required this.city});
   @override
   Widget build(BuildContext context) {
     return Container(
