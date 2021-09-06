@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
+  String city='Paris';
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class MyHomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Expanded(child: SolWidgetA()),
+            Expanded(child: SolWidgetA(city: city,)),
             Expanded(child: SagWidgetA())
           ],
         ),
@@ -35,6 +36,9 @@ class MyHomePage extends StatelessWidget {
 }
 
 class SolWidgetA extends StatelessWidget {
+  final String city;
+
+  const SolWidgetA({ required this.city});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -46,7 +50,7 @@ class SolWidgetA extends StatelessWidget {
               style: TextStyle(fontSize: 20),
             ),
             Text(
-              'Sehir: ..... ',
+              'Sehir: $city ',
               style: TextStyle(fontSize: 20),
             )
           ],
