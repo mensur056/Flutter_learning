@@ -1,11 +1,12 @@
 
-import 'dart:js';
+
 
 import 'package:path/path.dart';
 
 import 'package:daily_challenge/use_to_wigets/StateManagement/state_data.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'state_data.dart';
 
 void main() => runApp(Provider<StateData>(
     create: (BuildContext context) { return StateData();}, child: MyApp()));
@@ -54,7 +55,7 @@ class SolWidgetA extends StatelessWidget {
               style: TextStyle(fontSize: 20),
             ),
             Text(
-              'Sehir: $city ',
+              'City: $city ',
               style: TextStyle(fontSize: 20),
             )
           ],
