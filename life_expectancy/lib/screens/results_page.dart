@@ -14,7 +14,7 @@ ResultsPage({required this.bmiResult,required this.interpretation,required this.
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'BMI Hesablama',
+          'BMI CALCULATOR',
         ),
       ),
       body: Container(
@@ -25,7 +25,7 @@ ResultsPage({required this.bmiResult,required this.interpretation,required this.
             Expanded(
               child: Container(
                 child: Text(
-                  'Sənin Nəticən',
+                  'Your Result',
                   style: kTitleTextStyle,
                 ),
               ),
@@ -54,7 +54,7 @@ ResultsPage({required this.bmiResult,required this.interpretation,required this.
                 ),
               ),
             ),BottomButton(
-              buttonTitle: 'YENIDƏN HESABLA',
+              buttonTitle: 'RE-CALCULATOR',
               onTap: () {
                 Navigator.pop(context);
               },
