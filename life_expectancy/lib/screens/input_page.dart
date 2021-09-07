@@ -28,7 +28,7 @@ class _InputPageState extends State<InputPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text('Həyat Gözləntisi')),
+        title: Center(child: Text('BMI Calculator')),
       ),
       body: Center(
         child: Column(
@@ -49,7 +49,7 @@ class _InputPageState extends State<InputPage> {
                           : kInactiveCardColour,
                       cardChild: IconContent(
                         icon: FontAwesomeIcons.mars,
-                        label: "KİŞİ",
+                        label: "MALE",
                       ),
                     ),
                   ),
@@ -65,7 +65,7 @@ class _InputPageState extends State<InputPage> {
                           : kInactiveCardColour,
                       cardChild: IconContent(
                         icon: FontAwesomeIcons.venus,
-                        label: "QADIN",
+                        label: "FEMALE",
                       ),
                     ),
                   )
@@ -80,7 +80,7 @@ class _InputPageState extends State<InputPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      'Boy',
+                      'HEIGHT',
                       style: kLabelTextStyle,
                     ),
                     Row(
@@ -135,7 +135,7 @@ class _InputPageState extends State<InputPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'Kilo',
+                            'WEIGHT',
                             style: kLabelTextStyle,
                           ),
                           Text(
@@ -178,7 +178,7 @@ class _InputPageState extends State<InputPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'YAŞ',
+                            'AGE',
                             style: kLabelTextStyle,
                           ),
                           Text(
@@ -228,7 +228,7 @@ class _InputPageState extends State<InputPage> {
                   ),
                 );
               },
-              buttonTitle: 'HESABLA',
+              buttonTitle: 'CALCULATOR',
             )
           ],
         ),
