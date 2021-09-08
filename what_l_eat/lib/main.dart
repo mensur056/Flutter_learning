@@ -23,9 +23,16 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class FoodPage extends StatelessWidget {
+class FoodPage extends StatefulWidget {
+  @override
+  _FoodPageState createState() => _FoodPageState();
+}
+
+class _FoodPageState extends State<FoodPage> {
   int soupNumber=5;
+
   int eatNumber= 2;
+
   int sweetNumber =3;
 
   @override
@@ -37,8 +44,10 @@ class FoodPage extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: FlatButton(
                 splashColor: Colors.white,highlightColor: Colors.white,
-                onPressed: () {
-                  soupNumber =4;
+                onPressed: () {setState(() {soupNumber =4;
+
+                });
+
                 },
                 child: Image.asset('images/corba_$soupNumber.jpg')),
           ),
@@ -49,17 +58,21 @@ class FoodPage extends StatelessWidget {
             child: FlatButton(
                 splashColor: Colors.white,
                 highlightColor: Colors.white,
-                onPressed: () {eatNumber=5;},
-                child: Image.asset('images/yemek_1.jpg')),
+                onPressed: () {setState(() {eatNumber=5;
+
+                });},
+                child: Image.asset('images/yemek_$eatNumber.jpg')),
           ),
         ),
         Expanded(
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: FlatButton(highlightColor: Colors.white,splashColor: Colors.white,
-                onPressed: () {
-              sweetNumber= 2;
-                }, child: Image.asset('images/tatli_1.jpg')),
+                onPressed: () {setState(() {
+                  sweetNumber= 2;
+                });
+
+                }, child: Image.asset('images/tatli_$sweetNumber.jpg')),
           ),
         )
       ]),
