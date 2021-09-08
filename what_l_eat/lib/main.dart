@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'dart:math';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -29,11 +29,11 @@ class FoodPage extends StatefulWidget {
 }
 
 class _FoodPageState extends State<FoodPage> {
-  int soupNumber=5;
+  int soupNumber = 1;
 
-  int eatNumber= 2;
+  int eatNumber = 1;
 
-  int sweetNumber =3;
+  int sweetNumber = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -43,11 +43,12 @@ class _FoodPageState extends State<FoodPage> {
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: FlatButton(
-                splashColor: Colors.white,highlightColor: Colors.white,
-                onPressed: () {setState(() {soupNumber =4;
-
-                });
-
+                splashColor: Colors.white,
+                highlightColor: Colors.white,
+                onPressed: () {
+                  setState(() {
+                    soupNumber = Random().nextInt(5)+1;
+                  });
                 },
                 child: Image.asset('images/corba_$soupNumber.jpg')),
           ),
@@ -58,21 +59,26 @@ class _FoodPageState extends State<FoodPage> {
             child: FlatButton(
                 splashColor: Colors.white,
                 highlightColor: Colors.white,
-                onPressed: () {setState(() {eatNumber=5;
-
-                });},
+                onPressed: () {
+                  setState(() {
+                    eatNumber = Random().nextInt(5)+1;
+                  });
+                },
                 child: Image.asset('images/yemek_$eatNumber.jpg')),
           ),
         ),
         Expanded(
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: FlatButton(highlightColor: Colors.white,splashColor: Colors.white,
-                onPressed: () {setState(() {
-                  sweetNumber= 2;
-                });
-
-                }, child: Image.asset('images/tatli_$sweetNumber.jpg')),
+            child: FlatButton(
+                highlightColor: Colors.white,
+                splashColor: Colors.white,
+                onPressed: () {
+                  setState(() {
+                    sweetNumber = Random().nextInt(5)+1;
+                  });
+                },
+                child: Image.asset('images/tatli_$sweetNumber.jpg')),
           ),
         )
       ]),
