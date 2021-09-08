@@ -12,7 +12,8 @@ class MyApp extends StatelessWidget {
           title: Center(
             child: Text(
               'What should I eat today',
-              style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
+              style:
+                  TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
             ),
           ),
         ),
@@ -27,18 +28,32 @@ class FoodPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Column(children: [
-        Expanded(child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Image.asset('images/corba_1.jpg'),
-        )),
-        Expanded(child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Image.asset('images/yemek_1.jpg'),
-        )),
-        Expanded(child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Image.asset('images/tatli_1.jpg'),
-        ))
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: FlatButton(
+                splashColor: Colors.white,highlightColor: Colors.white,
+                onPressed: () {},
+                child: Image.asset('images/corba_1.jpg')),
+          ),
+        ),
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: FlatButton(
+                splashColor: Colors.white,
+                highlightColor: Colors.white,
+                onPressed: () {},
+                child: Image.asset('images/yemek_1.jpg')),
+          ),
+        ),
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: FlatButton(highlightColor: Colors.white,splashColor: Colors.white,
+                onPressed: () {}, child: Image.asset('images/tatli_1.jpg')),
+          ),
+        )
       ]),
     );
   }
