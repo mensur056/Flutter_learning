@@ -48,6 +48,9 @@ class _FoodPageState extends State<FoodPage> {
                 onPressed: () {
                   setState(() {
                     soupNumber = Random().nextInt(5)+1;
+                    eatNumber = Random().nextInt(5)+1;
+                    sweetNumber = Random().nextInt(5)+1;
+
                   });
                 },
                 child: Image.asset('images/corba_$soupNumber.jpg')),
@@ -61,7 +64,10 @@ class _FoodPageState extends State<FoodPage> {
                 highlightColor: Colors.white,
                 onPressed: () {
                   setState(() {
+                    soupNumber = Random().nextInt(5)+1;
                     eatNumber = Random().nextInt(5)+1;
+                    sweetNumber = Random().nextInt(5)+1;
+
                   });
                 },
                 child: Image.asset('images/yemek_$eatNumber.jpg')),
@@ -75,7 +81,10 @@ class _FoodPageState extends State<FoodPage> {
                 splashColor: Colors.white,
                 onPressed: () {
                   setState(() {
+                    soupNumber = Random().nextInt(5)+1;
+                    eatNumber = Random().nextInt(5)+1;
                     sweetNumber = Random().nextInt(5)+1;
+
                   });
                 },
                 child: Image.asset('images/tatli_$sweetNumber.jpg')),
