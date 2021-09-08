@@ -24,6 +24,10 @@ class MyApp extends StatelessWidget {
 }
 
 class FoodPage extends StatelessWidget {
+  int soupNumber=5;
+  int eatNumber= 2;
+  int sweetNumber =3;
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -33,8 +37,10 @@ class FoodPage extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: FlatButton(
                 splashColor: Colors.white,highlightColor: Colors.white,
-                onPressed: () {},
-                child: Image.asset('images/corba_1.jpg')),
+                onPressed: () {
+                  soupNumber =4;
+                },
+                child: Image.asset('images/corba_$soupNumber.jpg')),
           ),
         ),
         Expanded(
@@ -43,7 +49,7 @@ class FoodPage extends StatelessWidget {
             child: FlatButton(
                 splashColor: Colors.white,
                 highlightColor: Colors.white,
-                onPressed: () {},
+                onPressed: () {eatNumber=5;},
                 child: Image.asset('images/yemek_1.jpg')),
           ),
         ),
@@ -51,7 +57,9 @@ class FoodPage extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: FlatButton(highlightColor: Colors.white,splashColor: Colors.white,
-                onPressed: () {}, child: Image.asset('images/tatli_1.jpg')),
+                onPressed: () {
+              sweetNumber= 2;
+                }, child: Image.asset('images/tatli_1.jpg')),
           ),
         )
       ]),
