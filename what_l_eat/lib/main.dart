@@ -27,9 +27,18 @@ class FoodPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Column(children: [
-        Expanded(child: Image.asset('images/corba_1.jpg')),
-        Expanded(child: Image.asset('images/yemek_1.jpg')),
-        Expanded(child: Image.asset('images/tatli_1.jpg'))
+        Expanded(child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Image.asset('images/corba_1.jpg'),
+        )),
+        Expanded(child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Image.asset('images/yemek_1.jpg'),
+        )),
+        Expanded(child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Image.asset('images/tatli_1.jpg'),
+        ))
       ]),
     );
   }
