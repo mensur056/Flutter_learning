@@ -34,6 +34,12 @@ class _FoodPageState extends State<FoodPage> {
   int eatNumber = 1;
 
   int sweetNumber = 1;
+  void changeFood(){setState(() {
+    soupNumber = Random().nextInt(5)+1;
+    eatNumber = Random().nextInt(5)+1;
+    sweetNumber = Random().nextInt(5)+1;
+
+  });}
 
   @override
   Widget build(BuildContext context) {
@@ -45,14 +51,7 @@ class _FoodPageState extends State<FoodPage> {
             child: FlatButton(
                 splashColor: Colors.white,
                 highlightColor: Colors.white,
-                onPressed: () {
-                  setState(() {
-                    soupNumber = Random().nextInt(5)+1;
-                    eatNumber = Random().nextInt(5)+1;
-                    sweetNumber = Random().nextInt(5)+1;
-
-                  });
-                },
+                onPressed: changeFood,
                 child: Image.asset('images/corba_$soupNumber.jpg')),
           ),
         ),
@@ -62,14 +61,7 @@ class _FoodPageState extends State<FoodPage> {
             child: FlatButton(
                 splashColor: Colors.white,
                 highlightColor: Colors.white,
-                onPressed: () {
-                  setState(() {
-                    soupNumber = Random().nextInt(5)+1;
-                    eatNumber = Random().nextInt(5)+1;
-                    sweetNumber = Random().nextInt(5)+1;
-
-                  });
-                },
+                onPressed: changeFood,
                 child: Image.asset('images/yemek_$eatNumber.jpg')),
           ),
         ),
@@ -79,14 +71,7 @@ class _FoodPageState extends State<FoodPage> {
             child: FlatButton(
                 highlightColor: Colors.white,
                 splashColor: Colors.white,
-                onPressed: () {
-                  setState(() {
-                    soupNumber = Random().nextInt(5)+1;
-                    eatNumber = Random().nextInt(5)+1;
-                    sweetNumber = Random().nextInt(5)+1;
-
-                  });
-                },
+                onPressed:  changeFood,
                 child: Image.asset('images/tatli_$sweetNumber.jpg')),
           ),
         )
