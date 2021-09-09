@@ -25,7 +25,7 @@ class Falci extends StatefulWidget {
 }
 
 class _FalciState extends State<Falci> {
-  int yanitIndex=0;
+  int yanitIndex = 0;
   List<String> yanitlar = [
     'TIKLA FALIN GELSİN',
     'AŞK: Bugün, aşk ve ilişki hayatınızda biraz daha temkinli olmalısın. Onu her konuda doğru anlamda anladığından da emin misin?',
@@ -49,8 +49,8 @@ class _FalciState extends State<Falci> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.purpleAccent,
-      appBar: AppBar(
-        title: Center(child: Text("Gunun Fali")),
+      appBar: AppBar(backgroundColor: Colors.purple,
+        title: Center(child: Text("Günün Fali")),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -65,7 +65,12 @@ class _FalciState extends State<Falci> {
           ),
           Card(
             margin: EdgeInsets.symmetric(vertical: 5, horizontal: 40),
-            child: FlatButton(onPressed: (){yanitIndex=Random().nextInt(5)+1;},
+            child: FlatButton(
+              onPressed: () {setState(() { yanitIndex = Random().nextInt(5) + 1;
+
+              });
+
+              },
               child: ListTile(
                 leading: Icon(
                   Icons.favorite,
@@ -80,7 +85,12 @@ class _FalciState extends State<Falci> {
           ),
           Card(
             margin: EdgeInsets.symmetric(vertical: 5, horizontal: 40),
-            child: FlatButton(onPressed: (){yanitIndex=Random().nextInt(5)+6;},
+            child: FlatButton(
+              onPressed: () {setState(() {
+                yanitIndex = Random().nextInt(5) + 6;
+              });
+
+              },
               child: ListTile(
                 leading: Icon(
                   Icons.shop,
@@ -95,7 +105,12 @@ class _FalciState extends State<Falci> {
           ),
           Card(
             margin: EdgeInsets.symmetric(vertical: 5, horizontal: 40),
-            child: FlatButton(onPressed: (){yanitIndex=Random().nextInt(5)+11;},
+            child: FlatButton(
+              onPressed: () {setState(() {
+                yanitIndex = Random().nextInt(5) + 11;
+              });
+
+              },
               child: ListTile(
                 leading: Icon(
                   Icons.explore,
@@ -106,6 +121,15 @@ class _FalciState extends State<Falci> {
                   style: TextStyle(fontSize: 20, color: Colors.blue),
                 ),
               ),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 15),
+            height: 150,
+            width: double.infinity,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+              child: Center(child: Text(yanitlar[yanitIndex])),
             ),
           )
         ],
