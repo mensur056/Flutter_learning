@@ -46,7 +46,7 @@ class _FalciState extends State<Falci> {
               leading: Icon(
                 Icons.favorite,
                 color: Colors.red,
-              ),title: Text('ASK DRUMU'),
+              ),title: Text('ASK DRUMU',style: TextStyle(fontSize: 20,color: Colors.red),),
             ),
           ),
           Card(margin: EdgeInsets.symmetric(vertical: 5,horizontal: 40),
@@ -54,7 +54,7 @@ class _FalciState extends State<Falci> {
               leading: Icon(
                 Icons.shop,
                 color: Colors.green,
-              ),title: Text('PARA DRUMU'
+              ),title: Text('PARA DRUMU',style: TextStyle(fontSize: 20,color: Colors.green),
             ),
             ),
           ),
@@ -63,7 +63,7 @@ class _FalciState extends State<Falci> {
               leading: Icon(
                 Icons.explore,
                 color: Colors.blue,
-              ),title: Text('GUNLUK TAVSIYE'),
+              ),title: Text('GUNLUK TAVSIYE',style: TextStyle(fontSize: 20,color: Colors.blue),),
             ),
           )
         ],
