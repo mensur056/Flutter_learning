@@ -117,7 +117,7 @@ class _FalciState extends State<Falci> {
                   color: Colors.blue,
                 ),
                 title: Text(
-                  'GUNLUK TAVSIYE',
+                  'GÜNLÜK TAVSIYE',
                   style: TextStyle(fontSize: 20, color: Colors.blue),
                 ),
               ),
