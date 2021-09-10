@@ -12,9 +12,16 @@ class _SearchPageState extends State<SearchPage> {
         decoration: BoxDecoration(
             image: DecorationImage(
                 fit: BoxFit.cover, image: AssetImage('images/search.jpg'))),
-        child: Scaffold(appBar: AppBar(elevation: 0,backgroundColor: Colors.transparent,),
+        child: Scaffold(
+          appBar: AppBar(
+            elevation: 0,
+            backgroundColor: Colors.transparent,
+          ),
           backgroundColor: Colors.transparent,
-
+          body: Column(children: [Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 60),
+            child: TextField(decoration: InputDecoration(hintText: 'Arama çubuğu'),),
+          )],),
         ));
   }
 }
