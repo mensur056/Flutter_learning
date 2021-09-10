@@ -18,10 +18,17 @@ class _SearchPageState extends State<SearchPage> {
             backgroundColor: Colors.transparent,
           ),
           backgroundColor: Colors.transparent,
-          body: Column(children: [Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 60),
-            child: TextField(decoration: InputDecoration(hintText: 'Arama çubuğu'),),
-          )],),
+          body: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 60),
+                child: TextField(
+                  decoration: InputDecoration(hintText: 'Arama çubuğu'),
+                  style: TextStyle(fontSize: 35),
+                ),
+              )
+            ],
+          ),
         ));
   }
 }
