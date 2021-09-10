@@ -12,7 +12,7 @@ class _SearchPageState extends State<SearchPage> {
         decoration: BoxDecoration(
             image: DecorationImage(
                 fit: BoxFit.cover, image: AssetImage('images/search.jpg'))),
-        child: Scaffold(
+        child: Scaffold(appBar: AppBar(elevation: 0,backgroundColor: Colors.transparent,),
           backgroundColor: Colors.transparent,
 
         ));
