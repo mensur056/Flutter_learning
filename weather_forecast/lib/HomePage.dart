@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_forecast/search_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -28,7 +29,9 @@ class _HomePageState extends State<HomePage> {
                       'Ankara',
                       style: TextStyle(fontSize: 30),
                     ),
-                    IconButton(onPressed: () {}, icon: Icon(Icons.search))
+                    IconButton(onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>SearchPage()));
+                    }, icon: Icon(Icons.search))
                   ],
                 )
               ],
