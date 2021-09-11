@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_forecast_app/search_page.dart';
+import 'package:http/http.dart' as http;
 
 class HomePage extends StatefulWidget {
   @override
@@ -7,6 +8,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  String sehir = 'Ankara';
+  int sicaklik = 20;
+  var locationData;
+
+  void getLocationData() async {
+    locationData = await http.get(Uri.http('https://www.metaweather.com/api/location/search/?query=london', ''));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,19 +28,33 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                FlatButton(
+                  color: Colors.red,
+                  onPressed: () {
+                    getLocationData();
+                    print('location : $locationData');
+                  },
+                  child: Text('click me'),
+                ),
                 Text(
-                  '20° C',
+                  '$sicaklik° C',
                   style: TextStyle(fontSize: 70, fontWeight: FontWeight.bold),
                 ),
-                Row(mainAxisAlignment: MainAxisAlignment.center,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Ankara',
+                      '$sehir',
                       style: TextStyle(fontSize: 30),
                     ),
-                    IconButton(onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>SearchPage()));
-                    }, icon: Icon(Icons.search))
+                    IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SearchPage()));
+                        },
+                        icon: Icon(Icons.search))
                   ],
                 )
               ],
