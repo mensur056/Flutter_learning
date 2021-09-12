@@ -22,7 +22,37 @@ class _MyCalculatorState extends State<MyCalculator> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Row(
+              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [CalculatorButton(text: '9',),
+                  CalculatorButton(text: '8',),
+                  CalculatorButton(text: '7',),
+                  CalculatorButton(text: '6',),
+
+
+
+                ],
+              ),
+              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [CalculatorButton(text: '9',),
+                  CalculatorButton(text: '8',),
+                  CalculatorButton(text: '7',),
+                  CalculatorButton(text: '6',),
+
+
+
+                ],
+              ),
+              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [CalculatorButton(text: '9',),
+                  CalculatorButton(text: '8',),
+                  CalculatorButton(text: '7',),
+                  CalculatorButton(text: '6',),
+
+
+
+                ],
+              ),
+              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [CalculatorButton(text: '9',),
                   CalculatorButton(text: '8',),
                   CalculatorButton(text: '7',),
