@@ -23,10 +23,10 @@ class _MyCalculatorState extends State<MyCalculator> {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Row(
-                children: [CalculatorButton(),
-                  CalculatorButton(),
-                  CalculatorButton(),
-                  CalculatorButton(),
+                children: [CalculatorButton(text: '9',),
+                  CalculatorButton(text: '8',),
+                  CalculatorButton(text: '7',),
+                  CalculatorButton(text: '6',),
 
 
 

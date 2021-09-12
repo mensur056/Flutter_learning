@@ -1,16 +1,10 @@
 
-
-
 import 'package:flutter/material.dart';
 
-class CalculatorButton extends StatefulWidget {
+class CalculatorButton extends StatelessWidget {
+final String text;
+const CalculatorButton({required this.text});
 
-
-  @override
-  _CalculatorButtonState createState() => _CalculatorButtonState();
-}
-
-class _CalculatorButtonState extends State<CalculatorButton> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,7 +17,7 @@ class _CalculatorButtonState extends State<CalculatorButton> {
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(5)),
           child: Text(
-            '9',
+            text,
             style: TextStyle(fontSize: 24),
           ),
           color: Colors.blue,
