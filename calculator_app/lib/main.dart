@@ -16,7 +16,21 @@ class _MyCalculatorState extends State<MyCalculator> {
       home: Scaffold(
         appBar: AppBar(
           title: Text('Calculator'),
-        ),body: Container(child: Column(children: [Row(children: [Container()],)],),),
+        ),
+        body: Container(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Row(
+                children: [
+                  Container(
+                    margin: EdgeInsets.all(10.0),
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
