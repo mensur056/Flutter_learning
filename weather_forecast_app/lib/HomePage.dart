@@ -11,8 +11,7 @@ class _HomePageState extends State<HomePage> {
   String sehir = 'Ankara';
   int sicaklik = 20;
   var locationData;
-
-  void getLocationData() async {
+  Future<void> getLocationData() async {
     locationData = await http.get(Uri.http('https://www.metaweather.com/api/location/search/?query=london', ''));
   }
 
@@ -30,9 +29,12 @@ class _HomePageState extends State<HomePage> {
               children: [
                 FlatButton(
                   color: Colors.red,
-                  onPressed: () {
-                    getLocationData();
+                  onPressed: () async{
+
                     print('location : $locationData');
+                   await getLocationData();
+                   print(locationData.body);
+                   print(locationData.body.runtimeType);
                   },
                   child: Text('click me'),
                 ),
