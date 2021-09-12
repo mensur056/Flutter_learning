@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(MyCalculator());
 
@@ -25,6 +26,19 @@ class _MyCalculatorState extends State<MyCalculator> {
                 children: [
                   Container(
                     margin: EdgeInsets.all(10.0),
+                    child: SizedBox(
+                      width: 70,
+                      height: 70,
+                      child: FlatButton(
+                          onPressed: () {},
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5)),
+                          child: Text(
+                            '9',
+                            style: GoogleFonts.rubik(
+                                textStyle: TextStyle(fontSize: 24)),
+                          )),
+                    ),
                   )
                 ],
               )
