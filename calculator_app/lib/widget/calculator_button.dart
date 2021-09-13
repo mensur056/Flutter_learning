@@ -20,8 +20,8 @@ class CalculatorButton extends StatelessWidget {
     return Container(
       margin: EdgeInsets.all(10.0),
       child: SizedBox(
-        width: 70,
-        height: 70,
+        width: 55,
+        height: 55,
         child: FlatButton(
           onPressed: () {callBack!(text);},
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
