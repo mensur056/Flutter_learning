@@ -15,6 +15,7 @@ class _MyCalculatorState extends State<MyCalculator> {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blueGrey),
       home: Scaffold(
+        backgroundColor: Color(0xFF0A0E21),
         appBar: AppBar(
           title: Text('Calculator'),
         ),
@@ -22,46 +23,72 @@ class _MyCalculatorState extends State<MyCalculator> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [CalculatorButton(text: '9',),
-                  CalculatorButton(text: '8',),
-                  CalculatorButton(text: '7',),
-                  CalculatorButton(text: '6',),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  CalculatorButton(
+                    callBack: null,
+                    text: 'AC',
+                    textColor: 0xFF000000,
+                    textSize: 20,
+                    fillColor: 0xFF8ac4d0,
 
-
-
+                  ),
+                  CalculatorButton(
+                    text: 'C',
+                    textColor: 0xFF000000,
+                    textSize: 20,
+                    fillColor: 0xFF8ac4d0,
+                    callBack: null,
+                  ),
+                  CalculatorButton(
+                    callBack: null,
+                    text: '<',
+                    textColor: 0xFF000000,
+                    textSize: 20,
+                    fillColor: 0xFF8ac4d0,
+                  ),
+                  CalculatorButton(
+                    callBack: null,
+                    text: '/',
+                    textColor: 0xFF000000,
+                    textSize: 20,
+                    fillColor: 0xFF8ac4d0,
+                  ),
                 ],
               ),
-              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [CalculatorButton(text: '',),
-                  CalculatorButton(text: '',),
-                  CalculatorButton(text: '',),
-                  CalculatorButton(text: '',),
+              Row(
+                children: [
+                  CalculatorButton(
+                    callBack: null,
+                    text: '9',
+                    textColor: 0xFF000000,
+                    textSize: 20,
+                    fillColor: 0xFF8ac4d0,
 
-
-
+                  ), CalculatorButton(
+                    callBack: null,
+                    text: '8',
+                    textColor: 0xFF000000,
+                    textSize: 20,
+                    fillColor: 0xFF8ac4d0,
+                  ),
+                  CalculatorButton(
+                    callBack: null,
+                    text: '7',
+                    textColor: 0xFF000000,
+                    textSize: 20,
+                    fillColor: 0xFF8ac4d0,
+                  ),
+                  CalculatorButton(
+                    callBack: null,
+                    text: 'X',
+                    textColor: 0xFF000000,
+                    textSize: 20,
+                    fillColor: 0xFF8ac4d0,
+                  ),
                 ],
               ),
-              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [CalculatorButton(text: '5',),
-                  CalculatorButton(text: '4',),
-                  CalculatorButton(text: '3',),
-                  CalculatorButton(text: '2',),
-
-
-
-                ],
-              ),
-              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [CalculatorButton(text: '9',),
-                  CalculatorButton(text: '8',),
-                  CalculatorButton(text: '7',),
-                  CalculatorButton(text: '6',),
-
-
-
-                ],
-              )
             ],
           ),
         ),

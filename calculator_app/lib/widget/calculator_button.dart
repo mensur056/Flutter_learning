@@ -2,8 +2,18 @@
 import 'package:flutter/material.dart';
 
 class CalculatorButton extends StatelessWidget {
-final String text;
-const CalculatorButton({required this.text});
+  final String text;
+  final int fillColor;
+  final int textColor;
+  final double textSize;
+  final Function callBack;
+
+  const CalculatorButton(
+      {required this.text,
+       required this.callBack,
+      required this.fillColor,
+      required this.textColor,
+      required this.textSize});
 
   @override
   Widget build(BuildContext context) {
@@ -13,17 +23,17 @@ const CalculatorButton({required this.text});
         width: 70,
         height: 70,
         child: FlatButton(
-          onPressed: () {},
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(5)),
+          onPressed: () {callBack(text);},
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
           child: Text(
             text,
-            style: TextStyle(fontSize: 24),
+            style: TextStyle(fontSize: textSize),
           ),
-          color: Colors.blue,
-          textColor: Color(0xFF000000),
+          color: Color(fillColor),
+          textColor: Color(textColor),
         ),
       ),
     );
   }
+
 }
