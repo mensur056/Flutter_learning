@@ -42,7 +42,21 @@ class _MyCalculatorState extends State<MyCalculator> {
         res = (firstNum + secondNum).toString();
         history =
             firstNum.toString() + operation.toString() + secondNum.toString();
+      } if (operation == '-') {
+        res = (firstNum - secondNum).toString();
+        history =
+            firstNum.toString() + operation.toString() + secondNum.toString();
+      } if (operation == 'X') {
+        res = (firstNum * secondNum).toString();
+        history =
+            firstNum.toString() + operation.toString() + secondNum.toString();
+      } if (operation == '/') {
+        res = (firstNum / secondNum).toString();
+        history =
+            firstNum.toString() + operation.toString() + secondNum.toString();
       }
+    }else{
+      res=int.parse(textToDisplay+btnVal).toString();
     }
   }
 
