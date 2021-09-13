@@ -29,6 +29,8 @@ class _MyCalculatorState extends State<MyCalculator> {
       secondNum = 0;
       history = '';
       res = '';
+    } else if (btnVal == '+/-') {
+      if (textToDisplay[0] != '-'){res='-'+textToDisplay;}else{res=textToDisplay.substring(1);}
     } else if (btnVal == '+' ||
         btnVal == '-' ||
         btnVal == '/' ||
@@ -42,23 +44,27 @@ class _MyCalculatorState extends State<MyCalculator> {
         res = (firstNum + secondNum).toString();
         history =
             firstNum.toString() + operation.toString() + secondNum.toString();
-      } if (operation == '-') {
+      }
+      if (operation == '-') {
         res = (firstNum - secondNum).toString();
         history =
             firstNum.toString() + operation.toString() + secondNum.toString();
-      } if (operation == 'X') {
+      }
+      if (operation == 'X') {
         res = (firstNum * secondNum).toString();
         history =
             firstNum.toString() + operation.toString() + secondNum.toString();
-      } if (operation == '/') {
+      }
+      if (operation == '/') {
         res = (firstNum / secondNum).toString();
         history =
             firstNum.toString() + operation.toString() + secondNum.toString();
       }
-    }else{
-      res=int.parse(textToDisplay+btnVal).toString();
-    }setState(() {
-     textToDisplay=res;
+    } else {
+      res = int.parse(textToDisplay + btnVal).toString();
+    }
+    setState(() {
+      textToDisplay = res;
     });
   }
 
