@@ -57,7 +57,9 @@ class _MyCalculatorState extends State<MyCalculator> {
       }
     }else{
       res=int.parse(textToDisplay+btnVal).toString();
-    }
+    }setState(() {
+     textToDisplay=res;
+    });
   }
 
   @override
@@ -78,7 +80,7 @@ class _MyCalculatorState extends State<MyCalculator> {
                 child: Padding(
                   padding: EdgeInsets.only(right: 12),
                   child: Text(
-                    '98x7',
+                    history,
                     style: TextStyle(fontSize: 24, color: Color(0x66FFFFFF)),
                   ),
                 ),
@@ -88,7 +90,7 @@ class _MyCalculatorState extends State<MyCalculator> {
                 child: Padding(
                   padding: EdgeInsets.all(12),
                   child: Text(
-                    '987',
+                    textToDisplay,
                     style: TextStyle(fontSize: 48, color: Colors.white),
                   ),
                 ),
