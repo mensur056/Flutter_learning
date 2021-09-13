@@ -9,6 +9,43 @@ class MyCalculator extends StatefulWidget {
 }
 
 class _MyCalculatorState extends State<MyCalculator> {
+  int firstNum = 0;
+  int secondNum = 0;
+  String history = '';
+  String textToDisplay = '';
+  String res = '';
+  String operation = '';
+
+  void btnOnClick(String btnVal) {
+    print(btnVal);
+    if (btnVal == 'C') {
+      textToDisplay = '';
+      firstNum = 0;
+      secondNum = 0;
+      res = '';
+    } else if (btnVal == 'AC') {
+      textToDisplay = '';
+      firstNum = 0;
+      secondNum = 0;
+      history = '';
+      res = '';
+    } else if (btnVal == '+' ||
+        btnVal == '-' ||
+        btnVal == '/' ||
+        btnVal == 'X') {
+      firstNum = int.parse(textToDisplay);
+      res = '';
+      operation = btnVal;
+    } else if (btnVal == '=') {
+      secondNum = int.parse(textToDisplay);
+      if (operation == '+') {
+        res = (firstNum + secondNum).toString();
+        history =
+            firstNum.toString() + operation.toString() + secondNum.toString();
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,18 +62,29 @@ class _MyCalculatorState extends State<MyCalculator> {
             children: [
               Container(
                 child: Padding(
+                  padding: EdgeInsets.only(right: 12),
+                  child: Text(
+                    '98x7',
+                    style: TextStyle(fontSize: 24, color: Color(0x66FFFFFF)),
+                  ),
+                ),
+                alignment: Alignment(1.0, 1.0),
+              ),
+              Container(
+                child: Padding(
                   padding: EdgeInsets.all(12),
                   child: Text(
                     '987',
                     style: TextStyle(fontSize: 48, color: Colors.white),
                   ),
                 ),
+                alignment: Alignment(1.0, 1.0),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   CalculatorButton(
-                    callBack: null,
+                    callBack: btnOnClick,
                     text: 'AC',
                     textColor: 0xFF000000,
                     textSize: 20,
@@ -47,17 +95,17 @@ class _MyCalculatorState extends State<MyCalculator> {
                     textColor: 0xFF000000,
                     textSize: 20,
                     fillColor: 0xFF8ac4d0,
-                    callBack: null,
+                    callBack: btnOnClick,
                   ),
                   CalculatorButton(
-                    callBack: null,
+                    callBack: btnOnClick,
                     text: '<',
                     textColor: 0xFF000000,
                     textSize: 20,
                     fillColor: 0xFFed970e,
                   ),
                   CalculatorButton(
-                    callBack: null,
+                    callBack: btnOnClick,
                     text: '/',
                     textColor: 0xFF000000,
                     textSize: 20,
@@ -69,28 +117,28 @@ class _MyCalculatorState extends State<MyCalculator> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   CalculatorButton(
-                    callBack: null,
+                    callBack: btnOnClick,
                     text: '9',
                     textColor: 0xFF000000,
                     textSize: 20,
                     fillColor: 0xFF8ac4d0,
                   ),
                   CalculatorButton(
-                    callBack: null,
+                    callBack: btnOnClick,
                     text: '8',
                     textColor: 0xFF000000,
                     textSize: 20,
                     fillColor: 0xFF8ac4d0,
                   ),
                   CalculatorButton(
-                    callBack: null,
+                    callBack: btnOnClick,
                     text: '7',
                     textColor: 0xFF000000,
                     textSize: 20,
                     fillColor: 0xFF8ac4d0,
                   ),
                   CalculatorButton(
-                    callBack: null,
+                    callBack: btnOnClick,
                     text: 'X',
                     textColor: 0xFF000000,
                     textSize: 20,
@@ -102,29 +150,29 @@ class _MyCalculatorState extends State<MyCalculator> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   CalculatorButton(
-                    callBack: null,
-                    text: '9',
+                    callBack: btnOnClick,
+                    text: '6',
                     textColor: 0xFF000000,
                     textSize: 20,
                     fillColor: 0xFF8ac4d0,
                   ),
                   CalculatorButton(
-                    callBack: null,
-                    text: '8',
+                    callBack: btnOnClick,
+                    text: '5',
                     textColor: 0xFF000000,
                     textSize: 20,
                     fillColor: 0xFF8ac4d0,
                   ),
                   CalculatorButton(
-                    callBack: null,
-                    text: '7',
+                    callBack: btnOnClick,
+                    text: '4',
                     textColor: 0xFF000000,
                     textSize: 20,
                     fillColor: 0xFF8ac4d0,
                   ),
                   CalculatorButton(
-                    callBack: null,
-                    text: 'X',
+                    callBack: btnOnClick,
+                    text: '-',
                     textColor: 0xFF000000,
                     textSize: 20,
                     fillColor: 0xFFed970e,
@@ -135,29 +183,29 @@ class _MyCalculatorState extends State<MyCalculator> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   CalculatorButton(
-                    callBack: null,
-                    text: '9',
+                    callBack: btnOnClick,
+                    text: '3',
                     textColor: 0xFF000000,
                     textSize: 20,
                     fillColor: 0xFF8ac4d0,
                   ),
                   CalculatorButton(
-                    callBack: null,
-                    text: '8',
+                    callBack: btnOnClick,
+                    text: '2',
                     textColor: 0xFF000000,
                     textSize: 20,
                     fillColor: 0xFF8ac4d0,
                   ),
                   CalculatorButton(
-                    callBack: null,
-                    text: '7',
+                    callBack: btnOnClick,
+                    text: '1',
                     textColor: 0xFF000000,
                     textSize: 20,
                     fillColor: 0xFF8ac4d0,
                   ),
                   CalculatorButton(
-                    callBack: null,
-                    text: 'X',
+                    callBack: btnOnClick,
+                    text: '+',
                     textColor: 0xFF000000,
                     textSize: 20,
                     fillColor: 0xFFed970e,
@@ -168,28 +216,28 @@ class _MyCalculatorState extends State<MyCalculator> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   CalculatorButton(
-                    callBack: null,
+                    callBack: btnOnClick,
                     text: '+/-',
                     textColor: 0xFF000000,
                     textSize: 20,
                     fillColor: 0xFF8ac4d0,
                   ),
                   CalculatorButton(
-                    callBack: null,
+                    callBack: btnOnClick,
                     text: '0',
                     textColor: 0xFF000000,
                     textSize: 20,
                     fillColor: 0xFF8ac4d0,
                   ),
                   CalculatorButton(
-                    callBack: null,
+                    callBack: btnOnClick,
                     text: '00',
                     textColor: 0xFF000000,
                     textSize: 20,
                     fillColor: 0xFF8ac4d0,
                   ),
                   CalculatorButton(
-                    callBack: null,
+                    callBack: btnOnClick,
                     text: '=',
                     textColor: 0xFF000000,
                     textSize: 20,
