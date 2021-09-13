@@ -30,7 +30,13 @@ class _MyCalculatorState extends State<MyCalculator> {
       history = '';
       res = '';
     } else if (btnVal == '+/-') {
-      if (textToDisplay[0] != '-'){res='-'+textToDisplay;}else{res=textToDisplay.substring(1);}
+      if (textToDisplay[0] != '-') {
+        res = '-' + textToDisplay;
+      } else {
+        res = textToDisplay.substring(1);
+      }
+    } else if (btnVal == '<') {
+      res = textToDisplay.substring(0, textToDisplay.length - 1);
     } else if (btnVal == '+' ||
         btnVal == '-' ||
         btnVal == '/' ||
