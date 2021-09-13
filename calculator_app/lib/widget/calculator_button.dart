@@ -6,11 +6,11 @@ class CalculatorButton extends StatelessWidget {
   final int fillColor;
   final int textColor;
   final double textSize;
-  final Function callBack;
+  final Function? callBack;
 
   const CalculatorButton(
       {required this.text,
-       required this.callBack,
+        this.callBack,
       required this.fillColor,
       required this.textColor,
       required this.textSize});
@@ -23,7 +23,7 @@ class CalculatorButton extends StatelessWidget {
         width: 70,
         height: 70,
         child: FlatButton(
-          onPressed: () {callBack(text);},
+          onPressed: () {callBack!(text);},
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
           child: Text(
             text,
