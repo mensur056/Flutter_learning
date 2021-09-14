@@ -28,6 +28,33 @@ class _MusicAppState extends State<MusicApp> {
               end: Alignment.bottomRight,
               colors: [Colors.blue, Colors.blueAccent]),
         ),
+        child: Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: 12,
+            vertical: 24,
+          ),
+          child: Container(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Text(
+                  'Music Beats',
+                  style: TextStyle(
+                      fontSize: 38,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
+                ),Text(
+                  'Listen to your favorite music',
+                  style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white),
+                )
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
