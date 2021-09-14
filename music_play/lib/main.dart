@@ -61,11 +61,35 @@ class _MusicAppState extends State<MusicApp> {
                     height: 200.0,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30.0),
-                      image:
-                          DecorationImage(image: AssetImage('images/sts.jpg',),),
+                      image: DecorationImage(
+                        image: AssetImage(
+                          'images/sts.jpg',
+                        ),
+                      ),
                     ),
                   ),
-                )
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Center(
+                  child: Container(
+                    child: Text(
+                      'Shape Of You',
+                      style: TextStyle(
+                          fontSize: 26,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Expanded(
+                    child: Container(
+                  color: Colors.white,
+                ))
               ],
             ),
           ),
