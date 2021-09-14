@@ -44,12 +44,27 @@ class _MusicAppState extends State<MusicApp> {
                       fontSize: 38,
                       fontWeight: FontWeight.bold,
                       color: Colors.white),
-                ),Text(
+                ),
+                Text(
                   'Listen to your favorite music',
                   style: TextStyle(
                       fontSize: 24,
-                      fontWeight: FontWeight.w400,
+                      fontWeight: FontWeight.w100,
                       color: Colors.white),
+                ),
+                SizedBox(
+                  height: 24,
+                ),
+                Center(
+                  child: Container(
+                    width: 200.0,
+                    height: 200.0,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30.0),
+                      image:
+                          DecorationImage(image: AssetImage('images/sts.jpg',),),
+                    ),
+                  ),
                 )
               ],
             ),
