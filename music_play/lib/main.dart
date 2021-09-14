@@ -18,8 +18,9 @@ class MusicApp extends StatefulWidget {
 }
 
 class _MusicAppState extends State<MusicApp> {
-  bool playing=false;
-  IconData playBtn=Icons.play_arrow;
+  bool playing = false;
+  IconData playBtn = Icons.play_arrow;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -123,9 +124,23 @@ class _MusicAppState extends State<MusicApp> {
                               color: Colors.black,
                             ),
                             IconButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                if (!playing) {
+                                  setState(() {
+                                    playBtn = Icons.pause;
+                                    playing = true;
+                                  });
+                                } else {setState(() {
+                                  playBtn = Icons.play_arrow;
+
+                                  playing = false;
+
+                                });
+
+                                }
+                              },
                               icon: Icon(
-                                Icons.play_arrow,
+                                playBtn,
                               ),
                               iconSize: 52.0,
                               color: Colors.black,
