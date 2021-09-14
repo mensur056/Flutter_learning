@@ -18,6 +18,8 @@ class MusicApp extends StatefulWidget {
 }
 
 class _MusicAppState extends State<MusicApp> {
+  bool playing=false;
+  IconData playBtn=Icons.play_arrow;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -103,6 +105,42 @@ class _MusicAppState extends State<MusicApp> {
                         ),
                         topRight: Radius.circular(30),
                       ),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            IconButton(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.skip_previous,
+                              ),
+                              iconSize: 45.0,
+                              color: Colors.black,
+                            ),
+                            IconButton(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.play_arrow,
+                              ),
+                              iconSize: 52.0,
+                              color: Colors.black,
+                            ),
+                            IconButton(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.skip_next,
+                              ),
+                              iconSize: 45.0,
+                              color: Colors.black,
+                            ),
+                          ],
+                        )
+                      ],
                     ),
                   ),
                 )
