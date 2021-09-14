@@ -29,28 +29,35 @@ class _MusicAppState extends State<MusicApp> {
               colors: [Colors.blue, Colors.blueAccent]),
         ),
         child: Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: 12,
-            vertical: 24,
+          padding: EdgeInsets.only(
+            top: 48,
           ),
           child: Container(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  'Music Beats',
-                  style: TextStyle(
-                      fontSize: 38,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 12,
+                  ),
+                  child: Text(
+                    'Music Beats',
+                    style: TextStyle(
+                        fontSize: 38,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                  ),
                 ),
-                Text(
-                  'Listen to your favorite music',
-                  style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w100,
-                      color: Colors.white),
+                Padding(
+                  padding: const EdgeInsets.only(left: 12),
+                  child: Text(
+                    'Listen to your favorite music',
+                    style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.w100,
+                        color: Colors.white),
+                  ),
                 ),
                 SizedBox(
                   height: 24,
@@ -87,9 +94,18 @@ class _MusicAppState extends State<MusicApp> {
                   height: 10,
                 ),
                 Expanded(
-                    child: Container(
-                  color: Colors.white,
-                ))
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(
+                          30.0,
+                        ),
+                        topRight: Radius.circular(30),
+                      ),
+                    ),
+                  ),
+                )
               ],
             ),
           ),
