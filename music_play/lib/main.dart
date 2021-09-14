@@ -1,3 +1,5 @@
+import 'package:audioplayers/audio_cache.dart';
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -20,6 +22,27 @@ class MusicApp extends StatefulWidget {
 class _MusicAppState extends State<MusicApp> {
   bool playing = false;
   IconData playBtn = Icons.play_arrow;
+
+  AudioPlayer _player;
+  AudioCache cache;
+  Duration position = new Duration();
+  Duration musicLength = new Duration();
+
+  Widget slider() {
+    return Slider.adaptive(
+        value: position.inSeconds.toDouble(),
+        max: musicLength.inSeconds.toDouble(),
+        activeColor: Colors.blue,
+        inactiveColor: Colors.grey,
+        onChanged: (value) {
+          seekToSec(value.toInt());
+        });
+  }
+
+  void seekToSec(int sec) {
+    Duration newPos = Duration(seconds: sec);
+    _player.seek(newPos);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -130,13 +153,12 @@ class _MusicAppState extends State<MusicApp> {
                                     playBtn = Icons.pause;
                                     playing = true;
                                   });
-                                } else {setState(() {
-                                  playBtn = Icons.play_arrow;
+                                } else {
+                                  setState(() {
+                                    playBtn = Icons.play_arrow;
 
-                                  playing = false;
-
-                                });
-
+                                    playing = false;
+                                  });
                                 }
                               },
                               icon: Icon(
