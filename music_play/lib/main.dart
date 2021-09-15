@@ -139,7 +139,7 @@ class _MusicAppState extends State<MusicApp> {
                         topLeft: Radius.circular(
                           30.0,
                         ),
-                        topRight: Radius.circular(30),
+                        topRight: Radius.circular(31),
                       ),
                     ),
                     child: Column(
