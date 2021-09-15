@@ -177,7 +177,7 @@ class _MusicAppState extends State<MusicApp> {
                                 playBtn,
                               ),
                               iconSize: 50.0,
-                              color: Colors.black,
+                              color: Colors.blue,
                             ),
                             IconButton(
                               onPressed: () {},
