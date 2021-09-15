@@ -176,7 +176,7 @@ class _MusicAppState extends State<MusicApp> {
                               icon: Icon(
                                 playBtn,
                               ),
-                              iconSize: 52.0,
+                              iconSize: 50.0,
                               color: Colors.black,
                             ),
                             IconButton(
