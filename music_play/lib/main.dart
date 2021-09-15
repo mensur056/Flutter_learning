@@ -122,7 +122,7 @@ class _MusicAppState extends State<MusicApp> {
                     child: Text(
                       'Shape Of You',
                       style: TextStyle(
-                          fontSize: 26,
+                          fontSize: 25,
                           color: Colors.white,
                           fontWeight: FontWeight.w600),
                     ),
