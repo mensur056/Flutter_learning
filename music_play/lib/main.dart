@@ -184,8 +184,8 @@ class _MusicAppState extends State<MusicApp> {
                               icon: Icon(
                                 Icons.skip_next,
                               ),
-                              iconSize: 45.0,
-                              color: Colors.black,
+                              iconSize: 42.0,
+                              color: Colors.teal,
                             ),
                           ],
                         )
