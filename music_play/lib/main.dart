@@ -23,8 +23,8 @@ class _MusicAppState extends State<MusicApp> {
   bool playing = false;
   IconData playBtn = Icons.play_arrow;
 
-  AudioPlayer _player;
-  AudioCache cache;
+  late AudioPlayer _player;
+  late AudioCache cache;
   Duration position = new Duration();
   Duration musicLength = new Duration();
 
@@ -43,6 +43,18 @@ class _MusicAppState extends State<MusicApp> {
     Duration newPos = Duration(seconds: sec);
     _player.seek(newPos);
   }
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _player = AudioPlayer();
+    cache = AudioCache(fixedPlayer: _player);
+
+    //now let's handle the audioplayer time
+
+    //this function will allow you to get the music duration
+
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +68,7 @@ class _MusicAppState extends State<MusicApp> {
         ),
         child: Padding(
           padding: EdgeInsets.only(
-            top: 48,
+            top: 42,
           ),
           child: Container(
             child: Column(
@@ -133,7 +145,7 @@ class _MusicAppState extends State<MusicApp> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
+                      children: [slider(),
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.center,
