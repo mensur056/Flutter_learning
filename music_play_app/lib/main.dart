@@ -15,9 +15,22 @@ void main() {
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: primaryColor,
-      body: NavigationBar(),
+      body: Column(
+        children: [
+          NavigationBar(),
+          Container(
+            height: height / 2.5,
+            child: ListView.builder(
+              itemBuilder: (context, index) {
+                return AlbumArt();
+              },
+            ),
+          )
+        ],
+      ),
     );
   }
 }
