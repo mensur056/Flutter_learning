@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
               },itemCount: 3,
               scrollDirection: Axis.horizontal,
             ),
-          )
+          ),Text('Hello')
         ],
       ),
     );
