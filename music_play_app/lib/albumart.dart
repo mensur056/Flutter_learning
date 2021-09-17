@@ -5,12 +5,14 @@ class AlbumArt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 260,
-      width: 260,
-      margin: EdgeInsets.symmetric(vertical: 40, horizontal: 20),
+      height: 240,
+      width: 240,
+      margin: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+      padding: EdgeInsets.all(20),
       child: Image.asset('images/img.png'),
       decoration: BoxDecoration(
         color: primaryColor,
+        borderRadius: BorderRadius.circular(10),
         boxShadow: [
           BoxShadow(
               color: darkPrimaryColor.withOpacity(0.5),
