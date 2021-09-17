@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'colors.dart';
 import 'navbar.dart';
-
+import 'albumart.dart';
 void main() {
   runApp(
     MaterialApp(
@@ -26,7 +26,8 @@ class HomePage extends StatelessWidget {
             child: ListView.builder(
               itemBuilder: (context, index) {
                 return AlbumArt();
-              },
+              },itemCount: 3,
+              scrollDirection: Axis.horizontal,
             ),
           )
         ],
