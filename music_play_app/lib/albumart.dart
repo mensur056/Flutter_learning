@@ -5,27 +5,28 @@ class AlbumArt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 240,
-      width: 240,
-      margin: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-      padding: EdgeInsets.all(20),
-      child: Image.asset('images/img.png'),
+      height: 260,
+      width: 260,
+      padding: EdgeInsets.all(12),
+      margin: EdgeInsets.symmetric(horizontal: 20,vertical: 40),
+      child: ClipRRect(
+          borderRadius: BorderRadius.circular(20),
+          child: Image.asset('images/img.png',fit: BoxFit.fill,)),
       decoration: BoxDecoration(
         color: primaryColor,
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(20),
         boxShadow: [
-          BoxShadow(
-              color: darkPrimaryColor.withOpacity(0.5),
-              offset: Offset(5, 10),
+          BoxShadow(color: darkPrimaryColor,
+              offset: Offset(20,8),
               spreadRadius: 3,
-              blurRadius: 10),
-          BoxShadow(
-              color: Colors.white,
-              offset: Offset(-3, -4),
-              spreadRadius: -2,
-              blurRadius: 20)
+              blurRadius: 25
+          ),
+          BoxShadow(color: Colors.white,offset: Offset(-3,-4),spreadRadius: -2,blurRadius: 20
+          )
         ],
+
       ),
+
     );
   }
 }
