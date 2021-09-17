@@ -4,15 +4,23 @@ import 'colors.dart';
 class NavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(margin: EdgeInsets.symmetric(horizontal: 20),
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: 20),
       height: 90,
       alignment: Alignment.bottomCenter,
-      child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           NavBarItem(
             icon: Icons.arrow_back_ios,
           ),
-          Text('Playing Now',style: TextStyle(fontSize: 21,color: darkPrimaryColor,fontWeight: FontWeight.w300),),
+          Text(
+            'Playing Now',
+            style: TextStyle(
+                fontSize: 21,
+                color: darkPrimaryColor,
+                fontWeight: FontWeight.w300),
+          ),
           NavBarItem(
             icon: Icons.list,
           )
@@ -39,6 +47,11 @@ class NavBarItem extends StatelessWidget {
               offset: Offset(5, 10),
               spreadRadius: 3,
               blurRadius: 10),
+          BoxShadow(
+              color: Colors.white,
+              offset: Offset(-3, -4),
+              spreadRadius: -2,
+              blurRadius: 20)
         ],
         color: primaryColor,
         borderRadius: BorderRadius.circular(10),
