@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'colors.dart';
 import 'navbar.dart';
 import 'albumart.dart';
+import 'PlayerControls.dart';
 
 void main() {
   runApp(
@@ -69,7 +70,7 @@ class _HomePageState extends State<HomePage> {
               min: 0,
               max: 20,
             ),
-          )
+          ),PlayerControls()
         ],
       ),
     );
