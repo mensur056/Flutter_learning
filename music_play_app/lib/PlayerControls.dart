@@ -29,6 +29,8 @@ class PlayerControls extends StatelessWidget {
 }
 
 class PlayControl extends StatelessWidget {
+
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -48,6 +50,25 @@ class PlayControl extends StatelessWidget {
               offset: Offset(-3, -4),
               spreadRadius: -2,
               blurRadius: 20)
+        ],
+      ),
+      child: Stack(
+        children: [
+          Center(
+            child: Container(
+              margin: EdgeInsets.all(6),
+              decoration: BoxDecoration(
+                  color: darkPrimaryColor, shape: BoxShape.circle),
+            ),
+          ),
+          Center(
+            child: Container(
+              margin: EdgeInsets.all(6),
+              decoration:
+                  BoxDecoration(color: primaryColor, shape: BoxShape.circle),
+              child: Center(child: Icon(Icons.play_arrow,size: 60,),),
+            ),
+          )
         ],
       ),
     );
@@ -85,14 +106,16 @@ class Controls extends StatelessWidget {
           Center(
             child: Container(
               margin: EdgeInsets.all(6),
-              decoration:
-                  BoxDecoration(color: darkPrimaryColor, shape: BoxShape.circle),
+              decoration: BoxDecoration(
+                  color: darkPrimaryColor, shape: BoxShape.circle),
             ),
-          ), Center(
+          ),
+          Center(
             child: Container(
               margin: EdgeInsets.all(6),
               decoration:
-              BoxDecoration(color: primaryColor, shape: BoxShape.circle),child: Icon(icon),
+                  BoxDecoration(color: primaryColor, shape: BoxShape.circle),
+              child: Center(child: Icon(icon)),
             ),
           )
         ],
