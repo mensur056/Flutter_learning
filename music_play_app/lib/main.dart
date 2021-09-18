@@ -13,7 +13,13 @@ void main() {
   );
 }
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  double sliderValue=2;
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -47,8 +53,10 @@ class HomePage extends StatelessWidget {
                 fontSize: 20),
           ),
           Slider(
-            value: 10,
-            onChanged: (value) {},
+            value: sliderValue,
+            onChanged: (value) {setState(() {
+              sliderValue=value;
+            });},
             min: 0,
             max: 20,
           )
