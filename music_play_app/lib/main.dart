@@ -19,7 +19,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  double sliderValue=2;
+  double sliderValue = 2;
+
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -52,13 +53,22 @@ class _HomePageState extends State<HomePage> {
                 color: darkPrimaryColor,
                 fontSize: 20),
           ),
-          Slider(
-            value: sliderValue,
-            onChanged: (value) {setState(() {
-              sliderValue=value;
-            });},
-            min: 0,
-            max: 20,
+          SliderTheme(
+            data: SliderThemeData(
+                trackHeight: 5,
+                thumbShape: RoundSliderThumbShape(enabledThumbRadius: 5)),
+            child: Slider(
+              activeColor: darkPrimaryColor,
+              inactiveColor: darkPrimaryColor.withOpacity(0.5),
+              value: sliderValue,
+              onChanged: (value) {
+                setState(() {
+                  sliderValue = value;
+                });
+              },
+              min: 0,
+              max: 20,
+            ),
           )
         ],
       ),
