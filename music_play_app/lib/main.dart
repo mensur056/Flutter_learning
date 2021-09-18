@@ -45,6 +45,12 @@ class HomePage extends StatelessWidget {
                 fontWeight: FontWeight.w400,
                 color: darkPrimaryColor,
                 fontSize: 20),
+          ),
+          Slider(
+            value: 10,
+            onChanged: (value) {},
+            min: 0,
+            max: 20,
           )
         ],
       ),
