@@ -6,7 +6,8 @@ class PlayerControls extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Controls(
             icon: Icons.repeat,
@@ -81,9 +82,18 @@ class Controls extends StatelessWidget {
       ),
       child: Stack(
         children: [
-          Container(
-            decoration:
-                BoxDecoration(color: darkPrimaryColor, shape: BoxShape.circle),
+          Center(
+            child: Container(
+              margin: EdgeInsets.all(6),
+              decoration:
+                  BoxDecoration(color: darkPrimaryColor, shape: BoxShape.circle),
+            ),
+          ), Center(
+            child: Container(
+              margin: EdgeInsets.all(6),
+              decoration:
+              BoxDecoration(color: primaryColor, shape: BoxShape.circle),child: Icon(icon),
+            ),
           )
         ],
       ),
