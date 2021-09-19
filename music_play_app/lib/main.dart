@@ -20,7 +20,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  double sliderValue = 2;
+  double sliderValue = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +68,7 @@ class _HomePageState extends State<HomePage> {
                 });
               },
               min: 0,
-              max: 20,
+              max: 30,
             ),
           ),PlayerControls()
         ],

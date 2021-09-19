@@ -5,8 +5,8 @@ class AlbumArt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 260,
-      width: 260,
+      height: 255,
+      width: 255,
       padding: EdgeInsets.all(12),
       margin: EdgeInsets.symmetric(horizontal: 20, vertical: 40),
       child: ClipRRect(
@@ -14,7 +14,7 @@ class AlbumArt extends StatelessWidget {
           child: Image.asset(
             'images/sts.jpg',
             fit: BoxFit.fill,
-          )),
+          ),),
       decoration: BoxDecoration(
         color: primaryColor,
         borderRadius: BorderRadius.circular(20),
