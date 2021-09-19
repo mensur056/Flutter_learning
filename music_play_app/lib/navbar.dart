@@ -51,7 +51,7 @@ class NavBarItem extends StatelessWidget {
               color: Colors.white,
               offset: Offset(-3, -4),
               spreadRadius: -2,
-              blurRadius: 20)
+              blurRadius: 19)
         ],
         color: primaryColor,
         borderRadius: BorderRadius.circular(10),
