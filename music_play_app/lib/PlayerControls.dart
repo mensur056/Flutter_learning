@@ -63,10 +63,10 @@ class PlayControl extends StatelessWidget {
           ),
           Center(
             child: Container(
-              margin: EdgeInsets.all(6),
+              margin: EdgeInsets.all(8),
               decoration:
                   BoxDecoration(color: primaryColor, shape: BoxShape.circle),
-              child: Center(child: Icon(Icons.play_arrow,size: 60,),),
+              child: Center(child: Icon(Icons.play_arrow,size: 60,color:darkPrimaryColor),),
             ),
           )
         ],

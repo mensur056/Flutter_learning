@@ -12,7 +12,7 @@ class AlbumArt extends StatelessWidget {
       child: ClipRRect(
           borderRadius: BorderRadius.circular(20),
           child: Image.asset(
-            'images/sts.jpg',
+            'images/img.png',
             fit: BoxFit.fill,
           )),
       decoration: BoxDecoration(
