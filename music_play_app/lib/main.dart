@@ -70,7 +70,8 @@ class _HomePageState extends State<HomePage> {
               min: 0,
               max: 30,
             ),
-          ),PlayerControls()
+          ),
+          PlayerControls()
         ],
       ),
     );
