@@ -5,12 +5,12 @@ class AlbumArt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 255,
-      width: 255,
+      height: 260,
+      width: 260,
       padding: EdgeInsets.all(12),
       margin: EdgeInsets.symmetric(horizontal: 20, vertical: 40),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(19),
+        borderRadius: BorderRadius.circular(20),
         child: Image.asset(
           'images/sts.jpg',
           fit: BoxFit.fill,
