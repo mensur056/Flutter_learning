@@ -43,7 +43,7 @@ class MyHomePage extends StatelessWidget {
 }
 
 class SolWidgetA extends StatelessWidget {
- String city=Provider.of<StateData>(context).city;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -55,7 +55,7 @@ class SolWidgetA extends StatelessWidget {
               style: TextStyle(fontSize: 20),
             ),
             Text(
-              'City: $city ',
+              'City:  ',
               style: TextStyle(fontSize: 20),
             )
           ],
