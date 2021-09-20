@@ -20,7 +20,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  double sliderValue = 0;
+  double sliderValue = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
               itemBuilder: (context, index) {
                 return AlbumArt();
               },
-              itemCount: 3,
+              itemCount: 4,
               scrollDirection: Axis.horizontal,
             ),
           ),

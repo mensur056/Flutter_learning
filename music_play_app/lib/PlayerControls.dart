@@ -32,8 +32,8 @@ class PlayControl extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 99,
-      width: 99,
+      height: 100,
+      width: 100,
       decoration: BoxDecoration(
         color: primaryColor,
         shape: BoxShape.circle,
