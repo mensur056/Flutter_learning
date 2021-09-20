@@ -84,8 +84,8 @@ class Controls extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 59,
-      width: 59,
+      height:60,
+      width: 60,
       decoration: BoxDecoration(
         color: primaryColor,
         shape: BoxShape.circle,
