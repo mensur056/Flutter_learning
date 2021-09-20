@@ -7,7 +7,7 @@ void main() => runApp(Destini());
 
 class Destini extends StatelessWidget {
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp(debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
       home: StoryPage(),
     );
