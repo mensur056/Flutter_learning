@@ -68,7 +68,7 @@ class _HomePageState extends State<HomePage> {
                 });
               },
               min: 0,
-              max: 30,
+              max: 40,
             ),
           ),
           PlayerControls()
