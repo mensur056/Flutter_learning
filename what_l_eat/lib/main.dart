@@ -106,7 +106,7 @@ class _FoodPageState extends State<FoodPage> {
           ),
         ),
         Container(
-            width: 200,
+            width: 199,
             child: Divider(
               height: 5,
               color: Colors.black,
