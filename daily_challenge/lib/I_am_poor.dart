@@ -122,7 +122,7 @@ class _CalculatorState extends State<Calculator> {
                   shape: StadiumBorder(),
                   child: Text('0',
                     style: TextStyle(
-                        fontSize: 35,
+                        fontSize: 40,
                         color: Colors.white),
                   ),
                   color: Colors.grey[850],

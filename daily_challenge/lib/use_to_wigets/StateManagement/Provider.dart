@@ -89,7 +89,7 @@ class SagWidgetB extends StatelessWidget {
       child: Column(children: [
         Text(
           'SagWidget B',
-          style: TextStyle(fontSize: 20),
+          style: TextStyle(fontSize: 22),
         ),
         SagWidgetC()
       ]),
