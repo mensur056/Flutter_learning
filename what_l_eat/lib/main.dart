@@ -30,9 +30,9 @@ class FoodPage extends StatefulWidget {
 }
 
 class _FoodPageState extends State<FoodPage> {
-  int soupNumber = 1;
-  int eatNumber = 1;
-  int sweetNumber = 1;
+  int soupNumber = 2;
+  int eatNumber = 2;
+  int sweetNumber = 2;
   List<String> soupName = [
     'Mercimek',
     'Tarhana',
