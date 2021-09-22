@@ -15,14 +15,14 @@ class MiCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 CircleAvatar(
-                  radius: 50.0,
+                  radius: 49.0,
                   backgroundImage: AssetImage('images/mensur.jpg'),
                 ),
                 Text(
                   'Mensur Serxanov',
                   style: TextStyle(
                     fontFamily: 'Pacifico',
-                    fontSize: 45.0,
+                    fontSize: 44.0,
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                   ),
