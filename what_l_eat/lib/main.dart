@@ -69,7 +69,7 @@ class _FoodPageState extends State<FoodPage> {
       child: Column(children: [
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(6.0),
             child: FlatButton(
                 splashColor: Colors.white,
                 highlightColor: Colors.white,
@@ -91,7 +91,7 @@ class _FoodPageState extends State<FoodPage> {
             )),
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(6.0),
             child: FlatButton(
                 splashColor: Colors.white,
                 highlightColor: Colors.white,
@@ -113,7 +113,7 @@ class _FoodPageState extends State<FoodPage> {
             )),
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(6.0),
             child: FlatButton(
                 highlightColor: Colors.white,
                 splashColor: Colors.white,
