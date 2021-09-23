@@ -108,7 +108,7 @@ class Controls extends StatelessWidget {
             child: Container(
               margin: EdgeInsets.all(6),
               decoration: BoxDecoration(
-                  color: darkPrimaryColor, shape: BoxShape.circle),
+                  color:Colors.grey, shape: BoxShape.circle),
             ),
           ),
           Center(
