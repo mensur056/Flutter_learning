@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
               itemBuilder: (context, index) {
                 return AlbumArt();
               },
-              itemCount: 3,
+              itemCount: 4,
               scrollDirection: Axis.horizontal,
             ),
           ),
