@@ -56,7 +56,11 @@ class PlayControl extends StatelessWidget {
             child: Container(
               margin: EdgeInsets.all(7),
               decoration: BoxDecoration(
-                  color: darkPrimaryColor, shape: BoxShape.circle),
+                  color: darkPrimaryColor, shape: BoxShape.circle,boxShadow: [ BoxShadow(
+                  color: darkPrimaryColor.withOpacity(0.5),
+                  offset: Offset(20, 8),
+                  spreadRadius: 3,
+                  blurRadius: 25),]),
             ),
           ),
           Center(

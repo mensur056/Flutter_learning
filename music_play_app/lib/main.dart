@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: primaryColor,
-      body: Column(
+      body: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           NavigationBar(),
           Container(
