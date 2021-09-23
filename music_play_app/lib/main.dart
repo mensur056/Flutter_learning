@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage> {
           Text(
             'The Free Nationals',
             style: TextStyle(
-                fontSize: 20,
+                fontSize: 21,
                 fontWeight: FontWeight.w400,
                 color: darkPrimaryColor),
           ),
