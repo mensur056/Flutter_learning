@@ -79,12 +79,12 @@ class PlayControl extends StatelessWidget {
 class Controls extends StatelessWidget {
   final IconData icon;
 
-  const Controls({ required this.icon});
+  const Controls({required this.icon});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height:60,
+      height: 60,
       width: 60,
       decoration: BoxDecoration(
         color: primaryColor,
@@ -108,7 +108,15 @@ class Controls extends StatelessWidget {
             child: Container(
               margin: EdgeInsets.all(6),
               decoration: BoxDecoration(
-                  color:Colors.grey, shape: BoxShape.circle),
+                  color: Colors.grey,
+                  shape: BoxShape.circle,
+                  boxShadow: [
+                    BoxShadow(
+                        color: darkPrimaryColor.withOpacity(0.5),
+                        offset: Offset(20, 8),
+                        spreadRadius: 3,
+                        blurRadius: 25),
+                  ]),
             ),
           ),
           Center(
