@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage> {
         children: <Widget>[
           NavigationBar(),
           Container(
-            margin: EdgeInsets.only(left: 40),
+            margin: EdgeInsets.only(left: 39),
             height: height / 2.5,
             child: ListView.builder(
               itemBuilder: (context, index) {
