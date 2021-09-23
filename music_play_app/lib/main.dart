@@ -1,17 +1,22 @@
+import 'dart:async';
+
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'colors.dart';
-import 'navbar.dart';
-import 'albumart.dart';
+import 'model/myaudio.dart';
 import 'PlayerControls.dart';
+import 'albumart.dart';
+import 'navbar.dart';
 
 void main() {
-  runApp(
-    MaterialApp(
-      theme: ThemeData(fontFamily: 'Circular'),
-      debugShowCheckedModeBanner: false,
-      home: HomePage(),
-    ),
-  );
+  runApp(MaterialApp(
+    theme: ThemeData(fontFamily: 'Circular'),
+    debugShowCheckedModeBanner: false,
+    home: ChangeNotifierProvider(
+        create: (_)=>MyAudio(),
+        child: HomePage()),
+  ));
 }
 
 class HomePage extends StatefulWidget {
@@ -20,58 +25,78 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  double sliderValue = 1;
+  double sliderValue = 2;
+
+
+  Map audioData = {
+    'image':'https://thegrowingdeveloper.org/thumbs/1000x1000r/audios/quiet-time-photo.jpg',
+    'url':'https://thegrowingdeveloper.org/files/audios/quiet-time.mp3?b4869097e4'
+  };
 
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
+
     return Scaffold(
       backgroundColor: primaryColor,
-      body: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
           NavigationBar(),
           Container(
+            margin: EdgeInsets.only(left: 40),
             height: height / 2.5,
             child: ListView.builder(
               itemBuilder: (context, index) {
                 return AlbumArt();
               },
-              itemCount: 4,
+              itemCount: 3,
               scrollDirection: Axis.horizontal,
             ),
           ),
           Text(
             'Gidget',
             style: TextStyle(
+                fontSize: 28,
                 fontWeight: FontWeight.w500,
-                color: darkPrimaryColor,
-                fontSize: 28),
+                color: darkPrimaryColor),
           ),
           Text(
             'The Free Nationals',
             style: TextStyle(
+                fontSize: 20,
                 fontWeight: FontWeight.w400,
-                color: darkPrimaryColor,
-                fontSize: 20),
+                color: darkPrimaryColor),
           ),
-          SliderTheme(
-            data: SliderThemeData(
-                trackHeight: 5,
-                thumbShape: RoundSliderThumbShape(enabledThumbRadius: 5)),
-            child: Slider(
-              activeColor: darkPrimaryColor,
-              inactiveColor: darkPrimaryColor.withOpacity(0.5),
-              value: sliderValue,
-              onChanged: (value) {
-                setState(() {
-                  sliderValue = value;
-                });
-              },
-              min: 0,
-              max: 40,
-            ),
+          Column(
+            children: [
+              SliderTheme(
+                data: SliderThemeData(
+                    trackHeight: 5,
+                    thumbShape: RoundSliderThumbShape(enabledThumbRadius: 5)
+                ),
+                child: Consumer<MyAudio>(
+                  builder:(_,myAudioModel,child)=> Slider(
+                    value: myAudioModel.position==null? 0 : myAudioModel.position!.inMilliseconds.toDouble() ,
+                    activeColor: darkPrimaryColor,
+                    inactiveColor: darkPrimaryColor.withOpacity(0.3),
+                    onChanged: (value) {
+
+                      myAudioModel.seekAudio(Duration(milliseconds: value.toInt()));
+
+                    },
+                    min: 0,
+                    max:myAudioModel.totalDuration==null? 20 : myAudioModel.totalDuration!.inMilliseconds.toDouble() ,
+                  ),
+                ),
+              ),
+            ],
+
           ),
-          PlayerControls()
+
+          PlayerControls(),
+
+
         ],
       ),
     );

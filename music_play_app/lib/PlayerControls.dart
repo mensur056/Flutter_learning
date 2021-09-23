@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'model/myaudio.dart';
 
 import 'colors.dart';
 
@@ -8,7 +10,7 @@ class PlayerControls extends StatelessWidget {
     return Container(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
+        children: <Widget>[
           Controls(
             icon: Icons.repeat,
           ),
@@ -31,59 +33,79 @@ class PlayerControls extends StatelessWidget {
 class PlayControl extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 100,
-      width: 100,
-      decoration: BoxDecoration(
-        color: primaryColor,
-        shape: BoxShape.circle,
-        boxShadow: [
-          BoxShadow(
-              color: darkPrimaryColor.withOpacity(0.5),
-              offset: Offset(20, 8),
-              spreadRadius: 3,
-              blurRadius: 25),
-          BoxShadow(
-              color: Colors.white,
-              offset: Offset(-3, -4),
-              spreadRadius: -2,
-              blurRadius: 20)
-        ],
-      ),
-      child: Stack(
-        children: [
-          Center(
-            child: Container(
-              margin: EdgeInsets.all(7),
-              decoration: BoxDecoration(
-                  color: darkPrimaryColor, shape: BoxShape.circle,boxShadow: [ BoxShadow(
-                  color: darkPrimaryColor.withOpacity(0.5),
-                  offset: Offset(20, 8),
-                  spreadRadius: 3,
-                  blurRadius: 25),]),
-            ),
-          ),
-          Center(
-            child: Container(
-              margin: EdgeInsets.all(8),
-              decoration:
-                  BoxDecoration(color: primaryColor, shape: BoxShape.circle),
-              child: Center(
-                child:
-                    Icon(Icons.play_arrow, size: 60, color: darkPrimaryColor),
+    return
+      Consumer<MyAudio>(
+        builder: (_,myAudioModel,child)=>
+            GestureDetector(
+              onTap: (){
+                myAudioModel.audioState=="Playing"? myAudioModel.pauseAudio():myAudioModel.playAudio();
+              },
+              child: Container(
+                height: 100,
+                width: 100,
+                decoration: BoxDecoration(
+                  color: primaryColor,
+                  shape: BoxShape.circle,
+                  boxShadow: [
+                    BoxShadow(
+                        color: darkPrimaryColor.withOpacity(0.5),
+                        offset: Offset(5, 10),
+                        spreadRadius: 3,
+                        blurRadius: 10),
+                    BoxShadow(
+                        color: Colors.white,
+                        offset: Offset(-3, -4),
+                        spreadRadius: -2,
+                        blurRadius: 20)
+                  ],
+                ),
+                child: Stack(
+                  children: <Widget>[
+                    Center(
+                      child: Container(
+                        margin: EdgeInsets.all(6),
+                        decoration: BoxDecoration(
+                            color: darkPrimaryColor,
+                            shape: BoxShape.circle,
+                            boxShadow: [
+                              BoxShadow(
+                                  color: darkPrimaryColor.withOpacity(0.5),
+                                  offset: Offset(5, 10),
+                                  spreadRadius: 3,
+                                  blurRadius: 10),
+                              BoxShadow(
+                                  color: Colors.white,
+                                  offset: Offset(-3, -4),
+                                  spreadRadius: -2,
+                                  blurRadius: 20)
+                            ]),
+                      ),
+                    ),
+                    Center(
+                      child: Container(
+                        margin: EdgeInsets.all(8),
+                        decoration:
+                        BoxDecoration(color: primaryColor, shape: BoxShape.circle),
+                        child: Center(
+                            child: Icon(
+                              myAudioModel.audioState=="Playing"?Icons.pause: Icons.play_arrow,
+                              size: 30,
+                              color: darkPrimaryColor,
+                            )),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
-          )
-        ],
-      ),
-    );
+      );
   }
 }
 
 class Controls extends StatelessWidget {
   final IconData icon;
 
-  const Controls({required this.icon});
+  const Controls({required this.icon}) ;
 
   @override
   Widget build(BuildContext context) {
@@ -96,9 +118,9 @@ class Controls extends StatelessWidget {
         boxShadow: [
           BoxShadow(
               color: darkPrimaryColor.withOpacity(0.5),
-              offset: Offset(20, 8),
+              offset: Offset(5, 10),
               spreadRadius: 3,
-              blurRadius: 25),
+              blurRadius: 10),
           BoxShadow(
               color: Colors.white,
               offset: Offset(-3, -4),
@@ -107,7 +129,7 @@ class Controls extends StatelessWidget {
         ],
       ),
       child: Stack(
-        children: [
+        children: <Widget>[
           Center(
             child: Container(
               margin: EdgeInsets.all(6),
@@ -117,20 +139,30 @@ class Controls extends StatelessWidget {
                   boxShadow: [
                     BoxShadow(
                         color: darkPrimaryColor.withOpacity(0.5),
-                        offset: Offset(20, 8),
+                        offset: Offset(5, 10),
                         spreadRadius: 3,
-                        blurRadius: 25),
+                        blurRadius: 10),
+                    BoxShadow(
+                        color: Colors.white,
+                        offset: Offset(-3, -4),
+                        spreadRadius: -2,
+                        blurRadius: 20)
                   ]),
             ),
           ),
           Center(
             child: Container(
-              margin: EdgeInsets.all(6),
+              margin: EdgeInsets.all(10),
               decoration:
-                  BoxDecoration(color: primaryColor, shape: BoxShape.circle),
-              child: Center(child: Icon(icon)),
+              BoxDecoration(color: primaryColor, shape: BoxShape.circle),
+              child: Center(
+                  child: Icon(
+                    icon,
+                    size: 30,
+                    color: darkPrimaryColor,
+                  )),
             ),
-          )
+          ),
         ],
       ),
     );
