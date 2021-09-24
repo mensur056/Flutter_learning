@@ -6,41 +6,13 @@ class SearchPage extends StatefulWidget {
 }
 
 class _SearchPageState extends State<SearchPage> {
-  void butonFonksiyonu() {
-    print('buton fonksiyonu calisdi');
-  }
-
-  void birFonksiyon() {
-    print('bir fonksiyon calisdi');
-  }
- void sonFonksiyon(){print('son foonksiyon calisdi ve widget silindi');}
-  @override
-  void initState() {
-    birFonksiyon();
-    super.initState();
-
-  }
-  @override
-  void dispose() {
-   sonFonksiyon();
-    super.dispose();
-  }
-
   @override
   Widget build(BuildContext context) {
-    butonFonksiyonu();
     return Container(
         decoration: BoxDecoration(
             image: DecorationImage(
                 fit: BoxFit.cover, image: AssetImage('images/search.jpg'))),
         child: Scaffold(
-          floatingActionButton: FloatingActionButton(
-            onPressed: () {
-              setState(() {
-                print('setstate calisdi');
-              });
-            },
-          ),
           appBar: AppBar(
             elevation: 0,
             backgroundColor: Colors.transparent,

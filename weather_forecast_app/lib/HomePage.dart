@@ -13,10 +13,17 @@ class _HomePageState extends State<HomePage> {
   String sehir = 'Ankara';
   int sicaklik = 20;
   var locationData;
+  var woied;
 
   Future<void> getLocationData() async {
     locationData = await http.get(Uri.http(
         'https://www.metaweather.com/api/location/search/?query=london', ''));
+  }
+  @override
+  void initState() {
+   getLocationData();
+   print('woied =$woied');
+    super.initState();
   }
 
   @override
@@ -31,17 +38,17 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              FlatButton(
-                color: Colors.red,
-                onPressed: () async {
-                  print('location : $locationData');
-                  await getLocationData();
-                  print(locationData.body);
-                  var woied=jsonDecode(locationData.body)[0]['woied'];
-                  print(woied);
-                },
-                child: Text('click me'),
-              ),
+             // FlatButton(
+              //  color: Colors.red,
+              // onPressed: () async {
+            //  print('location : $locationData');
+            //   await getLocationData();
+    //  print(locationData.body);
+            //   var locationDataParse = jsonDecode(locationData.body);
+            //    woied = locationDataParse[0]['woied'];
+              //  },
+            //  child: Text('click me'),
+              //  ),
               Text(
                 '$sicaklik° C',
                 style: TextStyle(fontSize: 70, fontWeight: FontWeight.bold),
