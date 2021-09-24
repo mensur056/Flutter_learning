@@ -6,8 +6,10 @@ class SearchPage extends StatefulWidget {
 }
 
 class _SearchPageState extends State<SearchPage> {
+  void birFonksiyon(){print('bir fonksiyon calisdi');}
   @override
   Widget build(BuildContext context) {
+    birFonksiyon();
     return Container(
         decoration: BoxDecoration(
             image: DecorationImage(
