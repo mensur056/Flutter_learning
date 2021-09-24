@@ -13,11 +13,17 @@ class _SearchPageState extends State<SearchPage> {
   void birFonksiyon() {
     print('bir fonksiyon calisdi');
   }
-
+ void sonFonksiyon(){print('son foonksiyon calisdi ve widget silindi');}
   @override
   void initState() {
     birFonksiyon();
     super.initState();
+
+  }
+  @override
+  void dispose() {
+   sonFonksiyon();
+    super.dispose();
   }
 
   @override
