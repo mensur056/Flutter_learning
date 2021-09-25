@@ -39,11 +39,14 @@ class HomePage extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 28.0, top: 7),
-                child: Container(height:
-                  110,width: 110,
+                child: Container(
+                  height: 110,
+                  width: 110,
                   child: CircleAvatar(
                     radius: 35,
-                    backgroundImage: AssetImage('images/m4.jpg',),
+                    backgroundImage: AssetImage(
+                      'images/m4.jpg',
+                    ),
                   ),
                 ),
               ),
@@ -63,9 +66,12 @@ class HomePage extends StatelessWidget {
                     Row(
                       children: [
                         Icon(Icons.location_on, color: Colors.white),
+                        SizedBox(
+                          width: 10,
+                        ),
                         Text(
                           'Azerbaijan',
-                          style: TextStyle(fontSize: 15, color: Colors.white),
+                          style: TextStyle(fontSize: 18, color: Colors.white),
                         )
                       ],
                     )
@@ -77,7 +83,7 @@ class HomePage extends StatelessWidget {
           Row(
             children: [
               Padding(
-                padding: const EdgeInsets.only(left:40.0,top: 10),
+                padding: const EdgeInsets.only(left: 40.0, top: 18),
                 child: Column(
                   children: [
                     Text(
@@ -89,12 +95,48 @@ class HomePage extends StatelessWidget {
                     ),
                     Text(
                       'followers',
-                      style: TextStyle(fontSize: 10, color: Colors.white),
+                      style: TextStyle(fontSize: 15, color: Colors.white),
                     )
                   ],
                 ),
               ),
-              Column(),
+              SizedBox(
+                width: 35,
+              ),
+              Container(
+                color: Colors.white,
+                width: 0.2,
+                height: 22,
+              ),
+              SizedBox(
+                width: 35,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 18.0),
+                child: Column(
+                  children: [
+                    Text(
+                      '460',
+                      style: TextStyle(
+                          fontSize: 30,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      'following',
+                      style: TextStyle(fontSize: 15, color: Colors.white),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(
+                width: 35,
+              ),
+              Container(
+                color: Colors.white,
+                width: 0.2,
+                height: 22,
+              ),
               Column()
             ],
           )
