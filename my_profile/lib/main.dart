@@ -40,8 +40,8 @@ class HomePage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 28.0, top: 7),
                 child: Container(
-                  height: 110,
-                  width: 110,
+                  height: 100,
+                  width: 100,
                   child: CircleAvatar(
                     radius: 35,
                     backgroundImage: AssetImage(
