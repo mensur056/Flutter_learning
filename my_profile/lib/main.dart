@@ -151,7 +151,7 @@ class HomePage extends StatelessWidget {
                         end: Alignment.centerLeft)),
                 child: Text(
                   'follow',
-                  style: TextStyle(
+                  style: TextStyle(fontSize: 20,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
