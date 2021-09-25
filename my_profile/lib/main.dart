@@ -83,7 +83,7 @@ class HomePage extends StatelessWidget {
           Row(
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 40.0, top: 18),
+                padding: const EdgeInsets.only(left: 80.0, top: 18),
                 child: Column(
                   children: [
                     Text(
@@ -137,7 +137,26 @@ class HomePage extends StatelessWidget {
                 width: 0.2,
                 height: 22,
               ),
-              Column()
+              SizedBox(
+                width: 35,
+              ),
+              Container(
+                padding:
+                    EdgeInsets.only(left: 18, top: 8, right: 18, bottom: 5),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(33)),
+                    gradient: LinearGradient(
+                        colors: [Color(0xff6D0EB5), Color(0xff4059F1)],
+                        begin: Alignment.bottomRight,
+                        end: Alignment.centerLeft)),
+                child: Text(
+                  'follow',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              )
             ],
           )
         ],
