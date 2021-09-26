@@ -7,7 +7,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp(debugShowCheckedModeBanner: false,
 
       home: HomePage(),
     );
@@ -116,7 +116,7 @@ class HomePage extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      '460',
+                      '465',
                       style: TextStyle(
                           fontSize: 30,
                           color: Colors.white,
