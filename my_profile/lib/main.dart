@@ -83,7 +83,7 @@ class HomePage extends StatelessWidget {
           Row(
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 80.0, top: 18),
+                padding: const EdgeInsets.only(left: 79.0, top: 18),
                 child: Column(
                   children: [
                     Text(
@@ -101,7 +101,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 35,
+                width: 34,
               ),
               Container(
                 color: Colors.white,
