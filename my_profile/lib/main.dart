@@ -70,7 +70,7 @@ class HomePage extends StatelessWidget {
                           width: 10,
                         ),
                         Text(
-                          'Azerbaijan',
+                          'Azerbaijan-A.Z.E',
                           style: TextStyle(fontSize: 18, color: Colors.white),
                         )
                       ],
