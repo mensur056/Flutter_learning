@@ -112,7 +112,7 @@ class HomePage extends StatelessWidget {
                 width: 35,
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 18.0),
+                padding: const EdgeInsets.only(top: 17.0),
                 child: Column(
                   children: [
                     Text(
@@ -151,7 +151,7 @@ class HomePage extends StatelessWidget {
                         end: Alignment.centerLeft)),
                 child: Text(
                   'follow',
-                  style: TextStyle(fontSize: 20,
+                  style: TextStyle(fontSize: 19,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
