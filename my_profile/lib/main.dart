@@ -7,8 +7,8 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false,
-
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
   }
@@ -124,7 +124,7 @@ class HomePage extends StatelessWidget {
                     ),
                     Text(
                       'following',
-                      style: TextStyle(fontSize: 15, color: Colors.white),
+                      style: TextStyle(fontSize: 16, color: Colors.white),
                     )
                   ],
                 ),
@@ -142,7 +142,7 @@ class HomePage extends StatelessWidget {
               ),
               Container(
                 padding:
-                    EdgeInsets.only(left: 18, top: 8, right: 18, bottom: 5),
+                    EdgeInsets.only(left: 17, top: 8, right: 17, bottom: 5),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(33)),
                     gradient: LinearGradient(
@@ -151,7 +151,8 @@ class HomePage extends StatelessWidget {
                         end: Alignment.centerLeft)),
                 child: Text(
                   'follow',
-                  style: TextStyle(fontSize: 19,
+                  style: TextStyle(
+                    fontSize: 19,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
