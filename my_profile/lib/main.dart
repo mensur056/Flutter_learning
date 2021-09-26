@@ -106,7 +106,7 @@ class HomePage extends StatelessWidget {
               Container(
                 color: Colors.white,
                 width: 0.2,
-                height: 22,
+                height: 21,
               ),
               SizedBox(
                 width: 35,
