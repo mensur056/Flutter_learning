@@ -143,7 +143,7 @@ class HomePage extends StatelessWidget {
               ),
               Container(
                 padding:
-                EdgeInsets.only(left: 17, top: 8, right: 17, bottom: 5),
+                    EdgeInsets.only(left: 17, top: 8, right: 17, bottom: 5),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(33)),
                     gradient: LinearGradient(
@@ -161,12 +161,22 @@ class HomePage extends StatelessWidget {
               )
             ],
           ),
-          Container(height: 44,
+          Container(
+            height: 44,
             child: ListView.builder(
-              scrollDirection: Axis.horizontal, itemCount: tags.length,
+              scrollDirection: Axis.horizontal,
+              itemCount: tags.length,
               itemBuilder: (BuildContext context, int index) {
-                return
-              },),)
+                return Container(
+                  margin: EdgeInsets.only(right: 13),
+                  child: Text(
+                    tags[index],
+                    style: TextStyle(color: Colors.white),
+                  ),
+                );
+              },
+            ),
+          )
         ],
       ),
     );
