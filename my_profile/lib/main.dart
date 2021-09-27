@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    List tags = ['travel', 'urban', 'fashion', 'lifestyle', 'editing'];
     return Scaffold(
       backgroundColor: Color(0xff09031D),
       appBar: AppBar(
@@ -142,7 +143,7 @@ class HomePage extends StatelessWidget {
               ),
               Container(
                 padding:
-                    EdgeInsets.only(left: 17, top: 8, right: 17, bottom: 5),
+                EdgeInsets.only(left: 17, top: 8, right: 17, bottom: 5),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(33)),
                     gradient: LinearGradient(
@@ -159,7 +160,13 @@ class HomePage extends StatelessWidget {
                 ),
               )
             ],
-          )
+          ),
+          Container(height: 44,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal, itemCount: tags.length,
+              itemBuilder: (BuildContext context, int index) {
+                return
+              },),)
         ],
       ),
     );
