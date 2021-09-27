@@ -160,7 +160,10 @@ class HomePage extends StatelessWidget {
                 ),
               )
             ],
-          ),SizedBox(height: 5,),
+          ),
+          SizedBox(
+            height: 5,
+          ),
           Container(
             height: 44,
             child: ListView.builder(
@@ -177,11 +180,21 @@ class HomePage extends StatelessWidget {
                         top: 13.0, bottom: 5, right: 20, left: 20),
                     child: Text(
                       tags[index],
-                      style: TextStyle(color: Colors.white,fontSize: 15),
+                      style: TextStyle(color: Colors.white, fontSize: 15),
                     ),
                   ),
                 );
               },
+            ),
+          ),
+          Expanded(
+            child: Container(
+              margin: EdgeInsets.only(top: 15),
+              decoration: BoxDecoration(color: Colors.white,
+                borderRadius: BorderRadius.vertical(
+                  top: Radius.circular(33),
+                ),
+              ),
             ),
           )
         ],
