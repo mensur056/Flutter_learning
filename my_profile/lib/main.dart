@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 void main() {
   runApp(MyApp());
@@ -225,7 +226,7 @@ class HomePage extends StatelessWidget {
                       itemCount: categories.length,
                       itemBuilder: (BuildContext context, int index) {
                         return Padding(
-                          padding: const EdgeInsets.only(right: 17.0,top: 3),
+                          padding: const EdgeInsets.only(right: 17.0, top: 3),
                           child: index == 1
                               ? Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
@@ -233,7 +234,8 @@ class HomePage extends StatelessWidget {
                                     Text(
                                       categories[index],
                                       style: TextStyle(
-                                          color: Color(0xff434AE8), fontSize: 19),
+                                          color: Color(0xff434AE8),
+                                          fontSize: 19),
                                     ),
                                     CircleAvatar(
                                       radius: 2,
@@ -250,7 +252,24 @@ class HomePage extends StatelessWidget {
                         );
                       },
                     ),
-                  )
+                  ),
+                  Expanded(
+                      child: Stack(
+                    alignment: Alignment.bottomCenter,
+                    children: [
+                      Align(
+                        alignment: Alignment.topCenter,
+                        child: Container(
+                          padding: EdgeInsets.only(right: 25, left: 25),
+                          height: 200,
+                          child: StaggeredGridView.countBuilder(
+                              crossAxisCount: 4,itemCount: 4,
+                              itemBuilder: (BuildContext context ,int index)=>Container(child: ClipRRect(),),
+                              ),
+                        ),
+                      )
+                    ],
+                  ))
                 ],
               ),
             ),
