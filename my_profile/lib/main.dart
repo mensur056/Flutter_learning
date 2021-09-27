@@ -18,6 +18,13 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List tags = ['travel', 'urban', 'fashion', 'lifestyle', 'editing'];
+    List categories = [
+      'Featured',
+      'Neon City',
+      'Street Art',
+      'Fashion',
+      'Studio'
+    ];
     return Scaffold(
       backgroundColor: Color(0xff09031D),
       appBar: AppBar(
@@ -190,10 +197,61 @@ class HomePage extends StatelessWidget {
           Expanded(
             child: Container(
               margin: EdgeInsets.only(top: 15),
-              decoration: BoxDecoration(color: Colors.white,
+              decoration: BoxDecoration(
+                color: Colors.white,
                 borderRadius: BorderRadius.vertical(
                   top: Radius.circular(33),
                 ),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(left: 15.0, top: 33, right: 15),
+                    child: Text(
+                      'Protfllio',
+                      style: TextStyle(
+                          fontSize: 33,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                    ),
+                  ),
+                  Container(
+                    height: 40,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: categories.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        return Padding(
+                          padding: const EdgeInsets.only(right: 17.0,top: 3),
+                          child: index == 1
+                              ? Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      categories[index],
+                                      style: TextStyle(
+                                          color: Color(0xff434AE8), fontSize: 19),
+                                    ),
+                                    CircleAvatar(
+                                      radius: 2,
+                                      backgroundColor: Color(0xff434AE8),
+                                    )
+                                  ],
+                                )
+                              : Text(
+                                  categories[index],
+                                  style: TextStyle(
+                                      color: Colors.grey.withOpacity(0.9),
+                                      fontSize: 19),
+                                ),
+                        );
+                      },
+                    ),
+                  )
+                ],
               ),
             ),
           )
