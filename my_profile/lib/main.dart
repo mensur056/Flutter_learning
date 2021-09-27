@@ -160,7 +160,7 @@ class HomePage extends StatelessWidget {
                 ),
               )
             ],
-          ),
+          ),SizedBox(height: 5,),
           Container(
             height: 44,
             child: ListView.builder(
@@ -168,10 +168,17 @@ class HomePage extends StatelessWidget {
               itemCount: tags.length,
               itemBuilder: (BuildContext context, int index) {
                 return Container(
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(22),
+                      border: Border.all(color: Colors.white12)),
                   margin: EdgeInsets.only(right: 13),
-                  child: Text(
-                    tags[index],
-                    style: TextStyle(color: Colors.white),
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                        top: 13.0, bottom: 5, right: 20, left: 20),
+                    child: Text(
+                      tags[index],
+                      style: TextStyle(color: Colors.white,fontSize: 15),
+                    ),
                   ),
                 );
               },
