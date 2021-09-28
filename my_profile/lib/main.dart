@@ -283,6 +283,25 @@ class HomePage extends StatelessWidget {
                               crossAxisSpacing: 8,
                             ),
                           ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(left: 12, right: 12),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.vertical(
+                                  top: Radius.circular(33))),
+                          height: 55,
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.home,
+                                color: Color(0xff434BE6),
+                              ),
+                              Icon(
+                                Icons.notifications_active,
+                                color: Colors.grey.withOpacity(0.6),
+
+                              ),SizedBox(width: 33,),Icon(Icons.favorite,color: Colors.grey.withOpacity(0.6),),                           ],
+                          ),
                         )
                       ],
                     ),
