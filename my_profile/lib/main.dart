@@ -284,13 +284,13 @@ class HomePage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Container(
+                        Container(width: double.infinity,
                           padding: EdgeInsets.only(left: 12, right: 12),
-                          decoration: BoxDecoration(
+                          decoration: BoxDecoration(color: Colors.white,
                               borderRadius: BorderRadius.vertical(
                                   top: Radius.circular(33))),
                           height: 55,
-                          child: Row(
+                          child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Icon(
                                 Icons.home,
@@ -299,8 +299,18 @@ class HomePage extends StatelessWidget {
                               Icon(
                                 Icons.notifications_active,
                                 color: Colors.grey.withOpacity(0.6),
-
-                              ),SizedBox(width: 33,),Icon(Icons.favorite,color: Colors.grey.withOpacity(0.6),),                           ],
+                              ),
+                              SizedBox(
+                                width: 33,
+                              ),
+                              Icon(
+                                Icons.favorite,
+                                color: Colors.grey.withOpacity(0.6),
+                              ),Icon(
+                                Icons.person,
+                                color: Colors.grey.withOpacity(0.6),
+                              ),
+                            ],
                           ),
                         )
                       ],
