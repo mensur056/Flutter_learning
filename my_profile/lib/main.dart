@@ -272,7 +272,7 @@ class HomePage extends StatelessWidget {
                                     Radius.circular(12),
                                   ),
                                   child: Image.asset(
-                                    'images/m${index + 1}.jpg)',
+                                    'images/m${index + 1}.jpg',
                                     fit: BoxFit.cover,
                                   ),
                                 ),
