@@ -267,9 +267,20 @@ class HomePage extends StatelessWidget {
                               itemCount: 4,
                               itemBuilder: (BuildContext context, int index) =>
                                   Container(
-                                child: ClipRRect(),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(12),
+                                  ),
+                                  child: Image.asset(
+                                    'images/m${index + 1}.jpg)',
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
                               ),
-                              staggeredTileBuilder: (int index) {},
+                              staggeredTileBuilder: (int index) =>
+                                  StaggeredTile.count(2, index.isEven ? 3 : 1),
+                              mainAxisSpacing: 9,
+                              crossAxisSpacing: 8,
                             ),
                           ),
                         )
