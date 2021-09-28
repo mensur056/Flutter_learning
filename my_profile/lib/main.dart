@@ -254,22 +254,28 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Expanded(
-                      child: Stack(
-                    alignment: Alignment.bottomCenter,
-                    children: [
-                      Align(
-                        alignment: Alignment.topCenter,
-                        child: Container(
-                          padding: EdgeInsets.only(right: 25, left: 25),
-                          height: 200,
-                          child: StaggeredGridView.countBuilder(
-                              crossAxisCount: 4,itemCount: 4,
-                              itemBuilder: (BuildContext context ,int index)=>Container(child: ClipRRect(),),
+                    child: Stack(
+                      alignment: Alignment.bottomCenter,
+                      children: [
+                        Align(
+                          alignment: Alignment.topCenter,
+                          child: Container(
+                            padding: EdgeInsets.only(right: 25, left: 25),
+                            height: 200,
+                            child: StaggeredGridView.countBuilder(
+                              crossAxisCount: 4,
+                              itemCount: 4,
+                              itemBuilder: (BuildContext context, int index) =>
+                                  Container(
+                                child: ClipRRect(),
                               ),
-                        ),
-                      )
-                    ],
-                  ))
+                              staggeredTileBuilder: (int index) {},
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  )
                 ],
               ),
             ),
