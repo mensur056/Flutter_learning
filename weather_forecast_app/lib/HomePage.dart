@@ -1,4 +1,4 @@
-
+import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:weather_forecast_app/search_page.dart';
@@ -14,18 +14,24 @@ class _HomePageState extends State<HomePage> {
   int sicaklik = 20;
   var locationData;
   var woied;
-  void getLocationTemperature(){
-   var response= http.get(Uri.http('https://www.metaweather.com/api/location/44418/', ''));
+
+Future <void> getLocationTemperature() async {
+    var response = await http
+        .get(Uri.https('https://www.metaweather.com/api/location/44418/', '/london'));
+    var temperatureDataParsed=jsonDecode(response.body);
+    var temp=temperatureDataParsed['consolidated_weather'][0]['the_temp'];
+    print(temp);
   }
 
   Future<void> getLocationData() async {
     locationData = await http.get(Uri.http(
-        'https://www.metaweather.com/api/location/search/?query=london', ''));
+        'https://www.metaweather.com/api/location/search/?query=london', '/london'));
   }
+
   @override
-  void initState() {
-   getLocationData();
-   print('woied =$woied');
+  void initState() {getLocationTemperature();
+    getLocationData();
+    print('woied =$woied');
     super.initState();
   }
 
@@ -41,16 +47,16 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-             // FlatButton(
+              // FlatButton(
               //  color: Colors.red,
               // onPressed: () async {
-            //  print('location : $locationData');
-            //   await getLocationData();
-    //  print(locationData.body);
-            //   var locationDataParse = jsonDecode(locationData.body);
-            //    woied = locationDataParse[0]['woied'];
+              //  print('location : $locationData');
+              //   await getLocationData();
+              //  print(locationData.body);
+              //   var locationDataParse = jsonDecode(locationData.body);
+              //    woied = locationDataParse[0]['woied'];
               //  },
-            //  child: Text('click me'),
+              //  child: Text('click me'),
               //  ),
               Text(
                 '$sicaklik° C',
