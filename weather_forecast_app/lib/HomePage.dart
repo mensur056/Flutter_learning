@@ -26,12 +26,14 @@ Future <void> getLocationTemperature() async {
   Future<void> getLocationData() async {
     locationData = await http.get(Uri.http(
         'https://www.metaweather.com/api/location/search/?query=london', '/london'));
-  }
+ var locationDataParsed=jsonDecode(locationData.body);
+ woied=locationDataParsed[0]['woied'];
+}
 
   @override
   void initState() {getLocationTemperature();
     getLocationData();
-    print('woied =$woied');
+
     super.initState();
   }
 
