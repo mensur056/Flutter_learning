@@ -69,7 +69,7 @@ Future <void> getLocationTemperature() async {
                 children: [
                   Text(
                     '$sehir',
-                    style: TextStyle(fontSize: 30),
+                    style: TextStyle(fontSize: 29),
                   ),
                   IconButton(
                       onPressed: () {
