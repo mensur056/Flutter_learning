@@ -1,4 +1,4 @@
-import 'dart:convert';
+
 
 import 'package:flutter/material.dart';
 import 'package:weather_forecast_app/search_page.dart';
@@ -14,6 +14,9 @@ class _HomePageState extends State<HomePage> {
   int sicaklik = 20;
   var locationData;
   var woied;
+  void getLocationTemperature(){
+   var response= http.get(Uri.http('https://www.metaweather.com/api/location/44418/', ''));
+  }
 
   Future<void> getLocationData() async {
     locationData = await http.get(Uri.http(
