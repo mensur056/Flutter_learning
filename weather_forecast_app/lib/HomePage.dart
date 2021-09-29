@@ -62,7 +62,7 @@ Future <void> getLocationTemperature() async {
               //  ),
               Text(
                 '$sicaklik° C',
-                style: TextStyle(fontSize: 70, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 69, fontWeight: FontWeight.bold),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
