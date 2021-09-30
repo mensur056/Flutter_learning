@@ -15,25 +15,31 @@ class _HomePageState extends State<HomePage> {
   var locationData;
   var woied;
 
-Future <void> getLocationTemperature() async {
-    var response = await http
-        .get(Uri.https('https://www.metaweather.com/api/location/44418/', '/london'));
-    var temperatureDataParsed=jsonDecode(response.body);
-    var temp=temperatureDataParsed['consolidated_weather'][0]['the_temp'];
+  Future<void> getLocationTemperature() async {
+    var response = await http.get(Uri.https(
+        'https://www.metaweather.com/api/location/44418/', '/london'));
+    var temperatureDataParsed = jsonDecode(response.body);
+    var temp = temperatureDataParsed['consolidated_weather'][0]['the_temp'];
     print(temp);
   }
 
   Future<void> getLocationData() async {
     locationData = await http.get(Uri.http(
-        'https://www.metaweather.com/api/location/search/?query=london', '/london'));
- var locationDataParsed=jsonDecode(locationData.body);
- woied=locationDataParsed[0]['woied'];
-}
+        'https://www.metaweather.com/api/location/search/?query=london',
+        '/london'));
+    var locationDataParsed = jsonDecode(locationData.body);
+    woied = locationDataParsed[0]['woied'];
+  }
+
+  void getLocationDataAPI() async {
+    await getLocationData();
+    getLocationTemperature();
+  }
 
   @override
-  void initState() {getLocationTemperature();
+  void initState() {
+    getLocationTemperature();
     getLocationData();
-
     super.initState();
   }
 
