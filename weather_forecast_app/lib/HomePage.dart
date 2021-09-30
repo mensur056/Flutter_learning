@@ -62,14 +62,14 @@ Future <void> getLocationTemperature() async {
               //  ),
               Text(
                 '$sicaklik° C',
-                style: TextStyle(fontSize: 71, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 70, fontWeight: FontWeight.bold),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     '$sehir',
-                    style: TextStyle(fontSize: 31),
+                    style: TextStyle(fontSize: 30),
                   ),
                   IconButton(
                       onPressed: () {
