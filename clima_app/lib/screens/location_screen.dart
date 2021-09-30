@@ -32,14 +32,14 @@ class _LocationScreenState extends State<LocationScreen> {
                     onPressed: () {},
                     child: Icon(
                       Icons.near_me,
-                      size: 50.0,
+                      size: 51.0,
                     ),
                   ),
                   FlatButton(
                     onPressed: () {},
                     child: Icon(
                       Icons.location_city,
-                      size: 50.0,
+                      size: 51.0,
                     ),
                   ),
                 ],

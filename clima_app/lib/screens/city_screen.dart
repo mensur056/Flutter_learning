@@ -27,12 +27,12 @@ class _CityScreenState extends State<CityScreen> {
                   onPressed: () {},
                   child: Icon(
                     Icons.arrow_back_ios,
-                    size: 50.0,
+                    size: 51.0,
                   ),
                 ),
               ),
               Container(
-                padding: EdgeInsets.all(20.0),
+                padding: EdgeInsets.all(25.0),
                 child: null,
               ),
               FlatButton(
