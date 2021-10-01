@@ -9,19 +9,30 @@ class LoadingScreen extends StatefulWidget {
 class _LoadingScreenState extends State<LoadingScreen> {
   @override
   void initState() {
-getLocation();
+    getLocation();
     super.initState();
   }
 
   void getLocation() async {
-    Position position= await Geolocator.getCurrentPosition(
+    Position position = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.low);
     print(position);
   }
 
   @override
   Widget build(BuildContext context) {
+    String myMargin = '15';
+    double myMarginAsADouble;
+    try {
+      myMarginAsADouble = double.parse(myMargin);
+    } catch (e) {
+      print(e);
+    }
     return Scaffold(
+      body: Container(
+        color: Colors.red,
+        margin: EdgeInsets.all(double.parse(myMargin)),
+      ),
     );
   }
 }
