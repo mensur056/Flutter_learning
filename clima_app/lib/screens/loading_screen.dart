@@ -27,6 +27,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
       myMarginAsADouble = double.parse(myMargin);
     } catch (e) {
       print(e);
+      myMarginAsADouble=30.0;
     }
     return Scaffold(
       body: Container(
