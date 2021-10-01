@@ -14,26 +14,17 @@ class _LoadingScreenState extends State<LoadingScreen> {
   }
 
   void getLocation() async {
-    Position position = await Geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.low);
-    print(position);
+    try {
+      Position position = await Geolocator.getCurrentPosition(
+          desiredAccuracy: LocationAccuracy.low);
+      print(position);
+    } catch (e) {
+      print(e);
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-    String myMargin = '15';
-    double myMarginAsADouble;
-    try {
-      myMarginAsADouble = double.parse(myMargin);
-    } catch (e) {
-      print(e);
-      myMarginAsADouble=30.0;
-    }
-    return Scaffold(
-      body: Container(
-        color: Colors.red,
-        margin: EdgeInsets.all(double.parse(myMargin)),
-      ),
-    );
+    return Scaffold();
   }
 }
