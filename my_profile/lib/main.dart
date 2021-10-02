@@ -15,7 +15,12 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     List tags = ['travel', 'urban', 'fashion', 'lifestyle', 'editing'];
@@ -291,7 +296,7 @@ class HomePage extends StatelessWidget {
                               color: Colors.white,
                               borderRadius: BorderRadius.vertical(
                                   top: Radius.circular(33))),
-                          height: 55,
+                          height: 45,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -306,9 +311,17 @@ class HomePage extends StatelessWidget {
                               SizedBox(
                                 width: 33,
                               ),
-                              Icon(
-                                Icons.favorite,
-                                color: Colors.grey.withOpacity(0.6),
+                              FlatButton(
+                                onPressed: () {
+                                  setState(() {
+                                    IconAdd(
+                                        icon: Icons.favorite, renk: Colors.red);
+                                  });
+                                },
+                                child: Icon(
+                                  Icons.favorite,
+
+                                ),
                               ),
                               Icon(
                                 Icons.person,
@@ -351,4 +364,11 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
+}
+
+class IconAdd {
+  IconData icon = Icons.favorite;
+  Color renk = Colors.red;
+
+  IconAdd({required this.icon, required this.renk});
 }
