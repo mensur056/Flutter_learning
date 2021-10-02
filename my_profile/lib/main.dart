@@ -315,13 +315,10 @@ class _HomePageState extends State<HomePage> {
                                 onPressed: () {
                                   setState(() {
                                     IconAdd(
-                                        icon: Icons.favorite, renk: Colors.red);
+                                        icon: Icons.favorite, color: Colors.red);
                                   });
                                 },
-                                child: Icon(
-                                  Icons.favorite,
-
-                                ),
+                                child: Icon( Icons.favorite,color: Colors.grey)
                               ),
                               Icon(
                                 Icons.person,
@@ -368,7 +365,7 @@ class _HomePageState extends State<HomePage> {
 
 class IconAdd {
   IconData icon = Icons.favorite;
-  Color renk = Colors.red;
+  Color color = Colors.red;
 
-  IconAdd({required this.icon, required this.renk});
+  IconAdd({required this.icon, required this.color});
 }
