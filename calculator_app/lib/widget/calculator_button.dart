@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class CalculatorButton extends StatelessWidget {
@@ -10,7 +9,7 @@ class CalculatorButton extends StatelessWidget {
 
   const CalculatorButton(
       {required this.text,
-        required this.callBack,
+      required this.callBack,
       required this.fillColor,
       required this.textColor,
       required this.textSize});
@@ -23,7 +22,9 @@ class CalculatorButton extends StatelessWidget {
         width: 55,
         height: 55,
         child: FlatButton(
-          onPressed: () {callBack(text);},
+          onPressed: () {
+            callBack(text);
+          },
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
           child: Text(
             text,
@@ -35,5 +36,4 @@ class CalculatorButton extends StatelessWidget {
       ),
     );
   }
-
 }

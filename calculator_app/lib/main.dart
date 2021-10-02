@@ -88,22 +88,22 @@ class _MyCalculatorState extends State<MyCalculator> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Container(
+              Container(color: Colors.white,
                 child: Padding(
                   padding: EdgeInsets.only(right: 12),
                   child: Text(
                     history,
-                    style: TextStyle(fontSize: 24, color: Color(0x66FFFFFF)),
+                    style: TextStyle(fontSize: 24, color: Colors.green),
                   ),
                 ),
                 alignment: Alignment(1.0, 1.0),
               ),
-              Container(
+              Container(color: Colors.white,
                 child: Padding(
                   padding: EdgeInsets.all(12),
                   child: Text(
                     textToDisplay,
-                    style: TextStyle(fontSize: 48, color: Colors.white),
+                    style: TextStyle(fontSize: 48, color: Colors.black),
                   ),
                 ),
                 alignment: Alignment(1.0, 1.0),
