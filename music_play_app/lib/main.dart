@@ -16,7 +16,7 @@ void main() {
     home: ChangeNotifierProvider(
         create: (_)=>MyAudio(),
         child: HomePage()),
-  ));
+  ),);
 }
 
 class HomePage extends StatefulWidget {
@@ -55,7 +55,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Text(
-            'Gidget',
+            'GidGet',
             style: TextStyle(
                 fontSize: 28,
                 fontWeight: FontWeight.w500,
@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage> {
           Text(
             'The Free Nationals',
             style: TextStyle(
-                fontSize: 21,
+                fontSize: 20,
                 fontWeight: FontWeight.w400,
                 color: darkPrimaryColor),
           ),

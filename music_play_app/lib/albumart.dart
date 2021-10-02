@@ -6,8 +6,8 @@ class AlbumArt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
-      width: 200,
+      height: 220,
+      width: 220,
       padding: EdgeInsets.all(12),
       margin: EdgeInsets.symmetric(horizontal: 20,vertical: 40),
       child: ClipRRect(
