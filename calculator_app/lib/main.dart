@@ -82,13 +82,17 @@ class _MyCalculatorState extends State<MyCalculator> {
       home: Scaffold(
         backgroundColor: Color(0xFF0A0E21),
         appBar: AppBar(
-          title: Text('Calculator'),
+          title: Text(
+            'Calculator',
+            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+          ),
         ),
         body: Container(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Container(color: Colors.white,
+              Container(
+                color: Colors.white,
                 child: Padding(
                   padding: EdgeInsets.only(right: 12),
                   child: Text(
@@ -98,7 +102,8 @@ class _MyCalculatorState extends State<MyCalculator> {
                 ),
                 alignment: Alignment(1.0, 1.0),
               ),
-              Container(color: Colors.white,
+              Container(
+                color: Colors.white,
                 child: Padding(
                   padding: EdgeInsets.all(12),
                   child: Text(
