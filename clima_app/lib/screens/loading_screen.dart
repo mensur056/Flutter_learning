@@ -12,6 +12,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
   void initState() {
     getLocation();
     super.initState();
+    print('this line of code is triggered');
   }
 
   void getLocation() async {
