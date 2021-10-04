@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'inputWrapper.dart';
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -32,13 +32,15 @@ class LoginPage extends StatelessWidget {
               height: 50,
             ),
             Expanded(
-                child: Container(
-              decoration: BoxDecoration(
+              child: Container(
+                decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                       topRight: Radius.circular(60),
-                      topLeft: Radius.circular(60))),
-            ))
+                      topLeft: Radius.circular(60)),
+                ),child: inputWrapper(),
+              ),
+            )
           ],
         ),
       ),
