@@ -31,6 +31,8 @@ class _HomePageState extends State<HomePage> {
       'Fashion',
       'Studio'
     ];
+    bool _hasBeenPressed = false;
+
     return Scaffold(
       backgroundColor: Color(0xff09031D),
       appBar: AppBar(
@@ -311,14 +313,16 @@ class _HomePageState extends State<HomePage> {
                               SizedBox(
                                 width: 33,
                               ),
-                              FlatButton(
-                                onPressed: () {
-                                  setState(() {
-                                    IconAdd(
-                                        icon: Icons.favorite, color: Colors.red);
-                                  });
-                                },
-                                child: Icon( Icons.favorite,color: Colors.grey)
+                              RaisedButton(
+                                child: Icon(
+                                  Icons.favorite,
+                                  color: _hasBeenPressed==true
+                                      ? Colors.grey
+                                      : Colors.red,
+                                ),
+                                onPressed: () { setState(() {
+                                  _hasBeenPressed = !_hasBeenPressed;
+                                });},
                               ),
                               Icon(
                                 Icons.person,
