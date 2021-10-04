@@ -9,7 +9,8 @@ class inputWrapper extends StatelessWidget {
         children: [
           SizedBox(
             height: 40,
-          )
+          ),
+          Container(decoration: BoxDecoration(color: Colors.white),)
         ],
       ),
     );
