@@ -26,10 +26,10 @@ class LoginPage extends StatelessWidget {
             ),
             Text(
               'Welcome to inside Android',
-              style: TextStyle(fontSize: 30, color: Colors.white),
+              style: TextStyle(fontSize: 20, color: Colors.white),
             ),
             SizedBox(
-              height: 100,
+              height: 50,
             ),
             Expanded(
                 child: Container(
