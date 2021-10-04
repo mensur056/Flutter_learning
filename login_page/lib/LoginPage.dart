@@ -16,15 +16,20 @@ class LoginPage extends StatelessWidget {
         child: Column(
           children: [
             Center(
-                child: Padding(
-              padding: const EdgeInsets.only(top: 50.0),
-              child: Text(
-                'Login',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 50.0),
+                child: Text(
+                  'Login',
+                  style: TextStyle(fontSize: 60, color: Colors.white),
+                ),
               ),
-            ),),
+            ),
+            Text(
+              'Welcome to inside Android',
+              style: TextStyle(fontSize: 30, color: Colors.white),
+            ),
             SizedBox(
-              height: 150,
+              height: 100,
             ),
             Expanded(
                 child: Container(
