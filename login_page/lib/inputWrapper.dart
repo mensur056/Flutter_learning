@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'InputField.dart';
+import 'Button.dart';
+
 class InputWrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,11 @@ class InputWrapper extends StatelessWidget {
           Text(
             'Forgot password?',
             style: TextStyle(color: Colors.grey),
-          )
+          ),
+          SizedBox(
+            height: 40,
+          ),
+          Button()
         ],
       ),
     );
