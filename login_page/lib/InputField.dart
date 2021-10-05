@@ -10,7 +10,8 @@ class InputField extends StatelessWidget {
       child: TextField(
         decoration: InputDecoration(
             hintText: 'Enter your email',
-            hintStyle: TextStyle(color: Colors.grey)),
+            hintStyle: TextStyle(color: Colors.grey),
+            border: InputBorder.none),
       ),
     );
   }
