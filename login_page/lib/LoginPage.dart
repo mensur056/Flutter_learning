@@ -38,7 +38,7 @@ class LoginPage extends StatelessWidget {
                   borderRadius: BorderRadius.only(
                       topRight: Radius.circular(60),
                       topLeft: Radius.circular(60)),
-                ),child: inputWrapper(),
+                ),child: InputWrapper(),
               ),
             )
           ],

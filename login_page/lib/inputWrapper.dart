@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-class inputWrapper extends StatelessWidget {
+import 'InputField.dart';
+class InputWrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -13,13 +13,13 @@ class inputWrapper extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
                 color: Colors.white, borderRadius: BorderRadius.circular(10)),
-            child: inputField(),
+            child: InputField(),
           ),
           SizedBox(
             height: 40,
           ),
           Text(
-            'Forget password?',
+            'Forgot password?',
             style: TextStyle(color: Colors.grey),
           )
         ],
