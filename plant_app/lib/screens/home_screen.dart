@@ -3,12 +3,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:plant_app/components/body.dart';
 import 'package:plant_app/constants.dart';
 
-
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar(),body: Body(),
+      appBar: buildAppBar(),
+      body: Body(),
     );
   }
 
