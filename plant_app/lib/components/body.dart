@@ -13,7 +13,7 @@ class Body extends StatelessWidget {
             children: [
               Container(
                 height: size.height * 0.2 - 27,
-                decoration: BoxDecoration(color: kPrimaryColor),
+                decoration: BoxDecoration(color: kPrimaryColor,borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30),bottomRight: Radius.circular(30))),
               )
             ],
           ),
