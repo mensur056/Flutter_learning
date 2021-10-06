@@ -14,7 +14,9 @@ class Body extends StatelessWidget {
             children: [
               Container(
                 padding: EdgeInsets.only(
-                    left: kDefaultPadding, right: kDefaultPadding),
+                    left: kDefaultPadding,
+                    right: kDefaultPadding,
+                    bottom: kDefaultPadding + 35),
                 height: size.height * 0.3 - 27,
                 decoration: BoxDecoration(
                   color: kPrimaryColor,
@@ -70,7 +72,12 @@ class Body extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SvgPicture.asset('assets/icons/search.svg')
+                      FlatButton(
+                          splashColor: Colors.teal,
+                          highlightColor: Colors.white,
+                          hoverColor: Colors.white,
+                          onPressed: () {},
+                          child: SvgPicture.asset('assets/icons/search.svg'))
                     ],
                   ),
                 ),
