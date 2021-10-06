@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:plant_app/constants.dart';
 
 
 class HomeScreen extends StatelessWidget {
@@ -8,7 +9,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        leading: IconButton(
+        leading: IconButton(splashColor:kPrimaryColor,highlightColor: kPrimaryColor,
           icon: SvgPicture.asset('assets/icons/menu.svg'),
           onPressed: () {},
         ),
