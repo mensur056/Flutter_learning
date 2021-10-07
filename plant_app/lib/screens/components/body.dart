@@ -11,22 +11,41 @@ class Body extends StatelessWidget {
       child: Column(
         children: [
           HeaderWithSearchBox(size: size),
-          Row(
-            children: [
-              TitleWithCustomUnder(
-                text: 'Recomended',
-              ),Spacer(),
-              FlatButton(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)),
-                  color: kPrimaryColor,
-                  onPressed: () {},
-                  child: Text(
-                    'More',
-                    style: TextStyle(color: Colors.white),
-                  ))
-            ],
+          TitleWithMoreBtn(
+            title: 'Recomended',
+            press: () {},
           )
+        ],
+      ),
+    );
+  }
+}
+
+class TitleWithMoreBtn extends StatelessWidget {
+  const TitleWithMoreBtn({required this.title, required this.press});
+
+  final String title;
+  final VoidCallback press;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+      child: Row(
+        children: [
+          TitleWithCustomUnder(
+            text: title,
+          ),
+          Spacer(),
+          FlatButton(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)),
+              color: kPrimaryColor,
+              onPressed: press,
+              child: Text(
+                'More',
+                style: TextStyle(color: Colors.white),
+              ))
         ],
       ),
     );
@@ -52,7 +71,7 @@ class TitleWithCustomUnder extends StatelessWidget {
             ),
           ),
           Positioned(
-            left: 0,
+            left: 20,
             right: 0,
             bottom: 0,
             child: Container(
