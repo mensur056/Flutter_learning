@@ -16,7 +16,7 @@ class Body extends StatelessWidget {
               TitleWithCustomUnder(
                 text: 'Recomended',
               ),
-
+              FlatButton(color:kPrimaryColor,onPressed: () {}, child: Text('More'))
             ],
           )
         ],
@@ -49,7 +49,7 @@ class TitleWithCustomUnder extends StatelessWidget {
             bottom: 0,
             child: Container(
               color: kPrimaryColor,
-              height: 7,
+              height: 1,
               margin: EdgeInsets.only(right: kDefaultPadding),
             ),
           )
