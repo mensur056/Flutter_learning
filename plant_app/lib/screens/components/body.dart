@@ -15,8 +15,16 @@ class Body extends StatelessWidget {
             children: [
               TitleWithCustomUnder(
                 text: 'Recomended',
-              ),
-              FlatButton(color:kPrimaryColor,onPressed: () {}, child: Text('More'))
+              ),Spacer(),
+              FlatButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                  color: kPrimaryColor,
+                  onPressed: () {},
+                  child: Text(
+                    'More',
+                    style: TextStyle(color: Colors.white),
+                  ))
             ],
           )
         ],
