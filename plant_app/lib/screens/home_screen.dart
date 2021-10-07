@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:plant_app/components/body.dart';
+import 'package:plant_app/screens/components/body.dart';
 import 'package:plant_app/constants.dart';
 
 class HomeScreen extends StatelessWidget {
