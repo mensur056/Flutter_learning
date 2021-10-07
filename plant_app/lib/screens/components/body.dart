@@ -11,28 +11,46 @@ class Body extends StatelessWidget {
       child: Column(
         children: [
           HeaderWithSearchBox(size: size),
-          Container(
-            height: 24,
-            child: Stack(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: kDefaultPadding / 4),
-                  child: Text(
-                    'Recomended',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
-                ),
-                Positioned(
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  child: Container(
-                    color: kPrimaryColor,
-                    height: 7,
-                    margin: EdgeInsets.only(right: kDefaultPadding),
-                  ),
-                )
-              ],
+          Row(
+            children: [
+              TitleWithCustomUnder(
+                text: 'Recomended',
+              ),
+
+            ],
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class TitleWithCustomUnder extends StatelessWidget {
+  const TitleWithCustomUnder({required this.text});
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 24,
+      child: Stack(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: kDefaultPadding / 4),
+            child: Text(
+              text,
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+          ),
+          Positioned(
+            left: 0,
+            right: 0,
+            bottom: 0,
+            child: Container(
+              color: kPrimaryColor,
+              height: 7,
+              margin: EdgeInsets.only(right: kDefaultPadding),
             ),
           )
         ],
