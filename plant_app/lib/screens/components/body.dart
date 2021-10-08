@@ -25,7 +25,8 @@ class Body extends StatelessWidget {
             child: Column(
               children: [
                 Image.asset('assets/images/image_1.png'),
-                Container(width: 158,
+                Container(
+                  width: 158,
                   padding: EdgeInsets.all(kDefaultPadding / 2),
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -34,6 +35,25 @@ class Body extends StatelessWidget {
                           offset: Offset(0, 10),
                           blurRadius: 50,
                           color: kPrimaryColor.withOpacity(0.23)),
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                                text: 'Samantha'.toUpperCase(),
+                                style: Theme.of(context).textTheme.button),
+                            TextSpan(
+                              text: 'Russia',
+                              style: TextStyle(
+                                color: kPrimaryColor.withOpacity(0.5),
+                              ),
+                            )
+                          ],
+                        ),
+                      )
                     ],
                   ),
                 )
