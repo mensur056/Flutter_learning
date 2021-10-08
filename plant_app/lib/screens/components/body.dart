@@ -29,6 +29,7 @@ class Body extends StatelessWidget {
                   width: 158,
                   padding: EdgeInsets.all(kDefaultPadding / 2),
                   decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
@@ -43,7 +44,7 @@ class Body extends StatelessWidget {
                         text: TextSpan(
                           children: [
                             TextSpan(
-                                text: 'Samantha'.toUpperCase(),
+                                text: 'Samantha\n'.toUpperCase(),
                                 style: Theme.of(context).textTheme.button),
                             TextSpan(
                               text: 'Russia',
@@ -53,6 +54,13 @@ class Body extends StatelessWidget {
                             )
                           ],
                         ),
+                      ),Spacer(),
+                      Text(
+                        '\$400',
+                        style: Theme.of(context)
+                            .textTheme
+                            .button!
+                            .copyWith(color: kPrimaryColor,),
                       )
                     ],
                   ),
