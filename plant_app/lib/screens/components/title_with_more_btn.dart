@@ -11,22 +11,24 @@ class TitleWithMoreBtn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-      child: Row(
-        children: [
-          TitleWithCustomUnder(
-            text: title,
-          ),
-          Spacer(),
-          FlatButton(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20)),
-              color: kPrimaryColor,
-              onPressed: press,
-              child: Text(
-                'More',
-                style: TextStyle(color: Colors.white),
-              ))
-        ],
+      child: Positioned(top: 0,
+        child: Row(
+          children: [
+            TitleWithCustomUnder(
+              text: title,
+            ),
+            Spacer(),
+            FlatButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20)),
+                color: kPrimaryColor,
+                onPressed: press,
+                child: Text(
+                  'More',
+                  style: TextStyle(color: Colors.white),
+                ))
+          ],
+        ),
       ),
     );
   }

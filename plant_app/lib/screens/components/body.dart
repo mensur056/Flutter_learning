@@ -11,7 +11,7 @@ class Body extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          HeaderWithSearchBox(size: size),
+          HeaderWithSearchBox(size: size,),
           TitleWithMoreBtn(
             title: 'Recomended',
             press: () {},
@@ -27,14 +27,14 @@ class Body extends StatelessWidget {
                   price: 400,
                 ),
                 RecomendPlantCard(
-                  image: 'assets/images/image_1.png',
-                  title: 'Samantha',
+                  image: 'assets/images/image_2.png',
+                  title: 'Angelica',
                   press: () {},
                   country: 'Russia',
-                  price: 400,
+                  price: 540,
                 ),
                 RecomendPlantCard(
-                  image: 'assets/images/image_1.png',
+                  image: 'assets/images/image_3.png',
                   title: 'Samantha',
                   press: () {},
                   country: 'Russia',
