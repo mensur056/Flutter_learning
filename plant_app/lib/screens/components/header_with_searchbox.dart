@@ -85,7 +85,7 @@ class HeaderWithSearchBox extends StatelessWidget {
                 ],
               ),
             ),
-          )
+          ),
         ],
       ),
     );
