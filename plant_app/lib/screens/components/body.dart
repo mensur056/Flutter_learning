@@ -16,12 +16,32 @@ class Body extends StatelessWidget {
             title: 'Recomended',
             press: () {},
           ),
-          RecomendPlantCard(
-            image: 'assets/images/image_1.png',
-            title: 'Samantha',
-            press: () {},
-            country: 'Russia',
-            price: 400,
+          SingleChildScrollView(scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                RecomendPlantCard(
+                  image: 'assets/images/image_1.png',
+                  title: 'Samantha',
+                  press: () {},
+                  country: 'Russia',
+                  price: 400,
+                ),
+                RecomendPlantCard(
+                  image: 'assets/images/image_1.png',
+                  title: 'Samantha',
+                  press: () {},
+                  country: 'Russia',
+                  price: 400,
+                ),
+                RecomendPlantCard(
+                  image: 'assets/images/image_1.png',
+                  title: 'Samantha',
+                  press: () {},
+                  country: 'Russia',
+                  price: 400,
+                ),
+              ],
+            ),
           )
         ],
       ),
