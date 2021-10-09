@@ -19,10 +19,18 @@ class Body extends StatelessWidget {
             title: 'Recomended',
             press: () {},
           ),
-          RecomendsPlants()
+          RecomendsPlants(),
+          TitleWithMoreBtn(title: 'Featured Plants', press: () {}),
+          Container(
+            height: 185,
+            width: size.width * 0.8,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                image: DecorationImage(
+                    image: AssetImage('assets/images/bottom_img_1.png'))),
+          )
         ],
       ),
     );
   }
 }
-
