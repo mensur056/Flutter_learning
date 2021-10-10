@@ -10,7 +10,9 @@ class RecomendsPlants extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: [
-          FlatButton(splashColor: kBackgroundColor,hoverColor: kBackgroundColor,
+          FlatButton(
+            splashColor: kBackgroundColor,
+            hoverColor: kBackgroundColor,
             onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => DetailsScreen()));
@@ -23,25 +25,34 @@ class RecomendsPlants extends StatelessWidget {
               price: 400,
             ),
           ),
-          RecomendPlantCard(
-            image: 'assets/images/image_2.png',
-            title: 'Angelica',
-            press: () {
+          FlatButton(
+            hoverColor: kBackgroundColor,
+            splashColor: kBackgroundColor,
+            onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => DetailsScreen()));
             },
-            country: 'Russia',
-            price: 540,
+            child: RecomendPlantCard(
+              image: 'assets/images/image_2.png',
+              title: 'Angelica',
+              press: () {},
+              country: 'Russia',
+              price: 540,
+            ),
           ),
-          RecomendPlantCard(
-            image: 'assets/images/image_3.png',
-            title: 'Colaraci',
-            press: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => DetailsScreen()));
-            },
-            country: 'Russia',
-            price: 480,
+          FlatButton(onPressed: (){ Navigator.push(context,
+              MaterialPageRoute(builder: (context) => DetailsScreen()));
+          },
+            hoverColor: kBackgroundColor,
+            splashColor: kBackgroundColor,
+            child: RecomendPlantCard(
+              image: 'assets/images/image_3.png',
+              title: 'Colaraci',
+              press: () {
+               },
+              country: 'Russia',
+              price: 480,
+            ),
           ),
         ],
       ),
