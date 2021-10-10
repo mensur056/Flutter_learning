@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/screens/details/components/details_screen.dart';
 
 import '../../constants.dart';
 
 class RecomendsPlants extends StatelessWidget {
-
-
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -14,7 +13,10 @@ class RecomendsPlants extends StatelessWidget {
           RecomendPlantCard(
             image: 'assets/images/image_1.png',
             title: 'Samantha',
-            press: () {},
+            press: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => DetailsScreen()));
+            },
             country: 'Russia',
             price: 400,
           ),
@@ -41,10 +43,10 @@ class RecomendsPlants extends StatelessWidget {
 class RecomendPlantCard extends StatelessWidget {
   const RecomendPlantCard(
       {required this.country,
-        required this.title,
-        required this.image,
-        required this.press,
-        required this.price});
+      required this.title,
+      required this.image,
+      required this.press,
+      required this.price});
 
   final String image, title, country;
   final int price;
@@ -100,8 +102,8 @@ class RecomendPlantCard extends StatelessWidget {
                   Text(
                     ' \$$price',
                     style: Theme.of(context).textTheme.button!.copyWith(
-                      color: kPrimaryColor,
-                    ),
+                          color: kPrimaryColor,
+                        ),
                   )
                 ],
               ),
@@ -112,4 +114,3 @@ class RecomendPlantCard extends StatelessWidget {
     );
   }
 }
-
