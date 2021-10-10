@@ -51,7 +51,7 @@ class RecomendsPlants extends StatelessWidget {
               press: () {
                },
               country: 'Russia',
-              price: 480,
+              price: 495,
             ),
           ),
         ],
