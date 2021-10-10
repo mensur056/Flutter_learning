@@ -23,16 +23,22 @@ class RecomendsPlants extends StatelessWidget {
           RecomendPlantCard(
             image: 'assets/images/image_2.png',
             title: 'Angelica',
-            press: () {},
+            press: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => DetailsScreen()));
+            },
             country: 'Russia',
             price: 540,
           ),
           RecomendPlantCard(
             image: 'assets/images/image_3.png',
-            title: 'Samantha',
-            press: () {},
+            title: 'Colaraci',
+            press: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => DetailsScreen()));
+            },
             country: 'Russia',
-            price: 400,
+            price: 480,
           ),
         ],
       ),
