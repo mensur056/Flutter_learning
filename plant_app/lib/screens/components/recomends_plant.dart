@@ -13,10 +13,8 @@ class RecomendsPlants extends StatelessWidget {
           RecomendPlantCard(
             image: 'assets/images/image_1.png',
             title: 'Samantha',
-            press: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => DetailsScreen()));
-            },
+            press: () { Navigator.push(context,
+                MaterialPageRoute(builder: (context) => DetailsScreen()));},
             country: 'Russia',
             price: 400,
           ),
