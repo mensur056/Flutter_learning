@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'details_screen.dart';
 
 class BODY extends StatelessWidget {
   @override

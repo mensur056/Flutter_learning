@@ -10,13 +10,18 @@ class RecomendsPlants extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: [
-          RecomendPlantCard(
-            image: 'assets/images/image_1.png',
-            title: 'Samantha',
-            press: () { Navigator.push(context,
-                MaterialPageRoute(builder: (context) => DetailsScreen()));},
-            country: 'Russia',
-            price: 400,
+          FlatButton(splashColor: kBackgroundColor,hoverColor: kBackgroundColor,
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => DetailsScreen()));
+            },
+            child: RecomendPlantCard(
+              image: 'assets/images/image_1.png',
+              title: 'Samantha',
+              press: () {},
+              country: 'Russia',
+              price: 400,
+            ),
           ),
           RecomendPlantCard(
             image: 'assets/images/image_2.png',
