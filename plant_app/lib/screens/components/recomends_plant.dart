@@ -36,7 +36,7 @@ class RecomendsPlants extends StatelessWidget {
               image: 'assets/images/image_2.png',
               title: 'Angelica',
               press: () {},
-              country: 'Russia',
+              country: 'America',
               price: 540,
             ),
           ),
@@ -50,7 +50,7 @@ class RecomendsPlants extends StatelessWidget {
               title: 'Colaraci',
               press: () {
                },
-              country: 'Russia',
+              country: 'Mexico',
               price: 495,
             ),
           ),
