@@ -19,9 +19,15 @@ class FeaturePlants extends StatelessWidget {
               press: () {},
             ),
           ),
-          FeaturePlantCard(
-            image: 'assets/images/bottom_img_2.png',
-            press: () {},
+          FlatButton(
+            highlightColor: kBackgroundColor,
+            hoverColor: kBackgroundColor,
+            splashColor: kBackgroundColor,
+            onPressed: () {},
+            child: FeaturePlantCard(
+              image: 'assets/images/bottom_img_2.png',
+              press: () {},
+            ),
           ),
         ],
       ),
