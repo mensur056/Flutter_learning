@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app/screens/details/components/details_screen.dart';
 import '../../constants.dart';
+
 class RecomendsPlants extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -40,18 +41,20 @@ class RecomendsPlants extends StatelessWidget {
               price: 540,
             ),
           ),
-          FlatButton(onPressed: (){ Navigator.push(context,
-              MaterialPageRoute(builder: (context) => DetailsScreen()));
-          },
+          FlatButton(
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => DetailsScreen()));
+            },
+            highlightColor: kBackgroundColor,
             hoverColor: kBackgroundColor,
             splashColor: kBackgroundColor,
             child: RecomendPlantCard(
               image: 'assets/images/image_3.png',
               title: 'Colaraci',
-              press: () {
-               },
+              press: () {},
               country: 'Mexico',
-              price: 495,
+              price: 490,
             ),
           ),
         ],
