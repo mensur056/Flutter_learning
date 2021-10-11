@@ -12,7 +12,7 @@ class BODY extends StatelessWidget {
           ),
         ),
         Container(
-          height: size.height * 0.8,
+          height: size.height * 0.7,
         )
       ],
     );
