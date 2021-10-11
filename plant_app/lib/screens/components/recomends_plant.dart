@@ -27,6 +27,7 @@ class RecomendsPlants extends StatelessWidget {
           FlatButton(
             hoverColor: kBackgroundColor,
             splashColor: kBackgroundColor,
+            highlightColor: kBackgroundColor,
             onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => DetailsScreen()));
