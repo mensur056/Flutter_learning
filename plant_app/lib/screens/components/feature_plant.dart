@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:plant_app/screens/details/components/details_screen.dart';
 import '../../constants.dart';
 
 class FeaturePlants extends StatelessWidget {
@@ -13,7 +13,10 @@ class FeaturePlants extends StatelessWidget {
             hoverColor: kBackgroundColor,
             splashColor: kBackgroundColor,
             highlightColor: kBackgroundColor,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => DetailsScreen()));
+            },
             child: FeaturePlantCard(
               image: 'assets/images/bottom_img_1.png',
               press: () {},
@@ -23,7 +26,10 @@ class FeaturePlants extends StatelessWidget {
             highlightColor: kBackgroundColor,
             hoverColor: kBackgroundColor,
             splashColor: kBackgroundColor,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => DetailsScreen()));
+            },
             child: FeaturePlantCard(
               image: 'assets/images/bottom_img_2.png',
               press: () {},
