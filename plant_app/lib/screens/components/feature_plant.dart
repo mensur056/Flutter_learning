@@ -1,17 +1,23 @@
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
+
 class FeaturePlants extends StatelessWidget {
-
-
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(scrollDirection: Axis.horizontal,
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
       child: Row(
         children: [
-          FeaturePlantCard(
-            image: 'assets/images/bottom_img_1.png',
-            press: () {},
+          FlatButton(
+            hoverColor: kBackgroundColor,
+            splashColor: kBackgroundColor,
+            highlightColor: kBackgroundColor,
+            onPressed: () {},
+            child: FeaturePlantCard(
+              image: 'assets/images/bottom_img_1.png',
+              press: () {},
+            ),
           ),
           FeaturePlantCard(
             image: 'assets/images/bottom_img_2.png',
@@ -44,7 +50,7 @@ class FeaturePlantCard extends StatelessWidget {
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             image:
-            DecorationImage(fit: BoxFit.cover, image: AssetImage(image))),
+                DecorationImage(fit: BoxFit.cover, image: AssetImage(image))),
       ),
     );
   }
