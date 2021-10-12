@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app/screens/details/components/details_screen.dart';
 import '../../constants.dart';
-
 class RecomendsPlants extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:plant_app/constants.dart';
 import 'package:plant_app/screens/components/recomends_plant.dart';
 import 'package:plant_app/screens/components/title_with_more_btn.dart';
