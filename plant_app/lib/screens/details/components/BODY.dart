@@ -16,10 +16,10 @@ class BODY extends StatelessWidget {
             Container(
               height: size.height * 0.8,
               width: size.width * 0.6,
-              decoration: BoxDecoration(
+              decoration: BoxDecoration(boxShadow: [BoxShadow(offset: Offset(0,10),blurRadius: 60)],
                   borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(10),
-                      bottomLeft: Radius.circular(10)),
+                      topLeft: Radius.circular(60),
+                      bottomLeft: Radius.circular(60)),
                   image: DecorationImage(
                       alignment: Alignment.centerLeft,
                       fit: BoxFit.cover,
