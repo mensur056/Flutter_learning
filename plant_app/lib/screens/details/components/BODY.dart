@@ -29,18 +29,24 @@ class BODY extends StatelessWidget {
                       width: 65,
                       height: 65,
                       decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10),
-                          boxShadow: [
-                            BoxShadow(offset: Offset(0, 10), blurRadius: 25)
-                          ]),
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(offset: Offset(0, 10), blurRadius: 25),
+                          BoxShadow(
+                            color: Colors.white,
+                            blurRadius: 20,
+                            offset: Offset(-15, -15),
+                          )
+                        ],
+                      ),
                     )
                   ],
                 ),
               ),
               Container(
                 height: size.height * 0.8,
-                width: size.width * 0.6,
+                width: size.width * 0.75,
                 decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
