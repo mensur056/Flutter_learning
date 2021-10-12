@@ -26,6 +26,8 @@ class BODY extends StatelessWidget {
                     ),
                     Spacer(),
                     Container(
+                      padding: EdgeInsets.all(kDefaultPadding / 2),
+                      margin: EdgeInsets.symmetric(vertical: 0.03),
                       width: 65,
                       height: 65,
                       decoration: BoxDecoration(
