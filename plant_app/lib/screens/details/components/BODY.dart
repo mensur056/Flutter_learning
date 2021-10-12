@@ -23,7 +23,18 @@ class BODY extends StatelessWidget {
                           },
                           icon:
                               SvgPicture.asset('assets/icons/back_arrow.svg')),
-                    ),Spacer()
+                    ),
+                    Spacer(),
+                    Container(
+                      width: 65,
+                      height: 65,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                          boxShadow: [
+                            BoxShadow(offset: Offset(0, 10), blurRadius: 25)
+                          ]),
+                    )
                   ],
                 ),
               ),
