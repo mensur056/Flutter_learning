@@ -19,11 +19,11 @@ class TitleAndPrice extends StatelessWidget {
             text: TextSpan(
               children: [
                 TextSpan(
-                    text: 'Angelica\n',
+                    text: '$title\n',
                     style: Theme.of(context).textTheme.headline4!.copyWith(
                         color: kTextColor, fontWeight: FontWeight.bold)),
                 TextSpan(
-                    text: 'Russia',
+                    text: country,
                     style: TextStyle(
                         fontWeight: FontWeight.w300,
                         fontSize: 20,
@@ -32,7 +32,7 @@ class TitleAndPrice extends StatelessWidget {
             ),
           ),
           Spacer(),
-          Text('\$440',
+          Text('\$$price',
               style: Theme.of(context)
                   .textTheme
                   .headline5!

@@ -13,10 +13,13 @@ class BODY extends StatelessWidget {
       child: Column(
         children: [
           ImageAndIcons(size: size),
-          TitleAndPrice(),
+          TitleAndPrice(
+            title: 'Angelica',
+            price: 440,
+            country: 'Russia',
+          ),
         ],
       ),
     );
   }
 }
-
