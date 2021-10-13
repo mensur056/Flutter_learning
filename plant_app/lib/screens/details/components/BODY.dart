@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:plant_app/constants.dart';
+import 'icon_card.dart';
 
 class BODY extends StatelessWidget {
   @override
@@ -25,7 +26,18 @@ class BODY extends StatelessWidget {
                               SvgPicture.asset('assets/icons/back_arrow.svg')),
                     ),
                     Spacer(),
-                    IconCard()
+                    IconCard(
+                      icon: 'assets/icons/sun.svg',
+                    ),
+                    IconCard(
+                      icon: 'assets/icons/icon_2.svg',
+                    ),
+                    IconCard(
+                      icon: 'assets/icons/icon_3.svg',
+                    ),
+                    IconCard(
+                      icon: 'assets/icons/icon_4.svg',
+                    ),
                   ],
                 ),
               ),
@@ -55,28 +67,3 @@ class BODY extends StatelessWidget {
   }
 }
 
-class IconCard extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    return Container(
-      padding: EdgeInsets.all(kDefaultPadding / 2),
-      margin: EdgeInsets.symmetric(vertical: size.height * 0.03),
-      width: 65,
-      height: 65,
-      decoration: BoxDecoration(
-        color: kBackgroundColor,
-        borderRadius: BorderRadius.circular(10),
-        boxShadow: [
-          BoxShadow(offset: Offset(0, 10), blurRadius: 25),
-          BoxShadow(
-            color: Colors.white,
-            blurRadius: 20,
-            offset: Offset(-15, -15),
-          ),
-        ],
-      ),
-      child: SvgPicture.asset('assets/icons/sun.svg'),
-    );
-  }
-}
