@@ -12,16 +12,33 @@ class BODY extends StatelessWidget {
       child: Column(
         children: [
           ImageAndIcons(size: size),
-          Row(
-            children: [
-              RichText(
-                text: TextSpan(
-                    text: 'Angelica\n',
-                    style: Theme.of(context).textTheme.headline4!.copyWith(
-                        color: kTextColor, fontWeight: FontWeight.bold)),
-              ),
-            ],
-          )
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+            child: Row(
+              children: [
+                RichText(
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                          text: 'Angelica\n',
+                          style: Theme.of(context)
+                              .textTheme
+                              .headline4!
+                              .copyWith(
+                                  color: kTextColor,
+                                  fontWeight: FontWeight.bold)),
+                      TextSpan(
+                          text: 'Russia',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w300,
+                              fontSize: 20,
+                              color: kPrimaryColor))
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
         ],
       ),
     );
