@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import '../../../constants.dart';
 
 class TitleAndPrice extends StatelessWidget {
-  const TitleAndPrice({
-    Key? key,
-  }) : super(key: key);
+  final String country, title;
+  final int price;
+
+  const TitleAndPrice(
+      {required this.country, required this.title, required this.price});
 
   @override
   Widget build(BuildContext context) {
