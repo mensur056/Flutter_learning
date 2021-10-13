@@ -18,6 +18,14 @@ class BODY extends StatelessWidget {
             price: 440,
             country: 'Russia',
           ),
+          Row(
+            children: [
+              SizedBox(
+                  height: 84,
+                  width: size.width / 2,
+                  child: FlatButton(onPressed: () {}, child: Text('Buy Now')))
+            ],
+          )
         ],
       ),
     );
