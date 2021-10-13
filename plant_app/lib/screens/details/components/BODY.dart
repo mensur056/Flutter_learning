@@ -35,7 +35,13 @@ class BODY extends StatelessWidget {
                               color: kPrimaryColor))
                     ],
                   ),
-                )
+                ),
+                Spacer(),
+                Text('\$440',
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline5!
+                        .copyWith(color: kPrimaryColor))
               ],
             ),
           ),
