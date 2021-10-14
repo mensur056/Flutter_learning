@@ -38,14 +38,18 @@ class BODY extends StatelessWidget {
                   ),
                 ),
               ),
-              Expanded(
-                child: Center(
+              SizedBox(
+                height: 84,
+                width: size.width / 2,
+                child: FlatButton(
+
+                  onPressed: () {},
                   child: Text(
                     'Description',
                     style: TextStyle(fontSize: 16, color: Colors.black),
                   ),
                 ),
-              )
+              ),
             ],
           )
         ],
