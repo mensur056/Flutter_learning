@@ -25,9 +25,10 @@ class BODY extends StatelessWidget {
                   height: 84,
                   width: size.width / 2,
                   child: FlatButton(
+                      color: kPrimaryColor,
                       shape: RoundedRectangleBorder(
                           borderRadius:
-                              BorderRadius.only(topRight: Radius.circular(15))),
+                              BorderRadius.only(topRight: Radius.circular(30))),
                       onPressed: () {},
                       child: Text('Buy Now')))
             ],
