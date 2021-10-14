@@ -22,15 +22,28 @@ class BODY extends StatelessWidget {
           Row(
             children: [
               SizedBox(
-                  height: 84,
-                  width: size.width / 2,
-                  child: FlatButton(
-                      color: kPrimaryColor,
-                      shape: RoundedRectangleBorder(
-                          borderRadius:
-                              BorderRadius.only(topRight: Radius.circular(30))),
-                      onPressed: () {},
-                      child: Text('Buy Now')))
+                height: 84,
+                width: size.width / 2,
+                child: FlatButton(
+                  color: kPrimaryColor,
+                  shape: RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.only(topRight: Radius.circular(30))),
+                  onPressed: () {},
+                  child: Text(
+                    'Buy Now',
+                    style: TextStyle(fontSize: 16, color: Colors.white),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Center(
+                  child: Text(
+                    'Description',
+                    style: TextStyle(fontSize: 16, color: Colors.black),
+                  ),
+                ),
+              )
             ],
           )
         ],
