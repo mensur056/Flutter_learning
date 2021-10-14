@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:plant_app/constants.dart';
 import 'package:plant_app/screens/details/components/title_and_price.dart';
-import 'icon_card.dart';
 import 'image_and_icons.dart';
 
 class BODY extends StatelessWidget {
@@ -18,12 +16,20 @@ class BODY extends StatelessWidget {
             price: 440,
             country: 'Russia',
           ),
+          SizedBox(
+            height: kDefaultPadding,
+          ),
           Row(
             children: [
               SizedBox(
                   height: 84,
                   width: size.width / 2,
-                  child: FlatButton(onPressed: () {}, child: Text('Buy Now')))
+                  child: FlatButton(
+                      shape: RoundedRectangleBorder(
+                          borderRadius:
+                              BorderRadius.only(topRight: Radius.circular(15))),
+                      onPressed: () {},
+                      child: Text('Buy Now')))
             ],
           )
         ],
