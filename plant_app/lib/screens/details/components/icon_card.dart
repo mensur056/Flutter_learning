@@ -11,7 +11,7 @@ class IconCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return FlatButton(
+    return FlatButton(hoverColor:Colors.white ,
       onPressed: () {},
       child: Container(
         padding: EdgeInsets.all(kDefaultPadding / 2),
