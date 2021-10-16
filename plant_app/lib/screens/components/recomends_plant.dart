@@ -53,7 +53,7 @@ class RecomendsPlants extends StatelessWidget {
               title: 'Colaraci',
               press: () {},
               country: 'Mexico',
-              price: 490,
+              price: 640,
             ),
           ),
         ],
@@ -89,7 +89,7 @@ class RecomendPlantCard extends StatelessWidget {
           GestureDetector(
             onTap: press,
             child: Container(
-              width: 158,
+              width: 160,
               padding: EdgeInsets.all(kDefaultPadding / 2),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
