@@ -11,7 +11,7 @@ class FeaturePlants extends StatelessWidget {
           FlatButton(
             hoverColor: kBackgroundColor,
             splashColor: kBackgroundColor,
-            highlightColor: kBackgroundColor,
+
             onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => DetailsScreen()));
@@ -22,7 +22,7 @@ class FeaturePlants extends StatelessWidget {
             ),
           ),
           FlatButton(
-            highlightColor: kBackgroundColor,
+
             hoverColor: kBackgroundColor,
             splashColor: kBackgroundColor,
             onPressed: () {
