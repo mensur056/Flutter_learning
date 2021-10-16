@@ -8,15 +8,15 @@ class Button extends StatelessWidget {
       splashColor: Colors.white,
       highlightColor: Colors.white,
       child: Container(
-        height: 50,
-        margin: EdgeInsets.symmetric(horizontal: 50),
+        height: 45,
+        margin: EdgeInsets.symmetric(horizontal: 45),
         decoration: BoxDecoration(
             color: Colors.cyan, borderRadius: BorderRadius.circular(10)),
         child: Center(
           child: Text(
             'Login',
             style: TextStyle(
-                fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),
+                fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
           ),
         ),
       ),

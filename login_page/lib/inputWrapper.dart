@@ -20,7 +20,10 @@ class InputWrapper extends StatelessWidget {
           SizedBox(
             height: 40,
           ),
-          FlatButton(onPressed: (){},splashColor: Colors.white,highlightColor: Colors.white,
+          FlatButton(
+            onPressed: () {},
+            splashColor: Colors.white,
+            highlightColor: Colors.white,
             child: Text(
               'Forgot password?',
               style: TextStyle(color: Colors.grey),
