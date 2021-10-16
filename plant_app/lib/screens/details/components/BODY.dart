@@ -22,7 +22,7 @@ class BODY extends StatelessWidget {
           Row(
             children: [
               SizedBox(
-                height: 84,
+                height: 82,
                 width: size.width / 2,
                 child: FlatButton(
                   color: kPrimaryColor,

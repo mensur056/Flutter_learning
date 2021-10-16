@@ -56,7 +56,7 @@ class ImageAndIcons extends StatelessWidget {
                   boxShadow: [
                     BoxShadow(
                         offset: Offset(0, 10),
-                        blurRadius: 60,
+                        blurRadius: 55,
                         color: kPrimaryColor.withOpacity(0.29))
                   ],
                   borderRadius: BorderRadius.only(
