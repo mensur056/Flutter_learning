@@ -111,8 +111,8 @@ class _InputPageState extends State<InputPage> {
                               RoundSliderOverlayShape(overlayRadius: 20.0)),
                       child: Slider(
                         value: height.toDouble(),
-                        min: 120.0,
-                        max: 220.0,
+                        min: 110.0,
+                        max: 250.0,
                         onChanged: (double newValue) {
                           setState(() {
                             height = newValue.round();
@@ -135,7 +135,7 @@ class _InputPageState extends State<InputPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'WEIGHT',
+                            'Weight',
                             style: kLabelTextStyle,
                           ),
                           Text(
@@ -178,7 +178,7 @@ class _InputPageState extends State<InputPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'AGE',
+                            'Age',
                             style: kLabelTextStyle,
                           ),
                           Text(

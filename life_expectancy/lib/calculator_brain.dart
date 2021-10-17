@@ -16,7 +16,7 @@ class CalculatorBrain {
   String getResult() {
     if (_bmi >= 25) {
       return 'Kilolu';
-    } else if (_bmi > 18.5) {
+    } else if (_bmi > 21) {
       return 'Normal';
     } else {
       return 'Arıq';
@@ -27,7 +27,7 @@ class CalculatorBrain {
   String getInterpretation(){
     if (_bmi >= 25) {
       return 'Normal insan ağırliğından daha ağırsan .Biraz idman etməlisən';
-    } else if (_bmi > 18.5) {
+    } else if (_bmi > 21) {
       return 'Normal insan ağırlığındasan .Belə davam et';
     } else {
       return 'Həddindən artiq çox arığsan . Çox qida qəbul et ';
