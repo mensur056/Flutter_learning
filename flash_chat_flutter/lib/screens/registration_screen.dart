@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class RegistrationScreen extends StatefulWidget {
-  static String id='registration_screen';
+  static String id = 'registration_screen';
+
   @override
   _RegistrationScreenState createState() => _RegistrationScreenState();
 }
@@ -17,7 +18,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Hero(tag: 'logo.flash',
+            Hero(
+              tag: 'logo.flash',
               child: Container(
                 height: 200.0,
                 child: Image.asset('images/logo.flash.png'),
@@ -33,7 +35,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               decoration: InputDecoration(
                 hintText: 'Enter your email',
                 contentPadding:
-                EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                    EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(32.0)),
                 ),
@@ -57,7 +59,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               decoration: InputDecoration(
                 hintText: 'Enter your password',
                 contentPadding:
-                EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                    EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(30.0)),
                 ),
