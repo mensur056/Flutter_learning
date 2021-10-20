@@ -23,12 +23,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           children: <Widget>[
             Row(
               children: <Widget>[
-                FlatButton(
-                  onPressed: () {},
-                  child: Container(
-                    child: Image.asset('images/logo.flash.png'),
-                    height: 60.0,
-                  ),
+                Container(
+                  child: Image.asset('images/logo.flash.png'),
+                  height: 60.0,
                 ),
                 Text(
                   'Flash Chat',
