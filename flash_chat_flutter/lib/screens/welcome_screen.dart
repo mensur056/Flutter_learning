@@ -18,10 +18,13 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   @override
   void initState() {
     super.initState();
-    controller = AnimationController(
-        vsync: this, duration: Duration(seconds: 2));
-    animation = CurvedAnimation(parent: controller, curve: Curves.decelerate);
+    controller =
+        AnimationController(vsync: this, duration: Duration(seconds: 2));
+    animation = CurvedAnimation(parent: controller, curve: Curves.easeIn);
     controller.forward();
+    animation.addStatusListener((status) {
+      print(status);
+    });
     controller.addListener(() {
       setState(() {});
       print(animation.value);
@@ -44,7 +47,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                   tag: 'logo.flash',
                   child: Container(
                     child: Image.asset('images/logo.flash.png'),
-                    height: animation.value*100,
+                    height: animation.value * 100,
                   ),
                 ),
                 Text(
