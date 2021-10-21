@@ -18,7 +18,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   void initState() {
     super.initState();
     controller =
-        AnimationController(vsync: this, duration: Duration(seconds: 1),upperBound: 100);
+        AnimationController(vsync: this, duration: Duration(seconds: 3),upperBound: 100);
     controller.forward();
     controller.addListener(() {
       setState(() {});
