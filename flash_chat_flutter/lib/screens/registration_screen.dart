@@ -33,7 +33,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 //Do something with the user input.
               },
               decoration: InputDecoration(
-                hintText: 'Enter your email',
+                hintText: 'Enter your email',hintStyle: TextStyle(color: Colors.black),
                 contentPadding:
                     EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
                 border: OutlineInputBorder(
