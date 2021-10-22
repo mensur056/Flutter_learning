@@ -21,7 +21,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     controller =
         AnimationController(vsync: this, duration: Duration(seconds: 3));
     animation =
-        ColorTween(begin: Colors.blueGrey, end: Colors.white).animate(controller);
+        ColorTween(begin: Colors.blue, end: Colors.white).animate(controller);
     controller.forward();
 
     controller.addListener(() {
@@ -41,7 +41,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     return Scaffold(
       backgroundColor: animation.value,
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 24.0),
+        padding: EdgeInsets.symmetric(horizontal: 22.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
