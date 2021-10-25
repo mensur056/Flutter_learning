@@ -8,6 +8,13 @@ class Items extends StatefulWidget {
 class _ItemsState extends State<Items> {
   @override
   Widget build(BuildContext context) {
-    return Container(height:150,color: Colors.blue,);
+    return Container(
+      height: 150,
+      color: Colors.white,
+      child: Column(
+        children: [Row(),
+        Row()],
+      ),
+    );
   }
 }
