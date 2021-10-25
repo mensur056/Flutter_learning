@@ -10,9 +10,9 @@ class _MyFolderState extends State<MyFolder> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: Icon(Icons.more),
+      appBar: AppBar(backgroundColor: Colors.black,
+        leading: Icon(Icons.list,
       ),
-    );
+    ));
   }
 }
