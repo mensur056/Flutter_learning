@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
 project(runner LANGUAGES CXX)
 
-set(BINARY_NAME "my_folder")
-set(APPLICATION_ID "com.example.my_folder")
+set(BINARY_NAME "file_manager")
+set(APPLICATION_ID "com.example.file_manager")
 
 cmake_policy(SET CMP0063 NEW)
 

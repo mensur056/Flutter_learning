@@ -1,4 +1,4 @@
-package com.example.my_folder
+package com.example.file_manager
 
 import io.flutter.embedding.android.FlutterActivity
 

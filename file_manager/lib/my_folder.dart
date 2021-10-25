@@ -1,5 +1,6 @@
+import 'package:file_manager/NavBar.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_svg/flutter_svg.dart';
 
 class MyFolder extends StatefulWidget {
   @override
@@ -10,9 +11,11 @@ class _MyFolderState extends State<MyFolder> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.black,
-        leading: Icon(Icons.list,
+      backgroundColor: Colors.black,
+      body: Column(
+        children: [NavBar()
+        ],
       ),
-    ));
+    );
   }
 }
