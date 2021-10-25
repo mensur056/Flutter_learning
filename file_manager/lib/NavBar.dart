@@ -19,14 +19,14 @@ class _NavBarState extends State<NavBar> {
             padding: const EdgeInsets.only(left: 12.0),
             child: NavBarItem(
               icon: Icons.list,
-              colour: Colors.white,
+              colour: Colors.black,
             ),
           ),
-          NavBarItem(icon: Icons.access_time_outlined, colour: Colors.white),
-          NavBarItem(icon: Icons.folder, colour: Colors.white),
+          NavBarItem(icon: Icons.access_time_outlined, colour: Colors.black),
+          NavBarItem(icon: Icons.folder, colour: Colors.black),
           Padding(
             padding: const EdgeInsets.only(right: 12.0),
-            child: NavBarItem(icon: Icons.search, colour: Colors.white),
+            child: NavBarItem(icon: Icons.search, colour: Colors.black),
           )
         ],
       ),
