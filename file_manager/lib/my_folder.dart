@@ -1,6 +1,7 @@
 import 'package:file_manager/NavBar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'Item/Items.dart';
 
 class MyFolder extends StatefulWidget {
   @override
@@ -13,7 +14,12 @@ class _MyFolderState extends State<MyFolder> {
     return Scaffold(
       backgroundColor: Colors.black,
       body: Column(
-        children: [NavBar()
+        children: [
+          NavBar(),
+          Divider(
+            color: Colors.white,
+          ),
+          Items()
         ],
       ),
     );

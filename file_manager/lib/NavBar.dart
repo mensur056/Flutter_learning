@@ -13,10 +13,16 @@ class _NavBarState extends State<NavBar> {
       color: Colors.black,
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          NavBarItem(icon: Icons.list),
+          Padding(
+            padding: const EdgeInsets.only(left:12.0),
+            child: NavBarItem(icon: Icons.list),
+          ),
           NavBarItem(icon: Icons.access_time_outlined),
           NavBarItem(icon: Icons.folder),
-          NavBarItem(icon: Icons.search)
+          Padding(
+            padding: const EdgeInsets.only(right:12.0),
+            child: NavBarItem(icon: Icons.search),
+          )
         ],
       ),
     );
