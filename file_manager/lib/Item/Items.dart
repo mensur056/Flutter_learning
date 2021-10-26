@@ -68,7 +68,7 @@ class Simgeler extends StatelessWidget {
           height: 50,
           width: 50,
           child: Icon(
-            icon,
+            Icons.music_video,
             color: Colors.white,
           ),
         ),
@@ -80,7 +80,7 @@ class Simgeler extends StatelessWidget {
             height: 50,
             width: 50,
             child: Icon(
-              icon,
+              Icons.list,
               color: Colors.white,
             ),
           ),
