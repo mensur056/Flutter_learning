@@ -12,8 +12,42 @@ class _ItemsState extends State<Items> {
       height: 150,
       color: Colors.white,
       child: Column(
-        children: [Row(),
-        Row()],
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(25)),
+                height: 50,
+                width: 50,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(25)),
+                height: 50,
+                width: 50,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(25)),
+                height: 50,
+                width: 50,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(25)),
+                height: 50,
+                width: 50,
+              )
+            ],
+          ),
+          Row()
+        ],
       ),
     );
   }
