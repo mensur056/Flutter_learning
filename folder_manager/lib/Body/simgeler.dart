@@ -10,7 +10,7 @@ class _SimgelerState extends State<Simgeler> {
   Widget build(BuildContext context) {
     return Container(
       height: 150,
-      color: Colors.blue,
+      color: Colors.black,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -19,37 +19,13 @@ class _SimgelerState extends State<Simgeler> {
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 30),
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(30)),
-                  height: 60,
-                  width: 60,
-                ),
+                child: ContDecaration(),
               ),
-              Container(
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(30)),
-                height: 60,
-                width: 60,
-              ),
-              Container(
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(30)),
-                height: 60,
-                width: 60,
-              ),
+              ContDecaration(),
+              ContDecaration(),
               Padding(
                 padding: const EdgeInsets.only(right: 30),
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(30)),
-                  height: 60,
-                  width: 60,
-                ),
+                child: ContDecaration(),
               ),
             ],
           ),
@@ -58,42 +34,33 @@ class _SimgelerState extends State<Simgeler> {
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 30),
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(30)),
-                  height: 60,
-                  width: 60,
-                ),
+                child: ContDecaration(),
               ),
-              Container(
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(30)),
-                height: 60,
-                width: 60,
-              ),
-              Container(
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(30)),
-                height: 60,
-                width: 60,
-              ),
+              ContDecaration(),
+              ContDecaration(),
               Padding(
                 padding: const EdgeInsets.only(right: 30),
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(30)),
-                  height: 60,
-                  width: 60,
-                ),
+                child: ContDecaration(),
               ),
             ],
           ),
         ],
       ),
+    );
+  }
+}
+
+class ContDecaration extends StatelessWidget {
+  final IconData icon;
+  final Color colour;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(child: Icon(icon),
+      decoration: BoxDecoration(
+          color: Colors.white, borderRadius: BorderRadius.circular(30)),
+      height: 60,
+      width: 60,
     );
   }
 }
