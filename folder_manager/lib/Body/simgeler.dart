@@ -53,7 +53,7 @@ class _SimgelerState extends State<Simgeler> {
                 child: Container(
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(25)),
+                      borderRadius: BorderRadius.circular(30)),
                   height: 60,
                   width: 60,
                 ),
@@ -61,14 +61,14 @@ class _SimgelerState extends State<Simgeler> {
               Container(
                 decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(25)),
+                    borderRadius: BorderRadius.circular(30)),
                 height: 60,
                 width: 60,
               ),
               Container(
                 decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(25)),
+                    borderRadius: BorderRadius.circular(30)),
                 height: 60,
                 width: 60,
               ),
@@ -77,7 +77,7 @@ class _SimgelerState extends State<Simgeler> {
                 child: Container(
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(25)),
+                      borderRadius: BorderRadius.circular(30)),
                   height: 60,
                   width: 60,
                 ),
