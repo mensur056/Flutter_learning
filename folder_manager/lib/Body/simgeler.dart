@@ -9,7 +9,7 @@ class _SimgelerState extends State<Simgeler> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150,
+      height: 170,
       color: Colors.black,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -45,6 +45,33 @@ class _SimgelerState extends State<Simgeler> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
+                padding: const EdgeInsets.only(left: 40),
+                child: Text(
+                  'Images',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+              Text(
+                'Videos',
+                style: TextStyle(color: Colors.white),
+              ),
+              Text(
+                'Docs',
+                style: TextStyle(color: Colors.white),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 40),
+                child: Text(
+                  'Musics',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            ],
+          ),SizedBox(height: 8,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
                 padding: const EdgeInsets.only(left: 30),
                 child: ContDecaration(
                   icon: Icons.android,
@@ -68,6 +95,33 @@ class _SimgelerState extends State<Simgeler> {
               ),
             ],
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 40),
+                child: Text(
+                  'Apps',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+              Text(
+                'Download',
+                style: TextStyle(color: Colors.white),
+              ),
+              Text(
+                'Archive',
+                style: TextStyle(color: Colors.white),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 40),
+                child: Text(
+                  'More',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
@@ -84,8 +138,10 @@ class ContDecaration extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Icon(icon),
-      decoration:
-          BoxDecoration(color: colour, borderRadius: BorderRadius.circular(30)),
+      decoration: BoxDecoration(
+        color: colour,
+        borderRadius: BorderRadius.circular(30),
+      ),
       height: 60,
       width: 60,
     );
