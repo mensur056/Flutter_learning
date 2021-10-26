@@ -20,25 +20,33 @@ class _SimgelerState extends State<Simgeler> {
               Padding(
                 padding: const EdgeInsets.only(left: 30),
                 child: Container(
-                  color: Colors.white,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(30)),
                   height: 60,
                   width: 60,
                 ),
               ),
               Container(
-                color: Colors.white,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(30)),
                 height: 60,
                 width: 60,
               ),
               Container(
-                color: Colors.white,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(30)),
                 height: 60,
                 width: 60,
               ),
               Padding(
                 padding: const EdgeInsets.only(right: 30),
                 child: Container(
-                  color: Colors.white,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(30)),
                   height: 60,
                   width: 60,
                 ),
