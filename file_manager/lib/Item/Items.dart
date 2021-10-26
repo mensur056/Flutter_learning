@@ -14,15 +14,26 @@ class _ItemsState extends State<Items> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Icons(),
-          Icons(),
+          Simgeler(
+            icon: Icons.image,
+            colour: Colors.green,
+          ),
+          Simgeler(
+            colour: Colors.orange,
+            icon: Icons.view_day,
+          ),
         ],
       ),
     );
   }
 }
 
-class Icons extends StatelessWidget {
+class Simgeler extends StatelessWidget {
+  final Color colour;
+  final IconData icon;
+
+  const Simgeler({required this.colour, required this.icon});
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -32,30 +43,46 @@ class Icons extends StatelessWidget {
           padding: const EdgeInsets.only(left: 30),
           child: Container(
             decoration: BoxDecoration(
-                color: Colors.blue, borderRadius: BorderRadius.circular(25)),
+                color: colour, borderRadius: BorderRadius.circular(25)),
             height: 50,
             width: 50,
+            child: Icon(
+              icon,
+              color: Colors.white,
+            ),
           ),
         ),
         Container(
           decoration: BoxDecoration(
-              color: Colors.blue, borderRadius: BorderRadius.circular(25)),
+              color: colour, borderRadius: BorderRadius.circular(25)),
           height: 50,
           width: 50,
+          child: Icon(
+            icon,
+            color: Colors.white,
+          ),
         ),
         Container(
           decoration: BoxDecoration(
-              color: Colors.blue, borderRadius: BorderRadius.circular(25)),
+              color: colour, borderRadius: BorderRadius.circular(25)),
           height: 50,
           width: 50,
+          child: Icon(
+            icon,
+            color: Colors.white,
+          ),
         ),
         Padding(
           padding: const EdgeInsets.only(right: 30),
           child: Container(
             decoration: BoxDecoration(
-                color: Colors.blue, borderRadius: BorderRadius.circular(25)),
+                color: colour, borderRadius: BorderRadius.circular(25)),
             height: 50,
             width: 50,
+            child: Icon(
+              icon,
+              color: Colors.white,
+            ),
           ),
         ),
       ],
