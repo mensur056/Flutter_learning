@@ -19,13 +19,25 @@ class _SimgelerState extends State<Simgeler> {
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 30),
-                child: ContDecaration(),
+                child: ContDecaration(
+                  icon: Icons.image,
+                  colour: Colors.teal,
+                ),
               ),
-              ContDecaration(),
-              ContDecaration(),
+              ContDecaration(
+                colour: Colors.deepOrange,
+                icon: Icons.videocam,
+              ),
+              ContDecaration(
+                icon: Icons.list_outlined,
+                colour: Colors.purple,
+              ),
               Padding(
                 padding: const EdgeInsets.only(right: 30),
-                child: ContDecaration(),
+                child: ContDecaration(
+                  colour: Colors.pink,
+                  icon: Icons.library_music,
+                ),
               ),
             ],
           ),
@@ -34,13 +46,25 @@ class _SimgelerState extends State<Simgeler> {
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 30),
-                child: ContDecaration(),
+                child: ContDecaration(
+                  icon: Icons.apps,
+                  colour: Colors.green,
+                ),
               ),
-              ContDecaration(),
-              ContDecaration(),
+              ContDecaration(
+                colour: Colors.blue,
+                icon: Icons.download,
+              ),
+              ContDecaration(
+                icon: Icons.archive,
+                colour: Colors.orangeAccent,
+              ),
               Padding(
                 padding: const EdgeInsets.only(right: 30),
-                child: ContDecaration(),
+                child: ContDecaration(
+                  icon: Icons.view_module_rounded,
+                  colour: Colors.red,
+                ),
               ),
             ],
           ),
@@ -54,11 +78,14 @@ class ContDecaration extends StatelessWidget {
   final IconData icon;
   final Color colour;
 
+  ContDecaration({required this.icon, required this.colour});
+
   @override
   Widget build(BuildContext context) {
-    return Container(child: Icon(icon),
-      decoration: BoxDecoration(
-          color: Colors.white, borderRadius: BorderRadius.circular(30)),
+    return Container(
+      child: Icon(icon),
+      decoration:
+          BoxDecoration(color: colour, borderRadius: BorderRadius.circular(30)),
       height: 60,
       width: 60,
     );
