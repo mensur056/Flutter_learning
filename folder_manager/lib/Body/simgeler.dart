@@ -29,7 +29,7 @@ class _SimgelerState extends State<Simgeler> {
                 icon: Icons.videocam,
               ),
               ContDecaration(
-                icon: Icons.list_outlined,
+                icon: Icons.document_scanner_sharp,
                 colour: Colors.purple,
               ),
               Padding(
@@ -47,7 +47,7 @@ class _SimgelerState extends State<Simgeler> {
               Padding(
                 padding: const EdgeInsets.only(left: 30),
                 child: ContDecaration(
-                  icon: Icons.apps,
+                  icon: Icons.android,
                   colour: Colors.green,
                 ),
               ),

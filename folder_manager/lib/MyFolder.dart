@@ -12,14 +12,16 @@ class _MyFolderState extends State<MyFolder> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body: Column(
-        children: [
-          NavBar(),
-          Divider(
-            color: Colors.white,
-          ),
-          Simgeler()
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            NavBar(),
+            Divider(
+              color: Colors.white,
+            ),
+            Simgeler()
+          ],
+        ),
       ),
     );
   }
