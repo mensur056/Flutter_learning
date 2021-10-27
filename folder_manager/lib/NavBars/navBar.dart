@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:folder_manager/screens/myFiles.dart';
 import 'NavBarItem.dart';
 
 class NavBar extends StatefulWidget {
@@ -24,7 +25,10 @@ class _NavBarState extends State<NavBar> {
           ),
           NavBarItem(icon: Icons.access_time_outlined, colour: Colors.black),
           FlatButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push((context),
+                    MaterialPageRoute(builder: (context) => MyFiles(),));
+              },
               child: NavBarItem(icon: Icons.folder, colour: Colors.black)),
           Padding(
             padding: const EdgeInsets.only(right: 12.0),

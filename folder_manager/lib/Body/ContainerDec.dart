@@ -10,7 +10,7 @@ class ContDecaration extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Icon(icon),
+      child: Icon(icon,color: Colors.white,),
       decoration: BoxDecoration(
         color: colour,
         borderRadius: BorderRadius.circular(30),
