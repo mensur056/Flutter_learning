@@ -1,6 +1,7 @@
 import 'package:folder_manager/NavBars/navBar.dart';
 import 'package:flutter/material.dart';
 import 'Body/simgeler.dart';
+import 'apps/Apps.dart';
 
 class MyFolder extends StatefulWidget {
   @override
@@ -22,7 +23,7 @@ class _MyFolderState extends State<MyFolder> {
             Simgeler(),
             Divider(
               color: Colors.grey,
-            ),
+            ),Apps()
           ],
         ),
       ),
