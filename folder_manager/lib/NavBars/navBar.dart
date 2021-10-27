@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:folder_manager/MyFolder.dart';
 import 'package:folder_manager/screens/myFiles.dart';
 import 'NavBarItem.dart';
 
@@ -23,11 +24,23 @@ class _NavBarState extends State<NavBar> {
               colour: Colors.black,
             ),
           ),
-          NavBarItem(icon: Icons.access_time_outlined, colour: Colors.black),
           FlatButton(
               onPressed: () {
-                Navigator.push((context),
-                    MaterialPageRoute(builder: (context) => MyFiles(),));
+                Navigator.push(
+                    (context),
+                    MaterialPageRoute(
+                      builder: (context) => MyFolder(),
+                    ));
+              },
+              child: NavBarItem(
+                  icon: Icons.access_time_outlined, colour: Colors.black)),
+          FlatButton(
+              onPressed: () {
+                Navigator.push(
+                    (context),
+                    MaterialPageRoute(
+                      builder: (context) => MyFiles(),
+                    ));
               },
               child: NavBarItem(icon: Icons.folder_open, colour: Colors.black)),
           Padding(
