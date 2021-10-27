@@ -10,8 +10,24 @@ class _AppsState extends State<Apps> {
   Widget build(BuildContext context) {
     return Container(
       height: 150,
-      color: Colors.white,
-      child: Text('WhatsApp'),
+      color: Colors.black,
+      child: Row(
+        children: [
+          Container(
+            color: Colors.black,
+            child: Image.asset('images/whtps.png'),
+            width: 20,
+            height: 20,
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          Text(
+            'WhatsApp',
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w300),
+          ),
+        ],
+      ),
     );
   }
 }
