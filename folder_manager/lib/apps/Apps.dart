@@ -11,10 +11,26 @@ class Apps extends StatelessWidget {
           yazi: 'WhatsApp',
         ),
         Notification(
-          image: Image.asset('images/got.jpeg'),
-          icons: Image.asset('images/whtps.png'),
-          yazi: 'WhatsApp',
+          image: Image.asset('images/image2.jpeg'),
+          icons: Image.asset('images/insta2.png'),
+          yazi: 'Instagram',
         ),
+        Notification(
+          image: Image.asset('images/image2.jpeg'),
+          icons: Image.asset('images/insta2.png'),
+          yazi: 'Instagram',
+        ),
+        Notification(
+          image: Image.asset('images/image2.jpeg'),
+          icons: Image.asset('images/insta2.png'),
+          yazi: 'Instagram',
+        ),
+        Notification(
+          image: Image.asset('images/image2.jpeg'),
+          icons: Image.asset('images/insta2.png'),
+          yazi: 'Instagram',
+        ),
+
       ],
     );
   }
