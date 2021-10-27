@@ -29,7 +29,7 @@ class _NavBarState extends State<NavBar> {
                 Navigator.push((context),
                     MaterialPageRoute(builder: (context) => MyFiles(),));
               },
-              child: NavBarItem(icon: Icons.folder, colour: Colors.black)),
+              child: NavBarItem(icon: Icons.folder_open, colour: Colors.black)),
           Padding(
             padding: const EdgeInsets.only(right: 12.0),
             child: NavBarItem(icon: Icons.search, colour: Colors.black),
