@@ -13,7 +13,7 @@ class _MyFilesState extends State<MyFiles> {
       backgroundColor: Colors.black,
       body: Column(
         children: [
-          NavBar(),
+          NavBar(),Divider(color: Colors.grey,height: 1,),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

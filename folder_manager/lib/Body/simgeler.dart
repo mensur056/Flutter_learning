@@ -18,22 +18,28 @@ class _SimgelerState extends State<Simgeler> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 30),
+                padding: const EdgeInsets.only(left: 30,top: 10),
                 child: ContDecaration(
                   icon: Icons.image,
                   colour: Colors.teal,
                 ),
               ),
-              ContDecaration(
-                colour: Colors.deepOrange,
-                icon: Icons.videocam,
-              ),
-              ContDecaration(
-                icon: Icons.document_scanner_sharp,
-                colour: Colors.purple,
+              Padding(
+                padding: const EdgeInsets.only(top: 10.0),
+                child: ContDecaration(
+                  colour: Colors.deepOrange,
+                  icon: Icons.videocam,
+                ),
               ),
               Padding(
-                padding: const EdgeInsets.only(right: 30),
+                padding: const EdgeInsets.only(top: 10.0),
+                child: ContDecaration(
+                  icon: Icons.document_scanner_sharp,
+                  colour: Colors.purple,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 30,top: 10),
                 child: ContDecaration(
                   colour: Colors.pink,
                   icon: Icons.library_music,
@@ -45,7 +51,7 @@ class _SimgelerState extends State<Simgeler> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 40),
+                padding: const EdgeInsets.only(left: 35.0),
                 child: Text(
                   'Images',
                   style: TextStyle(color: Colors.white),
@@ -60,9 +66,9 @@ class _SimgelerState extends State<Simgeler> {
                 style: TextStyle(color: Colors.white),
               ),
               Padding(
-                padding: const EdgeInsets.only(right: 40),
+                padding: const EdgeInsets.only(right: 35),
                 child: Text(
-                  'Musics',
+                  'Music',
                   style: TextStyle(color: Colors.white),
                 ),
               ),

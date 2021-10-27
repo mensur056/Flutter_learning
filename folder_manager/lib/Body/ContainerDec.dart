@@ -15,8 +15,8 @@ class ContDecaration extends StatelessWidget {
         color: colour,
         borderRadius: BorderRadius.circular(30),
       ),
-      height: 60,
-      width: 60,
+      height: 45,
+      width: 45,
     );
   }
 }
