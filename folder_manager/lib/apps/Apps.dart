@@ -1,11 +1,32 @@
 import 'package:flutter/material.dart';
 
-class Apps extends StatefulWidget {
+class Apps extends StatelessWidget {
   @override
-  _AppsState createState() => _AppsState();
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Notification(
+          image: Image.asset('images/got.jpeg'),
+          icons: Image.asset('images/whtps.png'),
+          yazi: 'WhatsApp',
+        ),
+        Notification(
+          image: Image.asset('images/got.jpeg'),
+          icons: Image.asset('images/whtps.png'),
+          yazi: 'WhatsApp',
+        ),
+      ],
+    );
+  }
 }
 
-class _AppsState extends State<Apps> {
+class Notification extends StatelessWidget {
+  final String yazi;
+  final Image image, icons;
+
+  const Notification(
+      {required this.yazi, required this.image, required this.icons});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,7 +43,7 @@ class _AppsState extends State<Apps> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: Colors.white),
-                  child: Image.asset('images/whtps.png'),
+                  child: icons,
                   width: 20,
                   height: 20,
                 ),
@@ -31,7 +52,7 @@ class _AppsState extends State<Apps> {
                 width: 10,
               ),
               Text(
-                'WhatsApp',
+                yazi,
                 style:
                     TextStyle(color: Colors.white, fontWeight: FontWeight.w300),
               ),
@@ -46,14 +67,15 @@ class _AppsState extends State<Apps> {
             ],
           ),
           SizedBox(
-            height: 15,
+            height: 12,
           ),
           Padding(
             padding: const EdgeInsets.only(left: 10),
             child: Container(
-              height: 90,
-              width: 90,
               color: Colors.white,
+              height: 90,
+              width: 67,
+              child: image,
             ),
           )
         ],
