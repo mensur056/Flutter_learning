@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'ContainerDec.dart';
 class Simgeler extends StatefulWidget {
   @override
   _SimgelerState createState() => _SimgelerState();
@@ -128,22 +128,3 @@ class _SimgelerState extends State<Simgeler> {
   }
 }
 
-class ContDecaration extends StatelessWidget {
-  final IconData icon;
-  final Color colour;
-
-  ContDecaration({required this.icon, required this.colour});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Icon(icon),
-      decoration: BoxDecoration(
-        color: colour,
-        borderRadius: BorderRadius.circular(30),
-      ),
-      height: 60,
-      width: 60,
-    );
-  }
-}
