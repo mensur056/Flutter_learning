@@ -34,12 +34,20 @@ class _MyFilesState extends State<MyFiles> {
                       width: 60,
                       height: 60,
                     ),
-                    Positioned(top: 5,left:5,
+                    Positioned(
+                      top: 5,
+                      left: 5,
                       child: Container(
                         decoration: BoxDecoration(
                             shape: BoxShape.circle, color: Colors.black),
                         width: 50,
                         height: 50,
+                      ),
+                    ),
+                    Positioned(left:20,top:22,
+                      child: Text(
+                        '44%',
+                        style: TextStyle(color: Colors.orange),
                       ),
                     )
                   ],
