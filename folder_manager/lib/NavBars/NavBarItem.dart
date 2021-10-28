@@ -22,7 +22,7 @@ class NavBarItem extends StatelessWidget {
       ], color: colour, borderRadius: BorderRadius.circular(10)),
       child: Icon(
         icon,
-        color: Colors.white,
+        color: Colors.grey,
       ),
     );
   }

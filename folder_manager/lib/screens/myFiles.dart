@@ -44,7 +44,9 @@ class _MyFilesState extends State<MyFiles> {
                         height: 50,
                       ),
                     ),
-                    Positioned(left:20,top:22,
+                    Positioned(
+                      left: 20,
+                      top: 22,
                       child: Text(
                         '44%',
                         style: TextStyle(color: Colors.orange),
@@ -61,19 +63,30 @@ class _MyFilesState extends State<MyFiles> {
                         'Storage',
                         style: TextStyle(color: Colors.grey),
                       ),
-                      Text('23.26GB/53.29GB',
-                          style: TextStyle(color: Colors.grey))
+                      Row(
+                        children: [
+                          Text('23.26GB',
+                              style: TextStyle(color: Colors.orange)),
+                          Text(
+                            '/53.29GB',
+                            style: TextStyle(color: Colors.grey),
+                          )
+                        ],
+                      )
                     ],
                   ),
                 ),
                 Spacer(),
-                IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.arrow_forward_ios_outlined,
-                      color: Colors.grey,
-                      size: 10,
-                    ))
+                Padding(
+                  padding: const EdgeInsets.only(top: 15),
+                  child: IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.arrow_forward_ios_outlined,
+                        color: Colors.grey,
+                        size: 20,
+                      )),
+                )
               ],
             ),
           ),
@@ -89,6 +102,23 @@ class _MyFilesState extends State<MyFiles> {
                   'Internal shared storage >',
                   style: TextStyle(
                       color: Colors.grey, fontWeight: FontWeight.w100),
+                ),
+                Spacer(),
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.grid_view,
+                    color: Colors.grey,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 20),
+                  child: IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.more_vert_rounded,
+                        color: Colors.grey,
+                      )),
                 )
               ],
             ),
