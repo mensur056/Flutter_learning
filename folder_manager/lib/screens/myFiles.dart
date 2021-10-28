@@ -26,10 +26,10 @@ class _MyFilesState extends State<MyFiles> {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
+                Container(decoration: BoxDecoration(shape: BoxShape.circle,color: Colors.green),
                   width: 60,
                   height: 60,
-                  color: Colors.green,
+
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 16, left: 8),
