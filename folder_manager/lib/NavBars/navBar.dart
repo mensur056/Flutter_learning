@@ -4,6 +4,7 @@ import 'package:folder_manager/screens/Files/myFiles.dart';
 import 'NavBarItem.dart';
 
 class NavBar extends StatefulWidget {
+
   @override
   _NavBarState createState() => _NavBarState();
 }
