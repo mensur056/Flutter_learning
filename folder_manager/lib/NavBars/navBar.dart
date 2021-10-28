@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:folder_manager/MyFolder.dart';
-import 'package:folder_manager/screens/myFiles.dart';
+import 'package:folder_manager/screens/Files/myFiles.dart';
 import 'NavBarItem.dart';
 
 class NavBar extends StatefulWidget {

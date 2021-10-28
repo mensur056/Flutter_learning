@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:folder_manager/NavBars/navBar.dart';
+import 'package:folder_manager/screens/Files/Directory.dart';
 
 class MyFiles extends StatefulWidget {
   @override
@@ -122,7 +123,11 @@ class _MyFilesState extends State<MyFiles> {
                 )
               ],
             ),
-          )
+          ),
+          Divider(
+            height: 1,
+            color: Colors.blueGrey,
+          ),Directory()
         ],
       ),
     );
