@@ -15,7 +15,12 @@ class SearchPage extends StatelessWidget {
           child: Center(
             child: TextField(
               decoration: InputDecoration(
-                  hintText: 'Search...',),
+                  icon: Icon(Icons.search,color: Colors.blue,),
+                  hintText: 'Search...',
+                  hintStyle: TextStyle(
+                    color: Colors.white,
+                  ),
+                  border: InputBorder.none),
             ),
           ),
         ),
