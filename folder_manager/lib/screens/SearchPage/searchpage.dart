@@ -11,11 +11,11 @@ class SearchPage extends StatelessWidget {
           width: double.infinity,
           height: 40,
           decoration: BoxDecoration(
-              color: Colors.grey, borderRadius: BorderRadius.circular(5)),
+              color: Colors.white10, borderRadius: BorderRadius.circular(5)),
           child: Center(
             child: TextField(
               decoration: InputDecoration(
-                  hintText: 'Search...', border: InputBorder.none),
+                  hintText: 'Search...',),
             ),
           ),
         ),
