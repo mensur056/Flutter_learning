@@ -125,9 +125,12 @@ class _MyFilesState extends State<MyFiles> {
                 ],
               ),
             ),
-            Divider(
-              height: 1,
-              color: Colors.white10,
+            Padding(
+              padding: const EdgeInsets.only(top: 10,bottom: 10),
+              child: Divider(
+                height: 1,
+                color: Colors.white10,
+              ),
             ),Directory()
           ],
         ),
