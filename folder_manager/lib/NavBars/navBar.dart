@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:folder_manager/MyFolder.dart';
 import 'package:folder_manager/screens/Files/myFiles.dart';
+import 'package:folder_manager/screens/SearchPage/searchpage.dart';
 import 'NavBarItem.dart';
 
 class NavBar extends StatefulWidget {
@@ -49,7 +50,11 @@ class _NavBarState extends State<NavBar> {
           Padding(
             padding: const EdgeInsets.only(right: 12.0),
             child: FlatButton(
-                onPressed: () {},
+                onPressed: () {Navigator.push(
+                    (context),
+                    MaterialPageRoute(
+                      builder: (context) => SearchPage(),
+                    ));},
                 child: NavBarItem(icon: Icons.search, colour: Colors.black)),
           )
         ],
