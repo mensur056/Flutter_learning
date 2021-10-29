@@ -17,10 +17,10 @@ class _MyFolderState extends State<MyFolder> {
         child: Column(
           children: [
             NavBar(),
-            Divider(color: Colors.grey,height: 1,),
+            Divider( color: Colors.white10,height: 1,),
             Simgeler(),
             Divider(
-              color: Colors.grey,
+              color: Colors.white10,
             ),Apps()
           ],
         ),
