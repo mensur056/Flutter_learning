@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 class Directory extends StatefulWidget {
@@ -10,50 +12,77 @@ class _DirectoryState extends State<Directory> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        fayillar(),
-        Divider(
-          height: 1,
-          color: Colors.white10,
+        fayillar(text: 'Android',item: '3 items | 19/08/2021  12:32',),
+        Padding(
+          padding: const EdgeInsets.only(top: 10),
+          child: Divider(
+            height: 1,
+            color: Colors.white10,
+          ),
+        ),
+        fayillar(text: 'DCIM',item: '2 items | 12/10/2021  10:44',),
+        Padding(
+          padding: const EdgeInsets.only(top: 10),
+          child: Divider(
+            height: 1,
+            color: Colors.white10,
+          ),
+        ),
+        fayillar(text: 'Documents',item: '0 items | 11/10/2021  14:21',),
+        Padding(
+          padding: const EdgeInsets.only(top: 10),
+          child: Divider(
+            height: 1,
+            color: Colors.white10,
+          ),
+        ),
+        fayillar(text:'Download',item: '0 items | 20/10/2021  09:12',),
+        Padding(
+          padding: const EdgeInsets.only(top: 10),
+          child: Divider(
+            height: 1,
+            color: Colors.white10,
+          ),
+        ),
+        fayillar(text: 'HDWall',item: '3 items | 20/09/2021  06:39',),
+        Padding(
+          padding: const EdgeInsets.only(top: 10),
+          child: Divider(
+            height: 1,
+            color: Colors.white10,
+          ),
+        ),
+        fayillar(text: 'MIUI',item: ,),
+        Padding(
+          padding: const EdgeInsets.only(top: 10),
+          child: Divider(
+            height: 1,
+            color: Colors.white10,
+          ),
         ),
         fayillar(),
-        Divider(
-          height: 1,
-          color: Colors.white10,
+        Padding(
+          padding: const EdgeInsets.only(top: 10),
+          child: Divider(
+            height: 1,
+            color: Colors.white10,
+          ),
         ),
         fayillar(),
-        Divider(
-          height: 1,
-          color: Colors.white10,
+        Padding(
+          padding: const EdgeInsets.only(top: 10),
+          child: Divider(
+            height: 1,
+            color: Colors.white10,
+          ),
         ),
         fayillar(),
-        Divider(
-          height: 1,
-          color: Colors.white10,
-        ),
-        fayillar(),
-        Divider(
-          height: 1,
-          color: Colors.white10,
-        ),
-        fayillar(),
-        Divider(
-          height: 1,
-          color: Colors.white10,
-        ),
-        fayillar(),
-        Divider(
-          height: 1,
-          color: Colors.white10,
-        ),
-        fayillar(),
-        Divider(
-          height: 1,
-          color: Colors.white10,
-        ),
-        fayillar(),
-        Divider(
-          height: 1,
-          color: Colors.white10,
+        Padding(
+          padding: const EdgeInsets.only(top: 10),
+          child: Divider(
+            height: 1,
+            color: Colors.white10,
+          ),
         ),
         fayillar(),
       ],
@@ -62,6 +91,12 @@ class _DirectoryState extends State<Directory> {
 }
 
 class fayillar extends StatelessWidget {
+
+  final String text;
+  final String item;
+
+  const fayillar({, required this.text, required this.item}) ;
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -83,13 +118,13 @@ class fayillar extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Android',
+              text,
               style: TextStyle(color: Colors.white, fontSize: 18),
             ),
             SizedBox(
               height: 15,
             ),
-            Text('3 items | 19/08/2021  12:32',
+            Text(item,
                 style: TextStyle(color: Colors.grey))
           ],
         ),
