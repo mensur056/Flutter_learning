@@ -30,17 +30,22 @@ class _DirectoryState extends State<Directory> {
               children: [
                 Text(
                   'Android',
-                  style: TextStyle(color: Colors.white,fontSize: 20),
+                  style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 Text('3 items | 19/08/2021  12:32',
-                    style: TextStyle(color: Colors.white))
+                    style: TextStyle(color: Colors.grey))
               ],
             ),
+            Spacer(),
             IconButton(
-                onPressed: () {}, icon: Icon(Icons.arrow_forward_ios_outlined))
+                onPressed: () {},
+                icon: Icon(
+                  Icons.arrow_forward_ios_outlined,size: 13,
+                  color: Colors.grey,
+                ))
           ],
         )
       ],

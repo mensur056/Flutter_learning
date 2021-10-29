@@ -85,7 +85,7 @@ class _MyFilesState extends State<MyFiles> {
                       icon: Icon(
                         Icons.arrow_forward_ios_outlined,
                         color: Colors.grey,
-                        size: 20,
+                        size: 12,
                       )),
                 )
               ],
