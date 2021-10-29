@@ -17,18 +17,18 @@ class Apps extends StatelessWidget {
         ),
         Notification(
           image: Image.asset('images/image2.jpeg'),
-          icons: Image.asset('images/insta2.png'),
-          yazi: 'Instagram',
+          icons: Image.asset('images/telegram1.jpeg'),
+          yazi: 'Snapseed',
         ),
         Notification(
           image: Image.asset('images/image2.jpeg'),
-          icons: Image.asset('images/insta2.png'),
-          yazi: 'Instagram',
+          icons: Image.asset('images/snapseed.jpeg'),
+          yazi: 'Telegram',
         ),
         Notification(
           image: Image.asset('images/image2.jpeg'),
-          icons: Image.asset('images/insta2.png'),
-          yazi: 'Instagram',
+          icons: Image.asset('images/gmail.png'),
+          yazi: 'Gmail',
         ),
 
       ],

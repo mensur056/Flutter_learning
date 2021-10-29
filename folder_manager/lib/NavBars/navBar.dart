@@ -4,7 +4,6 @@ import 'package:folder_manager/screens/Files/myFiles.dart';
 import 'NavBarItem.dart';
 
 class NavBar extends StatefulWidget {
-
   @override
   _NavBarState createState() => _NavBarState();
 }
@@ -20,9 +19,12 @@ class _NavBarState extends State<NavBar> {
         children: [
           Padding(
             padding: const EdgeInsets.only(left: 12.0),
-            child: NavBarItem(
-              icon: Icons.list,
-              colour: Colors.black,
+            child: FlatButton(
+              onPressed: () {},
+              child: NavBarItem(
+                icon: Icons.list,
+                colour: Colors.black,
+              ),
             ),
           ),
           FlatButton(
@@ -46,7 +48,9 @@ class _NavBarState extends State<NavBar> {
               child: NavBarItem(icon: Icons.folder_open, colour: Colors.black)),
           Padding(
             padding: const EdgeInsets.only(right: 12.0),
-            child: NavBarItem(icon: Icons.search, colour: Colors.black),
+            child: FlatButton(
+                onPressed: () {},
+                child: NavBarItem(icon: Icons.search, colour: Colors.black)),
           )
         ],
       ),
