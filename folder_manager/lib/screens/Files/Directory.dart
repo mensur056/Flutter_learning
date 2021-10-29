@@ -12,90 +12,119 @@ class _DirectoryState extends State<Directory> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        fayillar(text: 'Android',item: '3 items | 19/08/2021  12:32',),
+        Fayillar(
+          text: 'Android',
+          item: '3 items | 19/08/2021  12:32',
+        ),
         Padding(
-          padding: const EdgeInsets.only(top: 10),
+          padding: const EdgeInsets.only(top: 10,bottom: 10),
           child: Divider(
             height: 1,
             color: Colors.white10,
           ),
         ),
-        fayillar(text: 'DCIM',item: '2 items | 12/10/2021  10:44',),
+        Fayillar(
+          text: 'DCIM',
+          item: '2 items | 12/10/2021  10:44',
+        ),
         Padding(
-          padding: const EdgeInsets.only(top: 10),
+          padding: const EdgeInsets.only(top: 10,bottom: 10),
           child: Divider(
             height: 1,
             color: Colors.white10,
           ),
         ),
-        fayillar(text: 'Documents',item: '0 items | 11/10/2021  14:21',),
+        Fayillar(
+          text: 'Documents',
+          item: '0 items | 11/10/2021  14:21',
+        ),
         Padding(
-          padding: const EdgeInsets.only(top: 10),
+          padding: const EdgeInsets.only(top: 10,bottom: 10),
           child: Divider(
             height: 1,
             color: Colors.white10,
           ),
         ),
-        fayillar(text:'Download',item: '0 items | 20/10/2021  09:12',),
+        Fayillar(
+          text: 'Download',
+          item: '0 items | 20/10/2021  09:12',
+        ),
         Padding(
-          padding: const EdgeInsets.only(top: 10),
+          padding: const EdgeInsets.only(top: 10,bottom: 10),
           child: Divider(
             height: 1,
             color: Colors.white10,
           ),
         ),
-        fayillar(text: 'HDWall',item: '3 items | 20/09/2021  06:39',),
+        Fayillar(
+          text: 'HDWall',
+          item: '3 items | 20/09/2021  06:39',
+        ),
         Padding(
-          padding: const EdgeInsets.only(top: 10),
+          padding: const EdgeInsets.only(top: 10,bottom: 10),
           child: Divider(
             height: 1,
             color: Colors.white10,
           ),
         ),
-        fayillar(text: 'MIUI',item: ,),
+        Fayillar(
+          text: 'MIUI',
+          item: '3 items | 19/09/2021  10:09',
+        ),
         Padding(
-          padding: const EdgeInsets.only(top: 10),
+          padding: const EdgeInsets.only(top: 10,bottom: 10),
           child: Divider(
             height: 1,
             color: Colors.white10,
           ),
         ),
-        fayillar(),
+        Fayillar(
+          text: 'Movies',
+          item: '1 items | 31/08/2021  15:51',
+        ),
         Padding(
-          padding: const EdgeInsets.only(top: 10),
+          padding: const EdgeInsets.only(top: 10,bottom: 10),
           child: Divider(
             height: 1,
             color: Colors.white10,
           ),
         ),
-        fayillar(),
+        Fayillar(
+          text: 'Music',
+          item: '2 items | 15/09/2021  10:00',
+        ),
         Padding(
-          padding: const EdgeInsets.only(top: 10),
+          padding: const EdgeInsets.only(top: 10,bottom: 10),
           child: Divider(
             height: 1,
             color: Colors.white10,
           ),
         ),
-        fayillar(),
+        Fayillar(
+          text: 'Notifications',
+          item: '0 items | 03/01/2021  07:13',
+        ),
         Padding(
-          padding: const EdgeInsets.only(top: 10),
+          padding: const EdgeInsets.only(top: 10,bottom: 10),
           child: Divider(
             height: 1,
             color: Colors.white10,
           ),
         ),
-        fayillar(),
+        Fayillar(
+          text: 'Pictures',
+          item: '4 items | 22/10/2021  08:59',
+        ),
       ],
     );
   }
 }
 
-class fayillar extends StatelessWidget {
-
+class Fayillar extends StatelessWidget {
   final String text;
   final String item;
 
-  const fayillar({, required this.text, required this.item}) ;
+  const Fayillar({required this.text, required this.item});
 
   @override
   Widget build(BuildContext context) {
@@ -124,8 +153,7 @@ class fayillar extends StatelessWidget {
             SizedBox(
               height: 15,
             ),
-            Text(item,
-                style: TextStyle(color: Colors.grey))
+            Text(item, style: TextStyle(color: Colors.grey))
           ],
         ),
         Spacer(),
