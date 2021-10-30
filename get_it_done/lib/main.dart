@@ -12,8 +12,20 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
   String sehir='Baku';
+
+  void changeCity(String newCity){
+    sehir=newCity;
+    setState(() {
+
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +39,7 @@ class MyHomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Expanded(child: SolWidgetA(sehir: sehir,)),
-            Expanded(child: SagWidgetA(sehir: sehir,))
+            Expanded(child: SagWidgetA(sehir: sehir,callBack: changeCity,))
           ],
         ),
       ),
@@ -60,8 +72,9 @@ class SolWidgetA extends StatelessWidget {
 
 class SagWidgetA extends StatelessWidget {
   final String sehir;
+  final Function callBack;
 
-  const SagWidgetA({ required this.sehir});
+  const SagWidgetA({ required this.sehir, required this.callBack});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -71,7 +84,7 @@ class SagWidgetA extends StatelessWidget {
           'SagWidget A',
           style: TextStyle(fontSize: 20),
         ),
-        SagWidgetB(sehir: sehir,)
+        SagWidgetB(sehir: sehir,callBack: callBack,)
       ]),
     );
   }
@@ -79,8 +92,9 @@ class SagWidgetA extends StatelessWidget {
 
 class SagWidgetB extends StatelessWidget {
   final String sehir;
+  final Function callBack;
 
-  const SagWidgetB({ required this.sehir});
+  const SagWidgetB({ required this.sehir, required this.callBack});
 
   @override
   Widget build(BuildContext context) {
@@ -93,7 +107,7 @@ class SagWidgetB extends StatelessWidget {
           'SagWidget B',
           style: TextStyle(fontSize: 20),
         ),
-        SagWidgetC(sehir: sehir,)
+        SagWidgetC(sehir: sehir,callBack: callBack,)
       ]),
     );
   }
@@ -101,8 +115,10 @@ class SagWidgetB extends StatelessWidget {
 
 class SagWidgetC extends StatelessWidget {
   final String sehir;
+  final Function callBack;
 
-  const SagWidgetC({ required this.sehir}) ;
+
+  const SagWidgetC({ required this.sehir, required this.callBack}) ;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -118,7 +134,9 @@ class SagWidgetC extends StatelessWidget {
           'Şehir: $sehir ',
           style: TextStyle(fontSize: 20),
         ),
-        TextField(onChanged: null)
+        TextField(onChanged: (input){
+          callBack(input);
+        })
       ]),
     );
   }
