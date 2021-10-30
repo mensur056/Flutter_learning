@@ -27,7 +27,7 @@ class MyHomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Expanded(child: SolWidgetA(sehir: sehir,)),
-            Expanded(child: SagWidgetA())
+            Expanded(child: SagWidgetA(sehir: sehir,))
           ],
         ),
       ),
@@ -59,6 +59,9 @@ class SolWidgetA extends StatelessWidget {
 }
 
 class SagWidgetA extends StatelessWidget {
+  final String sehir;
+
+  const SagWidgetA({ required this.sehir});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -68,14 +71,17 @@ class SagWidgetA extends StatelessWidget {
           'SagWidget A',
           style: TextStyle(fontSize: 20),
         ),
-        SagWidgetB()
+        SagWidgetB(sehir: sehir,)
       ]),
     );
   }
 }
 
 class SagWidgetB extends StatelessWidget {
-  String sehir='Samaxi';
+  final String sehir;
+
+  const SagWidgetB({ required this.sehir});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -87,7 +93,7 @@ class SagWidgetB extends StatelessWidget {
           'SagWidget B',
           style: TextStyle(fontSize: 20),
         ),
-        SagWidgetC(sehir:sehir ,)
+        SagWidgetC(sehir: sehir,)
       ]),
     );
   }
