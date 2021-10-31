@@ -53,7 +53,15 @@ class SolWidgetA extends StatelessWidget {
             Text(
               'Sehir: ${Provider.of<StateData>(context).sehir} ',
               style: TextStyle(fontSize: 20),
-            )
+            ),
+            Text(
+              'Mehle: ${Provider.of<StateData>(context).mehle} ',
+              style: TextStyle(fontSize: 20),
+            ),
+            Text(
+              'Olke: ${Provider.of<StateData>(context).olke} ',
+              style: TextStyle(fontSize: 20),
+            ),
           ],
         ));
   }
@@ -94,26 +102,27 @@ class SagWidgetB extends StatelessWidget {
 }
 
 class SagWidgetC extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
       height: 150,
       width: 160,
-      child: Column(children: [
-        Text(
-          'SagWidget C',
-          style: TextStyle(fontSize: 20),
-        ),
-        Text(
-          'Şehir: ${Provider.of<StateData>(context).sehir} ',
-          style: TextStyle(fontSize: 20),
-        ),
-        TextField(onChanged: (input) {
-          Provider.of<StateData>(context,listen: false).newCity(input);
-        })
-      ]),
+      child: Column(
+        children: [
+          Text(
+            'SagWidget C',
+            style: TextStyle(fontSize: 20),
+          ),
+          Text(
+            'Şehir: ${Provider.of<StateData>(context).sehir} ',
+            style: TextStyle(fontSize: 20),
+          ),
+          TextField(onChanged: (input) {
+            Provider.of<StateData>(context, listen: false).newCity(input);
+          })
+        ],
+      ),
     );
   }
 }
