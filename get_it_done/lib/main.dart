@@ -104,7 +104,7 @@ class SagWidgetC extends StatelessWidget {
           style: TextStyle(fontSize: 20),
         ),
         Text(
-          'Şehir: ... ',
+          'Şehir: ${Provider.of<StateData>(context).sehir} ',
           style: TextStyle(fontSize: 20),
         ),
         TextField(onChanged: null)
