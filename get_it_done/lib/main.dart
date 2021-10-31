@@ -43,27 +43,32 @@ class SolWidgetA extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: Colors.yellow,
-        child: Column(
-          children: [
-            Text(
-              'Sol Widget',
-              style: TextStyle(fontSize: 20),
-            ),
-            Text(
-              'Sehir: ${Provider.of<StateData>(context).sehir} ',
-              style: TextStyle(fontSize: 20),
-            ),
-            Text(
-              'Mehle: ${Provider.of<StateData>(context).mehle} ',
-              style: TextStyle(fontSize: 20),
-            ),
-            Text(
-              'Olke: ${Provider.of<StateData>(context).olke} ',
-              style: TextStyle(fontSize: 20),
-            ),
-          ],
-        ));
+      color: Colors.yellow,
+      child: Consumer<StateData>(
+        builder: (context, data, child) {
+          return Column(
+            children: [
+              Text(
+                'Sol Widget',
+                style: TextStyle(fontSize: 20),
+              ),
+              Text(
+                'Sehir: ${data.sehir} ',
+                style: TextStyle(fontSize: 20),
+              ),
+              Text(
+                'Mehle: ${data.mehle} ',
+                style: TextStyle(fontSize: 20),
+              ),
+              Text(
+                'Olke: ${data.olke} ',
+                style: TextStyle(fontSize: 20),
+              ),
+            ],
+          );
+        },
+      ),
+    );
   }
 }
 
