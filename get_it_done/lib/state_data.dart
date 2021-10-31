@@ -1,3 +1,10 @@
-class StateData {
+import 'package:flutter/cupertino.dart';
+
+class StateData with ChangeNotifier {
   String sehir = 'Baku';
+
+  void newCity(String city) {
+    sehir = city;
+    notifyListeners();
+  }
 }
