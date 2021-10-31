@@ -39,6 +39,7 @@ class MyHomePage extends StatelessWidget {
 class SolWidgetA extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    String sehir=Provider.of<StateData>(context).sehir;
     return Container(
         color: Colors.yellow,
         child: Column(
@@ -48,7 +49,7 @@ class SolWidgetA extends StatelessWidget {
               style: TextStyle(fontSize: 20),
             ),
             Text(
-              'Sehir: ..... ',
+              'Sehir: $sehir ',
               style: TextStyle(fontSize: 20),
             )
           ],
