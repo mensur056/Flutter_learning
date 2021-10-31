@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-
-void main() => runApp(MyApp());
+import 'package:get_it_done/state_data.dart';
+import 'package:provider/provider.dart';
+void main() => runApp(Provider<StateData>(create: (BuildContext context) { return StateData(); },
+child: MyApp()));
 
 class MyApp extends StatelessWidget {
   @override
