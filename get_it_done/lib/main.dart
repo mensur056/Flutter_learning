@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get_it_done/state_data.dart';
 import 'package:provider/provider.dart';
-void main() => runApp(Provider<StateData>(create: (BuildContext context) { return StateData(); },
-child: MyApp()));
+
+void main() => runApp(ChangeNotifierProvider<StateData>(
+    create: (BuildContext context) {
+      return StateData();
+    },
+    child: MyApp()));
 
 class MyApp extends StatelessWidget {
   @override
@@ -15,7 +19,6 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +42,6 @@ class MyHomePage extends StatelessWidget {
 class SolWidgetA extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     return Container(
         color: Colors.yellow,
         child: Column(
@@ -92,6 +94,7 @@ class SagWidgetB extends StatelessWidget {
 }
 
 class SagWidgetC extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -107,7 +110,9 @@ class SagWidgetC extends StatelessWidget {
           'Şehir: ${Provider.of<StateData>(context).sehir} ',
           style: TextStyle(fontSize: 20),
         ),
-        TextField(onChanged: null)
+        TextField(onChanged: (input) {
+          Provider.of<StateData>(context,listen: false).newCity(input);
+        })
       ]),
     );
   }
