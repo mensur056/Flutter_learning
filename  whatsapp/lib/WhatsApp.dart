@@ -4,17 +4,30 @@ class WhatsApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 100,
-        backgroundColor: Colors.blueGrey,
-        leading: Row(
-          children: [Text('WhatsApp')],
-        ),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [],
-        ),
+      body: Column(
+        children: [
+          Container(
+            height: 120,
+            color: Colors.black,
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Text(
+                      'WhatsApp',
+                      style: TextStyle(fontSize: 20, color: Colors.grey),
+                    ),
+                    Spacer(),
+                    Icon(Icons.search),
+                    Icon(Icons.more_vert_rounded)
+                  ],
+                ),
+                Row()
+              ],
+            ),
+          ),
+          Expanded(child: Container())
+        ],
       ),
     );
   }
