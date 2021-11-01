@@ -7,26 +7,80 @@ class WhatsApp extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            height: 120,
-            color: Colors.black,
+            height: 100,
+            color: Color(0xFF2d6a4f),
             child: Column(
               children: [
-                Row(
-                  children: [
-                    Text(
-                      'WhatsApp',
-                      style: TextStyle(fontSize: 20, color: Colors.grey),
-                    ),
-                    Spacer(),
-                    Icon(Icons.search),
-                    Icon(Icons.more_vert_rounded)
-                  ],
+                Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Row(
+                    children: [
+                      Text(
+                        'WhatsApp',
+                        style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white70,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Spacer(),
+                      Icon(
+                        Icons.search,
+                        color: Colors.white70,
+                      ),
+                      Icon(
+                        Icons.more_vert_rounded,
+                        color: Colors.white70,
+                      )
+                    ],
+                  ),
                 ),
-                Row()
+                Padding(
+                  padding:
+                  const EdgeInsets.only(left: 30.0, right: 30, bottom: 0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Icon(
+                        Icons.camera_alt,
+                        color: Colors.white70,
+                      ),
+                      Text(
+                        'CHATS',
+                        style: TextStyle(
+                            color: Colors.white70, fontWeight: FontWeight.w900),
+                      ),
+                      Text(
+                        'STATUS',
+                        style: TextStyle(
+                            color: Colors.white70, fontWeight: FontWeight.w900),
+                      ),
+                      Text(
+                        'CALLS',
+                        style: TextStyle(
+                            color: Colors.white70, fontWeight: FontWeight.w900),
+                      ),
+                    ],
+                  ),
+                )
               ],
             ),
           ),
-          Expanded(child: Container())
+          Expanded(
+              child: Container(
+                child: Column(
+                  children: [
+                    Row(),
+                    Row(),
+                    Row(),
+                    Row(),
+                    Row(),
+                    Row(),
+                    Row(),
+                    Row(),
+                    Row(),
+                  ],
+                ),
+              ))
         ],
       ),
     );
