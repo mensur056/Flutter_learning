@@ -64,7 +64,7 @@ class Users extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Person1',
+              text,
               style: TextStyle(fontSize: 20),
             ),
             SizedBox(
