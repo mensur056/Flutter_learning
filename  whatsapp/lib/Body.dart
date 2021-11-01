@@ -10,15 +10,33 @@ class Body extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                Users(),
-                Users(),
-                Users(),
-                Users(),
-                Users(),
-                Users(),
-                Users(),
-                Users(),
-                Users(),
+                Users(
+                  text: '643.20(Melumat Qrupu)',
+                ),
+                Users(
+                  text: 'Keep "typing..',
+                ),
+                Users(
+                  text: '643.20 Telebeler',
+                ),
+                Users(
+                  text: 'Kerim',
+                ),
+                Users(
+                  text: 'Asim',
+                ),
+                Users(
+                  text: 'Ilahe',
+                ),
+                Users(
+                  text: 'Ana',
+                ),
+                Users(
+                  text: 'Abuzer',
+                ),
+                Users(
+                  text: 'Necmeddin',
+                ),
               ],
             ),
           ),
@@ -29,6 +47,10 @@ class Body extends StatelessWidget {
 }
 
 class Users extends StatelessWidget {
+  final String text;
+
+  const Users({required this.text});
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -39,9 +61,15 @@ class Users extends StatelessWidget {
           child: Image.asset('images/user.jpg'),
         ),
         Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Person1', style: TextStyle(fontSize: 20),),
-            SizedBox(height: 10,),
+            Text(
+              'Person1',
+              style: TextStyle(fontSize: 20),
+            ),
+            SizedBox(
+              height: 10,
+            ),
             Text('Test')
           ],
         )
