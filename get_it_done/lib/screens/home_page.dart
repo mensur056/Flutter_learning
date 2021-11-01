@@ -6,8 +6,9 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       appBar: AppBar(
-        title: Text('Get It Done'),
+        title: Center(child: Text('Get It Done')),
       ),
       body: Column(
         children: [
