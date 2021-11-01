@@ -12,8 +12,31 @@ class HomePage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Container(),
-          Container(),
+          Expanded(
+            flex: 1,
+            child: Container(
+              height: 150,
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Text(
+                  '5 Items',
+                  style: Theme.of(context).textTheme.headline3,
+                ),
+              ),
+            ),
+          ),
+          Expanded(
+            flex: 5,
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                height: 400,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.all(Radius.circular(50))),
+              ),
+            ),
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton(

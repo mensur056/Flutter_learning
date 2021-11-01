@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
           accentColor: Colors.green,
           scaffoldBackgroundColor: Colors.green,
           appBarTheme: AppBarTheme(color: Colors.green),
-          primarySwatch: Colors.blue,
+          primarySwatch: Colors.green,
           textTheme: TextTheme(
               subtitle1: TextStyle(color: Colors.white),
               headline3: TextStyle(color: Colors.white))),
