@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'screens/home_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,8 +17,10 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Colors.green,
           appBarTheme: AppBarTheme(color: Colors.green),
           primarySwatch: Colors.blue,
-          textTheme: TextTheme(subtitle1: TextStyle(color: Colors.white))),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+          textTheme: TextTheme(
+              subtitle1: TextStyle(color: Colors.white),
+              headline3: TextStyle(color: Colors.white))),
+      home: HomePage(),
     );
   }
 }
