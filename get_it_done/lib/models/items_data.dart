@@ -7,6 +7,10 @@ class ItemData with ChangeNotifier {
     Item(title: 'Elma al'),
     Item(title: 'Eve gel'),
     Item(title: '2 Saat uyu'),
-
   ];
+
+  void toggleStatus(int index) {
+    items[index].toggleStatus();
+    notifyListeners();
+  }
 }
