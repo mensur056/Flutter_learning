@@ -16,7 +16,7 @@ class ItemCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
       ),
       child: ListTile(
-        title: Text(title,style: TextStyle(color: Colors.grey),),
+        title: Text(title,style: TextStyle(color: Colors.black),),
         trailing: Checkbox(
           onChanged: null,
           value: isDone,
