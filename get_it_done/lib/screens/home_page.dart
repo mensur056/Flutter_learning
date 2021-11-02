@@ -37,9 +37,12 @@ class HomePage extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.all(Radius.circular(50))),
-                child: ListView.builder(itemBuilder: (context, index) {
-                  return ItemCard();
-                }, itemCount: 10,),
+                child: Padding(
+                  padding: const EdgeInsets.all(14.0),
+                  child: ListView.builder(itemBuilder: (context, index) {
+                    return ItemCard();
+                  }, itemCount: 5,),
+                ),
               ),
             ),
           ),
