@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get_it_done/models/items_data.dart';
 import 'package:get_it_done/widget/items_card.dart';
 import 'package:get_it_done/widget/items_card.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -20,7 +21,7 @@ class HomePage extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Text(
-                  '5 Items',
+                  '${Provider.of<ItemData>(context).items.length} Items',
                   style: Theme.of(context).textTheme.headline3,
                 ),
               ),
@@ -38,11 +39,13 @@ class HomePage extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(14.0),
                   child: ListView.builder(
-                    itemCount: 5,
+                    itemCount: Provider.of<ItemData>(context).items.length,
                     itemBuilder: (context, index) {
                       return ItemCard(
-                        title: ItemData().items[index].title,
-                        isDone: ItemData().items[index].isDone,
+                        title:
+                            Provider.of<ItemData>(context).items[index].title,
+                        isDone:
+                            Provider.of<ItemData>(context).items[index].isDone,
                       );
                     },
                   ),

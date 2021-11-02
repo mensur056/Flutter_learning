@@ -5,10 +5,7 @@ import 'screens/home_page.dart';
 
 void main() {
   runApp(ChangeNotifierProvider<ItemData>(
-      create: (BuildContext context) {
-        return ItemData();
-      },
-      child: MyApp()));
+      create: (BuildContext context) => ItemData(), child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {

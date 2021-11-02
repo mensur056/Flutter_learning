@@ -7,6 +7,6 @@ class ItemData with ChangeNotifier {
     Item(title: 'Elma al'),
     Item(title: 'Eve gel'),
     Item(title: '2 Saat uyu'),
-    Item(title: 'Ders calis')
+
   ];
 }
