@@ -5,16 +5,16 @@ class ItemCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 5,
-      color: Theme.of(context).primaryColor,
+      shadowColor: Theme.of(context).primaryColor,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20),
       ),
       child: ListTile(
-        title: Text('Derslerini oku'),
+        title: Text('Derslerini oku',style: TextStyle(color: Colors.grey),),
         trailing: Checkbox(
           onChanged: null,
           value: false,
-          activeColor: Colors.green,
+          activeColor: Colors.white,
         ),
       ),
     );
