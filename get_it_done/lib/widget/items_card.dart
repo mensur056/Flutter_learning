@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 
 class ItemCard extends StatelessWidget {
+  final String title;
+  final bool isDone;
+
+  const ItemCard({ required this.title, required this.isDone});
+
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -10,10 +16,10 @@ class ItemCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
       ),
       child: ListTile(
-        title: Text('Derslerini oku',style: TextStyle(color: Colors.grey),),
+        title: Text(title,style: TextStyle(color: Colors.grey),),
         trailing: Checkbox(
           onChanged: null,
-          value: false,
+          value: isDone,
           activeColor: Colors.white,
         ),
       ),

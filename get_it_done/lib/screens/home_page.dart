@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get_it_done/models/items_data.dart';
 import 'package:get_it_done/widget/items_card.dart';
 import 'package:get_it_done/widget/items_card.dart';
 
@@ -20,10 +21,7 @@ class HomePage extends StatelessWidget {
                 padding: const EdgeInsets.all(20.0),
                 child: Text(
                   '5 Items',
-                  style: Theme
-                      .of(context)
-                      .textTheme
-                      .headline3,
+                  style: Theme.of(context).textTheme.headline3,
                 ),
               ),
             ),
@@ -39,9 +37,15 @@ class HomePage extends StatelessWidget {
                     borderRadius: BorderRadius.all(Radius.circular(50))),
                 child: Padding(
                   padding: const EdgeInsets.all(14.0),
-                  child: ListView.builder(itemBuilder: (context, index) {
-                    return ItemCard();
-                  }, itemCount: 5,),
+                  child: ListView.builder(
+                    itemCount: 5,
+                    itemBuilder: (context, index) {
+                      return ItemCard(
+                        title: ItemData().items[index].title,
+                        isDone: ItemData().items[index].isDone,
+                      );
+                    },
+                  ),
                 ),
               ),
             ),
