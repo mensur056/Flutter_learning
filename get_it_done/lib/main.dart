@@ -1,15 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:get_it_done/models/items_data.dart';
+import 'package:provider/provider.dart';
 import 'screens/home_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(ChangeNotifierProvider<ItemData>(
+      create: (BuildContext context) {
+        return ItemData();
+      },
+      child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false,
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
           primaryColor: Colors.green,
