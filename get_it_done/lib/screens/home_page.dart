@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get_it_done/widget/items_card.dart';
+import 'package:get_it_done/widget/items_card.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +20,10 @@ class HomePage extends StatelessWidget {
                 padding: const EdgeInsets.all(20.0),
                 child: Text(
                   '5 Items',
-                  style: Theme.of(context).textTheme.headline3,
+                  style: Theme
+                      .of(context)
+                      .textTheme
+                      .headline3,
                 ),
               ),
             ),
@@ -34,6 +37,9 @@ class HomePage extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.all(Radius.circular(50))),
+                child: ListView.builder(itemBuilder: (context, index) {
+                  return ItemCard();
+                }, itemCount: 10,),
               ),
             ),
           ),
