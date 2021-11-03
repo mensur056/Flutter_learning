@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 class ItemCard extends StatelessWidget {
   final String title;
   final bool isDone;
+ final Function toggleStatus;
 
-  const ItemCard({ required this.title, required this.isDone});
+
+  const ItemCard({ required this.title, required this.isDone, required this.toggleStatus});
 
 
   @override
@@ -18,7 +20,7 @@ class ItemCard extends StatelessWidget {
       child: ListTile(
         title: Text(title,style: TextStyle(color: Colors.black),),
         trailing: Checkbox(
-          onChanged: null,
+          onChanged:(bool)=>toggleStatus,
           value: isDone,
           activeColor: Colors.white,
         ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get_it_done/models/items_data.dart';
 import 'package:get_it_done/widget/items_card.dart';
-import 'package:get_it_done/widget/items_card.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
@@ -42,6 +41,9 @@ class HomePage extends StatelessWidget {
                     itemCount: Provider.of<ItemData>(context).items.length,
                     itemBuilder: (context, index) {
                       return ItemCard(
+                        toggleStatus: (_) {
+                          Provider.of<ItemData>(context,listen: false).toggleStatus(index);
+                        },
                         title:
                             Provider.of<ItemData>(context).items[index].title,
                         isDone:
