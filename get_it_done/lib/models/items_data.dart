@@ -10,7 +10,7 @@ class ItemData with ChangeNotifier {
   ];
 
   void toggleStatus(int index) {
-    items[index].toggleStatus();
+    items[index].trueFalse();
     notifyListeners();
   }
 }

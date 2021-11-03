@@ -41,7 +41,7 @@ class HomePage extends StatelessWidget {
                     itemCount: Provider.of<ItemData>(context).items.length,
                     itemBuilder: (context, index) {
                       return ItemCard(
-                        toggleStatus: (_) {
+                        toggle: (_) {
                           Provider.of<ItemData>(context,listen: false).toggleStatus(index);
                         },
                         title:

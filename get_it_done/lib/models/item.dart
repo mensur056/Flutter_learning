@@ -4,7 +4,7 @@ class Item {
 
   Item({ required this.title, this.isDone = false});
 
-  void toggleStatus() {
-    isDone = !isDone;
+  void trueFalse() {
+    isDone=!isDone;
   }
 }
