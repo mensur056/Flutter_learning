@@ -6,7 +6,7 @@ class ItemData with ChangeNotifier {
     Item(title: 'You should go to the store'),
     Item(title: 'You should buy apples'),
     Item(title: 'Go back'),
-    Item(title: 'You sleep 2 hours'),
+    Item(title: 'You sleep 3 hours'),
     Item(title: 'Finish'),
 
   ];
