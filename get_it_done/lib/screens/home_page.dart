@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
             child: Container(
               height: 150,
               child: Padding(
-                padding: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(10.0),
                 child: Text(
                   '${Provider.of<ItemData>(context).items.length} Items',
                   style: Theme.of(context).textTheme.headline3,
