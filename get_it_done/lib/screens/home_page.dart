@@ -42,7 +42,8 @@ class HomePage extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return ItemCard(
                         toggle: (_) {
-                          Provider.of<ItemData>(context,listen: false).toggleStatus(index);
+                          Provider.of<ItemData>(context, listen: false)
+                              .toggleStatus(index);
                         },
                         title:
                             Provider.of<ItemData>(context).items[index].title,
@@ -58,7 +59,9 @@ class HomePage extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){},
+        onPressed: () {
+          showBottomSheet(context: context, builder: (context) => Container());
+        },
         child: Icon(Icons.add),
       ),
     );
