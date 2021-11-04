@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:get_it_done/models/items_data.dart';
 
 class ItemAdder extends StatelessWidget {
   final textController = TextEditingController();
@@ -24,7 +26,10 @@ class ItemAdder extends StatelessWidget {
               autofocus: true,
             ),
             FlatButton(
-                onPressed: () {},
+                onPressed: () {
+                  Provider.of<ItemData>(context, listen: false)
+                      .addItem(textController.text);
+                },
                 color: Theme.of(context).accentColor,
                 child: Text('Add'))
           ],
