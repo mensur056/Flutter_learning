@@ -60,7 +60,7 @@ class HomePage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          showBottomSheet(context: context, builder: (context) => Container());
+          showModalBottomSheet(context: context, builder: (context)=>Container());
         },
         child: Icon(Icons.add),
       ),
