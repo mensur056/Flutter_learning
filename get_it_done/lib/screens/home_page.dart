@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get_it_done/models/items_data.dart';
 import 'package:get_it_done/widget/items_card.dart';
 import 'package:provider/provider.dart';
-
+import 'ItemAdder.dart';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -60,10 +60,11 @@ class HomePage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          showModalBottomSheet(context: context, builder: (context)=>Container());
+          showModalBottomSheet(context: context, builder: (context)=>ItemAdder());
         },
         child: Icon(Icons.add),
       ),
     );
   }
 }
+
