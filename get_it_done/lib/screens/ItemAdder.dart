@@ -29,6 +29,7 @@ class ItemAdder extends StatelessWidget {
                 onPressed: () {
                   Provider.of<ItemData>(context, listen: false)
                       .addItem(textController.text);
+                  Navigator.pop(context);
                 },
                 color: Theme.of(context).accentColor,
                 child: Text('Add'))
