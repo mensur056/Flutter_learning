@@ -7,7 +7,7 @@ class ItemAdder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Container(padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
       color: Colors.white,
       child: Padding(
         padding: const EdgeInsets.all(12.0),
@@ -16,7 +16,7 @@ class ItemAdder extends StatelessWidget {
             TextField(
               controller: textController,
               onChanged: (input) {
-                print(textController.text);
+
               },
               style: TextStyle(color: Colors.black, fontSize: 20),
               decoration: InputDecoration(
