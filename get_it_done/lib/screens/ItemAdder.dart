@@ -14,19 +14,19 @@ class ItemAdder extends StatelessWidget {
         padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
-            TextField(
-              controller: textController,
-              onChanged: (input) {},
-              style: TextStyle(color: Colors.black, fontSize: 20),
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: '...',
-                  labelText: 'Add Item'),
-              autofocus: true,
+            Expanded(
+              child: TextField(minLines: 1,maxLines: 2,
+                controller: textController,
+                onChanged: (input) {},
+                style: TextStyle(color: Colors.black, fontSize: 20),
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: '...',
+                    labelText: 'Add Item'),
+                autofocus: true,
+              ),
             ),
-            SizedBox(
-              height: 50,
-            ),
+
             Container(
               height: 50,
               width: 80,
