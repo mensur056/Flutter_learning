@@ -4,16 +4,18 @@ class ItemCard extends StatelessWidget {
   final String title;
   final bool isDone;
   final Function(bool?) toggle;
+  final Function(dynamic) deleteItem;
 
   ItemCard({
     required this.title,
     required this.isDone,
     required this.toggle,
+    required this.deleteItem,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Dismissible(
+    return Dismissible(onDismissed: deleteItem,
       key: Key(title),
       child: Card(
         color: isDone ? Colors.green.shade50 : Colors.white,

@@ -17,4 +17,8 @@ class ItemData with ChangeNotifier {
     items.add(Item(title: title));
     notifyListeners();
   }
+  void deleteItem(int index){
+    items.removeAt(index);
+    notifyListeners();
+  }
 }
