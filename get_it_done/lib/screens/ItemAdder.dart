@@ -27,14 +27,19 @@ class ItemAdder extends StatelessWidget {
             SizedBox(
               height: 50,
             ),
-            FlatButton(
-                onPressed: () {
-                  Provider.of<ItemData>(context, listen: false)
-                      .addItem(textController.text);
-                  Navigator.pop(context);
-                },
-                color: Theme.of(context).accentColor,
-                child: Text('Add'))
+            Container(
+              height: 50,
+              width: 80,
+
+              child: FlatButton(
+                  onPressed: () {
+                    Provider.of<ItemData>(context, listen: false)
+                        .addItem(textController.text);
+                    Navigator.pop(context);
+                  },
+                  color: Theme.of(context).accentColor,
+                  child: Text('Add')),
+            )
           ],
         ),
       ),
