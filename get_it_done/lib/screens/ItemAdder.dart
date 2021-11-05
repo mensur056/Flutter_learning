@@ -15,7 +15,9 @@ class ItemAdder extends StatelessWidget {
         child: Column(
           children: [
             Expanded(
-              child: TextField(minLines: 1,maxLines: 2,
+              child: TextField(
+                minLines: 1,
+                maxLines: 2,
                 controller: textController,
                 onChanged: (input) {},
                 style: TextStyle(color: Colors.black, fontSize: 20),
@@ -26,11 +28,9 @@ class ItemAdder extends StatelessWidget {
                 autofocus: true,
               ),
             ),
-
             Container(
               height: 50,
               width: 80,
-
               child: FlatButton(
                   onPressed: () {
                     Provider.of<ItemData>(context, listen: false)
