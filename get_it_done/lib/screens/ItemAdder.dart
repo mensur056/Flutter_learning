@@ -7,23 +7,25 @@ class ItemAdder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
-      color: Colors.white,
+    return Container(
+      padding:
+          EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
       child: Padding(
-        padding: const EdgeInsets.all(12.0),
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
             TextField(
               controller: textController,
-              onChanged: (input) {
-
-              },
+              onChanged: (input) {},
               style: TextStyle(color: Colors.black, fontSize: 20),
               decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: '...',
                   labelText: 'Add Item'),
               autofocus: true,
+            ),
+            SizedBox(
+              height: 50,
             ),
             FlatButton(
                 onPressed: () {
