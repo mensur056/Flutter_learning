@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get_it_done/models/color_Theme.dart';
+import 'package:provider/provider.dart';
+import 'package:get_it_done/models/color_Theme.dart';
 
 class SettingsPage extends StatelessWidget {
   @override
@@ -42,6 +45,7 @@ class _SwitchCardState extends State<SwitchCard> {
           setState(() {
             _value = value;
           });
+          Provider.of<ColorThemeData>(context).switchTheme(value);
         },
       ),
     );

@@ -5,8 +5,12 @@ import 'screens/home_page.dart';
 import 'models/color_Theme.dart';
 
 void main() {
-  runApp(ChangeNotifierProvider<ItemData>(
-      create: (BuildContext context) => ItemData(), child: MyApp()));
+  runApp(MultiProvider(providers: [
+    ChangeNotifierProvider<ItemData>(
+        create: (BuildContext context) => ItemData()),
+    ChangeNotifierProvider<ColorThemeData>(
+        create: (context) => ColorThemeData()),
+  ], child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -16,9 +20,30 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme:redTheme,
+      theme:Provider.of<ColorThemeData>(context).selectedThemeData,
       home: HomePage(),
     );
   }
 }
-
+ThemeData redTheme = ThemeData(
+  primaryColor: Colors.red,
+  accentColor: Colors.red,
+  scaffoldBackgroundColor: Colors.red,
+  appBarTheme: AppBarTheme(color: Colors.red),
+  primarySwatch: Colors.red,
+  textTheme: TextTheme(
+    subtitle1: TextStyle(color: Colors.white),
+    headline3: TextStyle(color: Colors.white),
+  ),
+);
+ThemeData greenTheme = ThemeData(
+  primaryColor: Colors.green,
+  accentColor: Colors.green,
+  scaffoldBackgroundColor: Colors.green,
+  appBarTheme: AppBarTheme(color: Colors.green),
+  primarySwatch: Colors.green,
+  textTheme: TextTheme(
+    subtitle1: TextStyle(color: Colors.white),
+    headline3: TextStyle(color: Colors.white),
+  ),
+);
