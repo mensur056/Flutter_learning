@@ -26,11 +26,11 @@ class ColorThemeData with ChangeNotifier {
   );
 
   ThemeData _selectedThemeData = ThemeData(
-    primaryColor: Colors.red,
-    accentColor: Colors.red,
-    scaffoldBackgroundColor: Colors.red,
-    appBarTheme: AppBarTheme(color: Colors.red),
-    primarySwatch: Colors.red,
+    primaryColor: Colors.green,
+    accentColor: Colors.green,
+    scaffoldBackgroundColor: Colors.green,
+    appBarTheme: AppBarTheme(color: Colors.green),
+    primarySwatch: Colors.green,
     textTheme: TextTheme(
       subtitle1: TextStyle(color: Colors.white),
       headline3: TextStyle(color: Colors.white),

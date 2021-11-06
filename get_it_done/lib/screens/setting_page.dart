@@ -45,7 +45,7 @@ class _SwitchCardState extends State<SwitchCard> {
           setState(() {
             _value = value;
           });
-          Provider.of<ColorThemeData>(context).switchTheme(value);
+          Provider.of<ColorThemeData>(context,listen: false).switchTheme(value);
         },
       ),
     );
