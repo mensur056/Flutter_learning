@@ -23,7 +23,7 @@ class _SwitchCardState extends State<SwitchCard> {
   @override
   Widget build(BuildContext context) {
     return Card(
-      child: SwitchListTile(title: Text('Change Theme Color'),
+      child: SwitchListTile(title: Text('Change Theme Color',style: TextStyle(color: Colors.black),),
         value: _value,
         onChanged: (bool value) {setState(() {
           _value = value;
