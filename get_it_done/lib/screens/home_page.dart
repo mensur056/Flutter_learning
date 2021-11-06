@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get_it_done/models/items_data.dart';
 import 'package:get_it_done/widget/items_card.dart';
 import 'package:provider/provider.dart';
+import 'setting_page.dart';
 import 'ItemAdder.dart';
 
 class HomePage extends StatelessWidget {
@@ -10,6 +11,17 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       appBar: AppBar(
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: IconButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SettingsPage()));
+                },
+                icon: Icon(Icons.settings)),
+          )
+        ],
         title: Center(child: Text('Get It Done')),
       ),
       body: Column(
@@ -42,7 +54,7 @@ class HomePage extends StatelessWidget {
                     itemCount: Provider.of<ItemData>(context).items.length,
                     itemBuilder: (context, index) {
                       return ItemCard(
-                        deleteItem:(_) {
+                        deleteItem: (_) {
                           Provider.of<ItemData>(context, listen: false)
                               .deleteItem(index);
                         },
