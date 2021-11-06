@@ -3,9 +3,7 @@ import 'item.dart';
 
 class ItemData with ChangeNotifier {
   final List<Item> items = [
-    Item(title: 'You go store'),
-    Item(title: 'You buy apple'),
-    Item(title: 'Go back')
+
   ];
 
   void toggleStatus(int index) {
@@ -22,3 +20,6 @@ class ItemData with ChangeNotifier {
     notifyListeners();
   }
 }
+//Item(title: 'You go store'),
+//Item(title: 'You buy apple'),
+//Item(title: 'Go back')
