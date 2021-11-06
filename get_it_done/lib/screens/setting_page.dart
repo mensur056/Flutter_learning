@@ -18,12 +18,12 @@ class SwitchCard extends StatefulWidget {
 }
 
 class _SwitchCardState extends State<SwitchCard> {
-  late bool _value;
+   bool _value=true;
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      child: SwitchListTile(
+      child: SwitchListTile(title: Text('Change Theme Color'),
         value: _value,
         onChanged: (bool value) {setState(() {
           _value = value;
