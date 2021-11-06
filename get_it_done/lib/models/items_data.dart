@@ -3,7 +3,9 @@ import 'item.dart';
 
 class ItemData with ChangeNotifier {
   final List<Item> items = [
-
+    Item(title: 'You go store'),
+    Item(title: 'You buy apple'),
+    Item(title: 'Go back')
   ];
 
   void toggleStatus(int index) {
@@ -15,7 +17,8 @@ class ItemData with ChangeNotifier {
     items.add(Item(title: title));
     notifyListeners();
   }
-  void deleteItem(int index){
+
+  void deleteItem(int index) {
     items.removeAt(index);
     notifyListeners();
   }
