@@ -22,16 +22,21 @@ class _SwitchCardState extends State<SwitchCard> {
 
   @override
   Widget build(BuildContext context) {
+    Text greenText = Text(
+      'Green',
+      style: TextStyle(color: Colors.green),
+    );
+    Text redText = Text(
+      'Red',
+      style: TextStyle(color: Colors.red),
+    );
     return Card(
       child: SwitchListTile(
         title: Text(
           'Change Theme Color',
           style: TextStyle(color: Colors.black),
         ),
-        subtitle: Text(
-          'Green',
-          style: TextStyle(color: Theme.of(context).primaryColor),
-        ),
+        subtitle: _value ? greenText : redText,
         value: _value,
         onChanged: (bool value) {
           setState(() {
