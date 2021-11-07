@@ -49,31 +49,36 @@ class HomePage extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.all(Radius.circular(50))),
                 child: Padding(
-                    padding: const EdgeInsets.all(14.0),
-                    child:
-                        Consumer<ItemData>(builder: (context, child, itemData) {
-                      return ListView.builder(reverse: true,
-                        itemCount: Provider.of<ItemData>(context).items.length,
-                        itemBuilder: (context, index) {
-                          return ItemCard(
-                            deleteItem: (_) {
-                              Provider.of<ItemData>(context, listen: false)
-                                  .deleteItem(index);
-                            },
-                            toggle: (_) {
-                              Provider.of<ItemData>(context, listen: false)
-                                  .toggleStatus(index);
-                            },
-                            title: Provider.of<ItemData>(context)
-                                .items[index]
-                                .title,
-                            isDone: Provider.of<ItemData>(context)
-                                .items[index]
-                                .isDone,
-                          );
-                        },
+                  padding: const EdgeInsets.all(14.0),
+                  child: Consumer<ItemData>(
+                    builder: (context, child, itemData) {
+                      return Align(alignment: Alignment.topCenter,
+                        child: ListView.builder(shrinkWrap: true,
+                          reverse: true,
+                          itemCount: Provider.of<ItemData>(context).items.length,
+                          itemBuilder: (context, index) {
+                            return ItemCard(
+                              deleteItem: (_) {
+                                Provider.of<ItemData>(context, listen: false)
+                                    .deleteItem(index);
+                              },
+                              toggle: (_) {
+                                Provider.of<ItemData>(context, listen: false)
+                                    .toggleStatus(index);
+                              },
+                              title: Provider.of<ItemData>(context)
+                                  .items[index]
+                                  .title,
+                              isDone: Provider.of<ItemData>(context)
+                                  .items[index]
+                                  .isDone,
+                            );
+                          },
+                        ),
                       );
-                    })),
+                    },
+                  ),
+                ),
               ),
             ),
           ),
