@@ -52,7 +52,7 @@ class HomePage extends StatelessWidget {
                     padding: const EdgeInsets.all(14.0),
                     child:
                         Consumer<ItemData>(builder: (context, child, itemData) {
-                      return ListView.builder(
+                      return ListView.builder(reverse: true,
                         itemCount: Provider.of<ItemData>(context).items.length,
                         itemBuilder: (context, index) {
                           return ItemCard(
