@@ -1,8 +1,9 @@
 import 'package:daily_challenge/shared_pref_sample/themeData.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-
-void main() => runApp(MyApp());
+void main() => runApp(
+    ChangeNotifierProvider(create: (BuildContext context) {}, child: MyApp()));
 
 class MyApp extends StatelessWidget {
   @override
