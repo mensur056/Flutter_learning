@@ -33,7 +33,7 @@ class HomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             SwitchListTile(
-              title: Text("Yeşil Tema"),
+              title: Provider.of<ThemeColorData>(context).isGreen?Text("Yeşil Tema"):Text('Kırmızı Tema'),
               onChanged: (_) {
                 Provider.of<ThemeColorData>(context, listen: false)
                     .toggleColor();
