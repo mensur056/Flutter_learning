@@ -34,8 +34,11 @@ class HomePage extends StatelessWidget {
           children: <Widget>[
             SwitchListTile(
               title: Text("Yeşil Tema"),
-              onChanged: null,
-              value: false,
+              onChanged: (_) {
+                Provider.of<ThemeColorData>(context, listen: false)
+                    .toggleColor();
+              },
+              value: Provider.of<ThemeColorData>(context).isGreen,
             ),
             Card(
               child: ListTile(

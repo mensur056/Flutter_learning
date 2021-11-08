@@ -12,6 +12,7 @@ ThemeData red = ThemeData(
 
 class ThemeColorData with ChangeNotifier {
   bool _isGreen = true;
+  bool get isGreen=>_isGreen;
 
   ThemeData get themeColor {
     return _isGreen ? green : red;
