@@ -2,15 +2,18 @@ import 'package:daily_challenge/shared_pref_sample/themeData.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-void main() => runApp(
-    ChangeNotifierProvider(create: (BuildContext context) {}, child: MyApp()));
+void main() => runApp(ChangeNotifierProvider<ThemeColorData>(
+    create: (BuildContext context) {
+      return ThemeColorData();
+    },
+    child: MyApp()));
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: green,
+      theme: Provider.of<ThemeColorData>(context).themeColor,
       home: HomePage(),
     );
   }
