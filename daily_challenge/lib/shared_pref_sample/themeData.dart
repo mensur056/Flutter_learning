@@ -9,3 +9,9 @@ ThemeData red = ThemeData(
     buttonColor: Colors.red.shade300,
     primarySwatch: Colors.red,
     scaffoldBackgroundColor: Colors.red.shade50);
+
+class ThemeColorData with ChangeNotifier{
+  bool isGreen=true;
+
+
+}
