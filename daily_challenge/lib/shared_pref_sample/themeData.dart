@@ -14,23 +14,28 @@ ThemeData red = ThemeData(
 class ThemeColorData with ChangeNotifier {
   SharedPreferences _sharedPrefObject;
   bool _isGreen = true;
-  bool get isGreen=>_isGreen;
+
+  bool get isGreen => _isGreen;
 
   ThemeData get themeColor {
     return _isGreen ? green : red;
-
   }
-  void toggleColor(){
-    _isGreen=!_isGreen;
+
+  void toggleColor() {
+    _isGreen = !_isGreen;
     saveThemeToSharedPref(_isGreen);
     notifyListeners();
   }
-  Future<void> createSharedPrefObject()async{
-    _sharedPrefObject=await SharedPreferences.getInstance();
 
-}
-void saveThemeToSharedPref(bool value){
+  Future<void> createSharedPrefObject() async {
+    _sharedPrefObject = await SharedPreferences.getInstance();
+  }
+
+  void saveThemeToSharedPref(bool value) {
     _sharedPrefObject.setBool('ThemeData', value);
-}
+  }
 
+  void loadThemeFromSharedPref() {
+    _isGreen = _sharedPrefObject.getBool('ThemeData');
+  }
 }
