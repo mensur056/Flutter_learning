@@ -11,6 +11,8 @@ void main() => runApp(ChangeNotifierProvider<ThemeColorData>(
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Provider.of<ThemeColorData>(context).loadThemeFromSharedPref();
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: Provider.of<ThemeColorData>(context).themeColor,
@@ -33,7 +35,9 @@ class HomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             SwitchListTile(
-              title: Provider.of<ThemeColorData>(context).isGreen?Text("Yeşil Tema"):Text('Kırmızı Tema'),
+              title: Provider.of<ThemeColorData>(context).isGreen
+                  ? Text("Yeşil Tema")
+                  : Text('Kırmızı Tema'),
               onChanged: (_) {
                 Provider.of<ThemeColorData>(context, listen: false)
                     .toggleColor();
