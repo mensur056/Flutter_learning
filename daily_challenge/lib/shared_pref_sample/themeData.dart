@@ -24,7 +24,7 @@ class ThemeColorData with ChangeNotifier {
     _isGreen=!_isGreen;
     notifyListeners();
   }
-  void createSharedPrefObject()async{
+  Future<void> createSharedPrefObject()async{
     _sharedPrefObject=await SharedPreferences.getInstance();
 
 }
