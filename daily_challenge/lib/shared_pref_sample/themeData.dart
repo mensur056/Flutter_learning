@@ -22,11 +22,15 @@ class ThemeColorData with ChangeNotifier {
   }
   void toggleColor(){
     _isGreen=!_isGreen;
+    saveThemeToSharedPref(_isGreen);
     notifyListeners();
   }
   Future<void> createSharedPrefObject()async{
     _sharedPrefObject=await SharedPreferences.getInstance();
 
+}
+void saveThemeToSharedPref(bool value){
+    _sharedPrefObject.setBool('ThemeData', value);
 }
 
 }
