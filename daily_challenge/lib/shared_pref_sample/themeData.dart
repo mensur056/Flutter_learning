@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 ThemeData green = ThemeData(
     buttonColor: Colors.green.shade300,
@@ -11,6 +12,7 @@ ThemeData red = ThemeData(
     scaffoldBackgroundColor: Colors.red.shade50);
 
 class ThemeColorData with ChangeNotifier {
+  SharedPreferences _sharedPrefObject;
   bool _isGreen = true;
   bool get isGreen=>_isGreen;
 
@@ -22,5 +24,9 @@ class ThemeColorData with ChangeNotifier {
     _isGreen=!_isGreen;
     notifyListeners();
   }
+  void createSharedPrefObject()async{
+    _sharedPrefObject=await SharedPreferences.getInstance();
+
+}
 
 }
