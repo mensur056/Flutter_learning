@@ -11,7 +11,7 @@ void main() => runApp(ChangeNotifierProvider<ThemeColorData>(
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Provider.of<ThemeColorData>(context).loadThemeFromSharedPref();
+    Provider.of<ThemeColorData>(context,listen: false).loadThemeFromSharedPref();
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
