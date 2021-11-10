@@ -40,6 +40,7 @@ class ColorThemeData with ChangeNotifier {
 
   void switchTheme(bool selected) {
     _selectedThemeData = selected ? _greenTheme : _redTheme;
+    isGreen=selected;
     notifyListeners();
   }
 

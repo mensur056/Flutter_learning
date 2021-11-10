@@ -21,10 +21,11 @@ class SwitchCard extends StatefulWidget {
 }
 
 class _SwitchCardState extends State<SwitchCard> {
-  bool _value = true;
+
 
   @override
   Widget build(BuildContext context) {
+    bool _value = Provider.of<ColorThemeData>(context).isGreen;
     Text greenText = Text(
       'Green',
       style: TextStyle(color: Colors.green),
