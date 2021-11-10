@@ -36,6 +36,7 @@ class ColorThemeData with ChangeNotifier {
       headline3: TextStyle(color: Colors.white),
     ),
   );
+  bool isGreen=true;
 
   void switchTheme(bool selected) {
     _selectedThemeData = selected ? _greenTheme : _redTheme;
