@@ -2,16 +2,21 @@ import 'package:daily_challenge/shared_pref_sample/themeData.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-void main() => runApp(ChangeNotifierProvider<ThemeColorData>(
-    create: (BuildContext context) {
-      return ThemeColorData();
-    },
-    child: MyApp()));
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await ThemeColorData().createSharedPrefObject();
+  runApp(ChangeNotifierProvider<ThemeColorData>(
+      create: (BuildContext context) {
+        return ThemeColorData();
+      },
+      child: MyApp()));
+}
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Provider.of<ThemeColorData>(context,listen: false).loadThemeFromSharedPref();
+    Provider.of<ThemeColorData>(context, listen: false)
+        .loadThemeFromSharedPref();
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,

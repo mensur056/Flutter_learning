@@ -12,7 +12,7 @@ ThemeData red = ThemeData(
     scaffoldBackgroundColor: Colors.red.shade50);
 
 class ThemeColorData with ChangeNotifier {
-  SharedPreferences _sharedPrefObject;
+  static SharedPreferences _sharedPrefObject;
   bool _isGreen = true;
 
   bool get isGreen => _isGreen;
@@ -37,9 +37,10 @@ class ThemeColorData with ChangeNotifier {
 
   void loadThemeFromSharedPref() async {
     await createSharedPrefObject();
-    if(_sharedPrefObject.getBool('themeData')==null){
-      _isGreen=true;
-    }else{_isGreen = _sharedPrefObject.getBool('themeData');}
-
+    if (_sharedPrefObject.getBool('themeData') == null) {
+      _isGreen = true;
+    } else {
+      _isGreen = _sharedPrefObject.getBool('themeData');
+    }
   }
 }
