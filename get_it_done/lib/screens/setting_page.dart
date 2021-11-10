@@ -15,12 +15,8 @@ class SettingsPage extends StatelessWidget {
   }
 }
 
-class SwitchCard extends StatefulWidget {
-  @override
-  _SwitchCardState createState() => _SwitchCardState();
-}
+class SwitchCard extends StatelessWidget {
 
-class _SwitchCardState extends State<SwitchCard> {
 
 
   @override
@@ -43,9 +39,7 @@ class _SwitchCardState extends State<SwitchCard> {
         subtitle: _value ? greenText : redText,
         value: _value,
         onChanged: (bool value) {
-          setState(() {
-            _value = value;
-          });
+
           Provider.of<ColorThemeData>(context,listen: false).switchTheme(value);
         },
       ),
