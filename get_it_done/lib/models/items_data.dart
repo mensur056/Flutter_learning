@@ -5,7 +5,8 @@ class ItemData with ChangeNotifier {
   final List<Item> _items = [
     Item(title: 'You go store'),
     Item(title: 'You buy apple'),
-    Item(title: 'Go back')
+    Item(title: 'Go back'),
+    Item(title: 'You must sleep')
   ];
 
   void toggleStatus(int index) {
