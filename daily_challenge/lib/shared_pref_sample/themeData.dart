@@ -36,7 +36,7 @@ class ThemeColorData with ChangeNotifier {
   }
 
   void loadThemeFromSharedPref() async {
-    await createSharedPrefObject();
+    //await createSharedPrefObject();
     if (_sharedPrefObject.getBool('themeData') == null) {
       _isGreen = true;
     } else {
