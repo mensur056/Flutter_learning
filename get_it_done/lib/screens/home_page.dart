@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => SettingsPage()));
                 },
-                icon: Icon(Icons.settings)),
+                icon: Icon(Icons.more)),
           )
         ],
         title: Center(child: Text('Get It Done')),
