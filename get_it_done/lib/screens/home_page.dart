@@ -92,7 +92,7 @@ class HomePage extends StatelessWidget {
               context: context,
               builder: (context) => ItemAdder());
         },
-        child: Icon(Icons.add),
+        child: Icon(Icons.favorite),
       ),
     );
   }
