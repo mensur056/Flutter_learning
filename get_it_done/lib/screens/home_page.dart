@@ -13,13 +13,13 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         actions: [
           Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(8.0),
             child: IconButton(
                 onPressed: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => SettingsPage()));
                 },
-                icon: Icon(Icons.more)),
+                icon: Icon(Icons.settings)),
           )
         ],
         title: Center(child: Text('Get It Done')),
