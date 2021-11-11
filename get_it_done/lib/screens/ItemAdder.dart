@@ -23,7 +23,7 @@ class ItemAdder extends StatelessWidget {
                 style: TextStyle(color: Colors.black, fontSize: 20),
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
-                    hintText: '...',
+                    hintText: 'Write',
                     labelText: 'Add Item'),
                 autofocus: true,
               ),
