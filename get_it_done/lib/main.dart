@@ -4,7 +4,8 @@ import 'package:provider/provider.dart';
 import 'screens/home_page.dart';
 import 'models/color_Theme.dart';
 
-void main() {
+void main()  {
+
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider<ItemData>(
         create: (BuildContext context) => ItemData()),
@@ -14,17 +15,17 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme:Provider.of<ColorThemeData>(context).selectedThemeData,
+      theme: Provider.of<ColorThemeData>(context).selectedThemeData,
       home: HomePage(),
     );
   }
 }
+
 ThemeData redTheme = ThemeData(
   primaryColor: Colors.red,
   accentColor: Colors.red,

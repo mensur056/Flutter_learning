@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class ColorThemeData with ChangeNotifier {
   final ThemeData _redTheme = ThemeData(
     primaryColor: Colors.red,
@@ -38,6 +39,7 @@ class ColorThemeData with ChangeNotifier {
   );
   bool isGreen=true;
 
+
   void switchTheme(bool selected) {
     _selectedThemeData = selected ? _greenTheme : _redTheme;
     isGreen=selected;
@@ -45,4 +47,5 @@ class ColorThemeData with ChangeNotifier {
   }
 
   ThemeData get selectedThemeData => _selectedThemeData;
+
 }
