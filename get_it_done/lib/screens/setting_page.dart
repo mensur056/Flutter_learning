@@ -33,7 +33,7 @@ class SwitchCard extends StatelessWidget {
     return Card(
       child: SwitchListTile(
         title: Text(
-          'Change Theme Color',
+          'Change Your Theme Color',
           style: TextStyle(color: Colors.black),
         ),
         subtitle: _value ? greenText : redText,
