@@ -6,7 +6,9 @@ class ItemData with ChangeNotifier {
     Item(title: 'You go store'),
     Item(title: 'You buy apple'),
     Item(title: 'Go back'),
-    Item(title: 'You must sleep')
+    Item(title: 'You must sleep'),
+    Item(title: 'Weak Up')
+
   ];
 
   void toggleStatus(int index) {
@@ -26,6 +28,3 @@ class ItemData with ChangeNotifier {
 
   List<Item> get items =>_items;
 }
-//Item(title: 'You go store'),
-//Item(title: 'You buy apple'),
-//Item(title: 'Go back')
