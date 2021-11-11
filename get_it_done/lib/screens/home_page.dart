@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         actions: [
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(10.0),
             child: IconButton(
                 onPressed: () {
                   Navigator.push(context,
@@ -92,7 +92,7 @@ class HomePage extends StatelessWidget {
               context: context,
               builder: (context) => ItemAdder());
         },
-        child: Icon(Icons.favorite),
+        child: Icon(Icons.add),
       ),
     );
   }
