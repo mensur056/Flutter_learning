@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 class ItemCard extends StatelessWidget {
   final String title;
   final bool isDone;
-  final Function(bool?) toggle;
+  final Function(bool) toggle;
   final Function(dynamic) deleteItem;
 
   ItemCard({
-    required this.title,
-    required this.isDone,
-    required this.toggle,
-    required this.deleteItem,
+     this.title,
+     this.isDone,
+     this.toggle,
+     this.deleteItem,
   });
 
   @override
