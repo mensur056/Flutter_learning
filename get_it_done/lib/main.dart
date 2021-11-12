@@ -20,12 +20,14 @@ void main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Provider.of<ColorThemeData>(context).loadThemeFromSharedPref();
-    Provider.of<ItemData>(context).loadItemsFromSharedPref();
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: Provider.of<ColorThemeData>(context).selectedThemeData,
-      home: HomePage(),
+    // Provider.of<ColorThemeData>(context).loadThemeFromSharedPref();
+    // Provider.of<ItemData>(context).loadItemsFromSharedPref();
+    return Consumer2<ItemData, ColorThemeData>(
+      builder: (context, child, itemData, colorThemeData) => MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: Provider.of<ColorThemeData>(context).selectedThemeData,
+        home: HomePage(),
+      ),
     );
   }
 }
