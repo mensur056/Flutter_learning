@@ -42,7 +42,7 @@ class ColorThemeData with ChangeNotifier {
 
   void switchTheme(bool selected) {
     _isGreen = selected;
-saveThemeToSharedPref(selected);
+    saveThemeToSharedPref(selected);
     notifyListeners();
   }
   bool get isGreen=>_isGreen;

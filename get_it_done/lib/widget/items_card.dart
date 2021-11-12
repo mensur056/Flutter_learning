@@ -7,10 +7,10 @@ class ItemCard extends StatelessWidget {
   final Function(dynamic) deleteItem;
 
   ItemCard({
-     this.title,
-     this.isDone,
-     this.toggle,
-     this.deleteItem,
+    this.title,
+    this.isDone,
+    this.toggle,
+    this.deleteItem,
   });
 
   @override
