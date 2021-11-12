@@ -31,7 +31,7 @@ class HomePage extends StatelessWidget {
             child: Container(
               height: 150,
               child: Padding(
-                padding: const EdgeInsets.all(10.0),
+                padding: const EdgeInsets.all(12.0),
                 child: Text(
                   '${Provider.of<ItemData>(context).items.length} Items',
                   style: Theme.of(context).textTheme.headline3,
@@ -42,7 +42,7 @@ class HomePage extends StatelessWidget {
           Expanded(
             flex: 5,
             child: Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(12.0),
               child: Container(
                 height: 400,
                 decoration: BoxDecoration(
