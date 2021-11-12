@@ -23,11 +23,11 @@ class MyApp extends StatelessWidget {
     // Provider.of<ColorThemeData>(context).loadThemeFromSharedPref();
     // Provider.of<ItemData>(context).loadItemsFromSharedPref();
     return Consumer2<ItemData, ColorThemeData>(
-      builder: (context, child, itemData, colorThemeData) => MaterialApp(
+      builder: (context, child, itemData, colorThemeData) {return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: Provider.of<ColorThemeData>(context).selectedThemeData,
         home: HomePage(),
-      ),
+      );}
     );
   }
 }
