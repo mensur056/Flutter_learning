@@ -1,5 +1,5 @@
 import '../constants.dart';
-import '../screens/input_page.dart';
+
 import 'package:flutter/material.dart';
 
 class BottomButton extends StatelessWidget {
@@ -21,7 +21,7 @@ class BottomButton extends StatelessWidget {
         color: kBottomContainerColour,
         margin: EdgeInsets.only(top: 10),
         width: double.infinity,
-        height: 40,
+        height: 42,
       ),
     );
   }
