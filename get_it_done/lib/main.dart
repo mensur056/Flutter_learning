@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get_it_done/models/items_data.dart';
 import 'package:provider/provider.dart';
+import 'package:splashscreen/splashscreen.dart';
 import 'screens/home_page.dart';
 import 'models/color_Theme.dart';
 
@@ -30,9 +31,25 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: Provider.of<ColorThemeData>(context).selectedThemeData,
-        home: HomePage(),
+        home: SplashWidget(),
       );}
     );
   }
 }
+class SplashWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return SplashScreen(
+        seconds: 6,
+        navigateAfterSeconds: HomePage(),
+        title:  Text('Get It Done'),
+        image:  Image.asset('images/splash_image.png'),
+        backgroundColor: Colors.white,
+        styleTextUnderTheLoader:  TextStyle(),
+        photoSize: 100.0,
+        loaderColor: Colors.green
+    );
+  }
+}
+
 
