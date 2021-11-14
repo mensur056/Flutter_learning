@@ -16,7 +16,7 @@ class ItemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Dismissible(onDismissed: deleteItem,
-      key: Key(title),
+      key: UniqueKey(),
       child: Card(
         color: isDone ? Colors.green.shade50 : Colors.white,
         elevation: isDone ? 1 : 5,
