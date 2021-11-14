@@ -42,7 +42,7 @@ class SplashWidget extends StatelessWidget {
     return SplashScreen(
         seconds: 6,
         navigateAfterSeconds: HomePage(),
-        title:  Text('Get It Done'),
+        title:  Text('Get It Done',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
         image:  Image.asset('images/splash_image.png'),
         backgroundColor: Colors.white,
         styleTextUnderTheLoader:  TextStyle(),
