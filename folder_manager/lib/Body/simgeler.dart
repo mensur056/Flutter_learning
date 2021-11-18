@@ -45,7 +45,7 @@ class _SimgelerState extends State<Simgeler> {
                         colour: Colors.deepOrange,
                         icon: Icons.videocam,
                       ),Text(
-                        'Images',
+                        'Video',
                         style: TextStyle(color: Colors.white),
                       ),
                     ],
@@ -56,9 +56,16 @@ class _SimgelerState extends State<Simgeler> {
                 padding: const EdgeInsets.only(top: 10.0),
                 child: FlatButton(
                   onPressed: () {},
-                  child: ContDecaration(
-                    icon: Icons.document_scanner_sharp,
-                    colour: Colors.purple,
+                  child: Column(
+                    children: [
+                      ContDecaration(
+                        icon: Icons.document_scanner_sharp,
+                        colour: Colors.purple,
+                      ),Text(
+                        'Docs',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -66,9 +73,16 @@ class _SimgelerState extends State<Simgeler> {
                 padding: const EdgeInsets.only(right: 30, top: 10),
                 child: FlatButton(
                   onPressed: () {},
-                  child: ContDecaration(
-                    colour: Colors.pink,
-                    icon: Icons.library_music,
+                  child: Column(
+                    children: [
+                      ContDecaration(
+                        colour: Colors.pink,
+                        icon: Icons.library_music,
+                      ),Text(
+                        'Music',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
                   ),
                 ),
               ),
