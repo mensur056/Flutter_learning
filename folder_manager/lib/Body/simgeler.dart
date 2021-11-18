@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'ContainerDec.dart';
+
 class Simgeler extends StatefulWidget {
   @override
   _SimgelerState createState() => _SimgelerState();
@@ -18,85 +19,100 @@ class _SimgelerState extends State<Simgeler> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 30,top: 10),
-                child: ContDecaration(
-                  icon: Icons.image,
-                  colour: Colors.teal,
+                padding: const EdgeInsets.only(left: 30, top: 10),
+                child: FlatButton(
+                  onPressed: () {},
+                  child: Column(
+                    children: [
+                      ContDecaration(
+                        icon: Icons.image,
+                        colour: Colors.teal,
+                      ),Text(
+                        'Images',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 10.0),
-                child: ContDecaration(
-                  colour: Colors.deepOrange,
-                  icon: Icons.videocam,
+                child: FlatButton(
+                  onPressed: () {},
+                  child: Column(
+                    children: [
+                      ContDecaration(
+                        colour: Colors.deepOrange,
+                        icon: Icons.videocam,
+                      ),Text(
+                        'Images',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 10.0),
-                child: ContDecaration(
-                  icon: Icons.document_scanner_sharp,
-                  colour: Colors.purple,
+                child: FlatButton(
+                  onPressed: () {},
+                  child: ContDecaration(
+                    icon: Icons.document_scanner_sharp,
+                    colour: Colors.purple,
+                  ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(right: 30,top: 10),
-                child: ContDecaration(
-                  colour: Colors.pink,
-                  icon: Icons.library_music,
+                padding: const EdgeInsets.only(right: 30, top: 10),
+                child: FlatButton(
+                  onPressed: () {},
+                  child: ContDecaration(
+                    colour: Colors.pink,
+                    icon: Icons.library_music,
+                  ),
                 ),
               ),
             ],
+          ),
+
+          SizedBox(
+            height: 8,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 35.0),
-                child: Text(
-                  'Images',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-              Text(
-                'Videos',
-                style: TextStyle(color: Colors.white),
-              ),
-              Text(
-                'Docs',
-                style: TextStyle(color: Colors.white),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(right: 35),
-                child: Text(
-                  'Music',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-            ],
-          ),SizedBox(height: 8,),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Padding(
                 padding: const EdgeInsets.only(left: 30),
-                child: ContDecaration(
-                  icon: Icons.android,
-                  colour: Colors.green,
+                child: FlatButton(
+                  onPressed: () {},
+                  child: ContDecaration(
+                    icon: Icons.android,
+                    colour: Colors.green,
+                  ),
                 ),
               ),
-              ContDecaration(
-                colour: Colors.blue,
-                icon: Icons.download,
+              FlatButton(
+                onPressed: () {},
+                child: ContDecaration(
+                  colour: Colors.blue,
+                  icon: Icons.download,
+                ),
               ),
-              ContDecaration(
-                icon: Icons.archive,
-                colour: Colors.orangeAccent,
+              FlatButton(
+                onPressed: () {},
+                child: ContDecaration(
+                  icon: Icons.archive,
+                  colour: Colors.orangeAccent,
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.only(right: 30),
-                child: ContDecaration(
-                  icon: Icons.view_module_rounded,
-                  colour: Colors.red,
+                child: FlatButton(
+                  onPressed: () {},
+                  child: ContDecaration(
+                    icon: Icons.view_module_rounded,
+                    colour: Colors.red,
+                  ),
                 ),
               ),
             ],
@@ -133,4 +149,3 @@ class _SimgelerState extends State<Simgeler> {
     );
   }
 }
-
