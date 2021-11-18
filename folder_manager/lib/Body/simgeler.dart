@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'ContainerDec.dart';
+import 'package:folder_manager/screens/More_page/MorePage.dart';
 
 class Simgeler extends StatefulWidget {
   @override
@@ -119,9 +120,11 @@ class _SimgelerState extends State<Simgeler> {
                       ContDecaration(
                         icon: Icons.android,
                         colour: Colors.green,
-                      ),SizedBox(
+                      ),
+                      SizedBox(
                         height: 5,
-                      ),Text(
+                      ),
+                      Text(
                         'Apps',
                         style: TextStyle(color: Colors.white),
                       ),
@@ -136,9 +139,11 @@ class _SimgelerState extends State<Simgeler> {
                     ContDecaration(
                       colour: Colors.blue,
                       icon: Icons.download,
-                    ),SizedBox(
+                    ),
+                    SizedBox(
                       height: 5,
-                    ),Text(
+                    ),
+                    Text(
                       'Download',
                       style: TextStyle(color: Colors.white),
                     ),
@@ -152,9 +157,11 @@ class _SimgelerState extends State<Simgeler> {
                     ContDecaration(
                       icon: Icons.archive,
                       colour: Colors.orangeAccent,
-                    ),SizedBox(
+                    ),
+                    SizedBox(
                       height: 5,
-                    ),Text(
+                    ),
+                    Text(
                       'Archive',
                       style: TextStyle(color: Colors.white),
                     ),
@@ -164,15 +171,23 @@ class _SimgelerState extends State<Simgeler> {
               Padding(
                 padding: const EdgeInsets.only(right: 30),
                 child: FlatButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        (context),
+                        MaterialPageRoute(
+                          builder: (context) => MorePage(),
+                        ));
+                  },
                   child: Column(
                     children: [
                       ContDecaration(
                         icon: Icons.view_module_rounded,
                         colour: Colors.red,
-                      ),SizedBox(
+                      ),
+                      SizedBox(
                         height: 5,
-                      ),Text(
+                      ),
+                      Text(
                         'More',
                         style: TextStyle(color: Colors.white),
                       ),
@@ -182,7 +197,6 @@ class _SimgelerState extends State<Simgeler> {
               ),
             ],
           ),
-
         ],
       ),
     );
