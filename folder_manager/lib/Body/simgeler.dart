@@ -114,65 +114,67 @@ class _SimgelerState extends State<Simgeler> {
                 padding: const EdgeInsets.only(left: 30),
                 child: FlatButton(
                   onPressed: () {},
-                  child: ContDecaration(
-                    icon: Icons.android,
-                    colour: Colors.green,
+                  child: Column(
+                    children: [
+                      ContDecaration(
+                        icon: Icons.android,
+                        colour: Colors.green,
+                      ),Text(
+                        'Apps',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
                   ),
                 ),
               ),
               FlatButton(
                 onPressed: () {},
-                child: ContDecaration(
-                  colour: Colors.blue,
-                  icon: Icons.download,
+                child: Column(
+                  children: [
+                    ContDecaration(
+                      colour: Colors.blue,
+                      icon: Icons.download,
+                    ),Text(
+                      'Apps',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
                 ),
               ),
               FlatButton(
                 onPressed: () {},
-                child: ContDecaration(
-                  icon: Icons.archive,
-                  colour: Colors.orangeAccent,
+                child: Column(
+                  children: [
+                    ContDecaration(
+                      icon: Icons.archive,
+                      colour: Colors.orangeAccent,
+                    ),Text(
+                      'Apps',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.only(right: 30),
                 child: FlatButton(
                   onPressed: () {},
-                  child: ContDecaration(
-                    icon: Icons.view_module_rounded,
-                    colour: Colors.red,
+                  child: Column(
+                    children: [
+                      ContDecaration(
+                        icon: Icons.view_module_rounded,
+                        colour: Colors.red,
+                      ),Text(
+                        'Apps',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
                   ),
                 ),
               ),
             ],
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 40),
-                child: Text(
-                  'Apps',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-              Text(
-                'Download',
-                style: TextStyle(color: Colors.white),
-              ),
-              Text(
-                'Archive',
-                style: TextStyle(color: Colors.white),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(right: 40),
-                child: Text(
-                  'More',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-            ],
-          ),
+
         ],
       ),
     );
