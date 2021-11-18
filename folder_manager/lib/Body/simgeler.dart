@@ -119,6 +119,8 @@ class _SimgelerState extends State<Simgeler> {
                       ContDecaration(
                         icon: Icons.android,
                         colour: Colors.green,
+                      ),SizedBox(
+                        height: 5,
                       ),Text(
                         'Apps',
                         style: TextStyle(color: Colors.white),
@@ -134,8 +136,10 @@ class _SimgelerState extends State<Simgeler> {
                     ContDecaration(
                       colour: Colors.blue,
                       icon: Icons.download,
+                    ),SizedBox(
+                      height: 5,
                     ),Text(
-                      'Apps',
+                      'Download',
                       style: TextStyle(color: Colors.white),
                     ),
                   ],
@@ -148,8 +152,10 @@ class _SimgelerState extends State<Simgeler> {
                     ContDecaration(
                       icon: Icons.archive,
                       colour: Colors.orangeAccent,
+                    ),SizedBox(
+                      height: 5,
                     ),Text(
-                      'Apps',
+                      'Archive',
                       style: TextStyle(color: Colors.white),
                     ),
                   ],
@@ -164,8 +170,10 @@ class _SimgelerState extends State<Simgeler> {
                       ContDecaration(
                         icon: Icons.view_module_rounded,
                         colour: Colors.red,
+                      ),SizedBox(
+                        height: 5,
                       ),Text(
-                        'Apps',
+                        'More',
                         style: TextStyle(color: Colors.white),
                       ),
                     ],
