@@ -27,7 +27,11 @@ class _SimgelerState extends State<Simgeler> {
                       ContDecaration(
                         icon: Icons.image,
                         colour: Colors.teal,
-                      ),Text(
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text(
                         'Images',
                         style: TextStyle(color: Colors.white),
                       ),
@@ -44,7 +48,11 @@ class _SimgelerState extends State<Simgeler> {
                       ContDecaration(
                         colour: Colors.deepOrange,
                         icon: Icons.videocam,
-                      ),Text(
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text(
                         'Video',
                         style: TextStyle(color: Colors.white),
                       ),
@@ -61,7 +69,11 @@ class _SimgelerState extends State<Simgeler> {
                       ContDecaration(
                         icon: Icons.document_scanner_sharp,
                         colour: Colors.purple,
-                      ),Text(
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text(
                         'Docs',
                         style: TextStyle(color: Colors.white),
                       ),
@@ -78,7 +90,11 @@ class _SimgelerState extends State<Simgeler> {
                       ContDecaration(
                         colour: Colors.pink,
                         icon: Icons.library_music,
-                      ),Text(
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text(
                         'Music',
                         style: TextStyle(color: Colors.white),
                       ),
@@ -88,7 +104,6 @@ class _SimgelerState extends State<Simgeler> {
               ),
             ],
           ),
-
           SizedBox(
             height: 8,
           ),
