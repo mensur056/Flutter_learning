@@ -12,10 +12,12 @@ class _MyFilesState extends State<MyFiles> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
+      appBar: AppBar(
+        flexibleSpace: NavBar(),
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            NavBar(),
             Divider(
               color: Colors.white10,
               height: 1,
@@ -126,12 +128,13 @@ class _MyFilesState extends State<MyFiles> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 10,bottom: 10),
+              padding: const EdgeInsets.only(top: 10, bottom: 10),
               child: Divider(
                 height: 1,
                 color: Colors.white10,
               ),
-            ),Directory()
+            ),
+            Directory()
           ],
         ),
       ),
