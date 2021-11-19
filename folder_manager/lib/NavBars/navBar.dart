@@ -21,7 +21,7 @@ class _NavBarState extends State<NavBar> {
           Padding(
             padding: const EdgeInsets.only(left: 12.0),
             child: FlatButton(
-              onPressed: () {showModalBottomSheet(context: context,builder: (BuildContext context){return Container(color: Colors.white,height: 200,); });},
+              onPressed: () {showModalBottomSheet(context: context,builder: (BuildContext context){return Container(color: Colors.white,height: 250,); });},
               child: NavBarItem(
                 icon: Icons.list,
                 colour: Colors.black,
