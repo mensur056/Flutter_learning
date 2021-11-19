@@ -16,7 +16,7 @@ class _NavBarState extends State<NavBar> {
       height: 60,
       color: Colors.black,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Padding(
             padding: const EdgeInsets.only(left: 12.0),
