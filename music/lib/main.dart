@@ -13,22 +13,23 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.white,
         body: Column(
           children: [
-            Container(
-              width: double.infinity,
-              height: 40,
-              decoration: BoxDecoration(
-                  color: Color(0xFFc8c8c8),
-                  borderRadius: BorderRadius.circular(5)),
-              child: Center(
-                child: TextField(
-                  decoration: InputDecoration(
-                      icon: Icon(
-                        Icons.search,
-                        color: Colors.blue,
-                      ),
-                      border: InputBorder.none),
+            Row(
+              children: [Icon(Icons.settings),
+                Container(
+                  width: 475,
+                  height: 40,
+                  decoration: BoxDecoration(
+                      color: Color(0xFFc8c8c8),
+                      borderRadius: BorderRadius.circular(5)),
+                  child: Center(
+                    child: TextField(
+                      decoration: InputDecoration(
+
+                          border: InputBorder.none),
+                    ),
+                  ),
                 ),
-              ),
+              ],
             ),
             SingleChildScrollView(
               child: Column(
