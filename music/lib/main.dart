@@ -32,16 +32,34 @@ class MyApp extends StatelessWidget {
           ),
         ),
         body: SingleChildScrollView(
-            child: Column(
-          children: [
-            Row(
-              children: [
-                IconButton(
-                    onPressed: () {}, icon: Icon(Icons.access_time_outlined))
-              ],
-            )
-          ],
-        )),
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Column(
+                    children: [
+                      IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.access_time_outlined)),Text('Recent')
+                    ],
+                  ),Column(
+                    children: [
+                      IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.favorite)),Text('Favorites')
+                    ],
+                  ),Column(
+                    children: [
+                      IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.library_music)),Text('Playlist')
+                    ],
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
