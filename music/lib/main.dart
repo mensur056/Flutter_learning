@@ -7,18 +7,20 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(backgroundColor: Colors.red,
-        appBar: AppBar(
-          backgroundColor: Colors.black,
+    return MaterialApp(debugShowCheckedModeBanner: false,
+      home: Scaffold(backgroundColor: Colors.white,
+        appBar:AppBar(
+          backgroundColor: Colors.white,
           title: Container(
             width: double.infinity,
             height: 40,
             decoration: BoxDecoration(
-                color: Colors.white10, borderRadius: BorderRadius.circular(5)),
+                color: Color(0xFFc8c8c8), borderRadius: BorderRadius.circular(5)),
             child: Center(
               child: TextField(
                 decoration: InputDecoration(
+                    icon: Icon(Icons.search,color: Colors.blue,),
+
                     border: InputBorder.none),
               ),
             ),
